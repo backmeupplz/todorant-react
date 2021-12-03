@@ -1,29 +1,18 @@
 import { FC } from 'react'
-import { classnames } from 'classnames/tailwind'
+import { classnames, TArg } from 'classnames/tailwind'
 
 type ButtonProps = {
   onClick: () => void
   title: string
+  props: TArg[]
 }
 
-const button = classnames(
-  'bg-transparent',
-  'hover:bg-blue-500',
-  'text-blue-700',
-  'font-semibold',
-  'hover:text-white',
-  'py-2',
-  'px-4',
-  'border',
-  'border-blue-500',
-  'hover:border-transparent',
-  'rounded',
-  'focus:outline-none',
-  'mx-1'
-)
-const Button: FC<ButtonProps> = ({ onClick, title }) => {
+const button = (props: TArg[] = []) =>
+  classnames('rounded-lg', 'px-45', 'py-12', ...props)
+
+const Button: FC<ButtonProps> = ({ onClick, title, props }) => {
   return (
-    <button className={button} onClick={onClick}>
+    <button className={button(props)} onClick={onClick}>
       {title}
     </button>
   )

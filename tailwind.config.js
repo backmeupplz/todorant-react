@@ -14,16 +14,62 @@ module.exports = {
           dark: '#FA6641',
           light: '#EAE100',
         },
+        orange: {
+          dark: '#FF5F13',
+          light: '#FF8A53',
+          button: '#FF9A6A',
+        },
       },
       borderRadius: {
-        avatar: '6rem',
+        md: '8px',
+        lg: '10px',
+        xl: '20px',
       },
       width: {
-        chart: '108px',
-        time: '95px',
-        glass: '107px',
+        test: '54px',
+        video: '460px',
+      },
+      height: {
+        test: '47px',
+        video: '246px',
+      },
+      fontSize: {
+        title: [
+          '28px',
+          {
+            lineHeight: '34,13px',
+          },
+        ],
+        regular: [
+          '16px',
+          {
+            lineHeight: '30px',
+          },
+        ],
+        button: [
+          '18px',
+          {
+            lineHeight: '22px',
+          },
+        ],
+      },
+      spacing: {
+        test: '-112px',
+        sdsd: '43px',
+        sm: '8px',
+        lg: '24px',
+        xl: '48px',
+        12: '12px',
+        45: '45px',
+      },
+      fontFamily: {
+        montserrat: ['Montserrat'],
       },
     },
+    gradientColorStops: (theme) => ({
+      dark: '#FF5F13',
+      light: '#FF8A53',
+    }),
     container: {
       center: true,
       padding: '2rem',

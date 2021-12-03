@@ -1,4 +1,13 @@
 {
   "title": "Frontend Template",
-  "userCount": "User count: {{count}}"
+  "userCount": "User count: {{count}}",
+  "landingShort": {
+    "headline": "Productivity systems fail.",
+    "headline2": "Todorant works.",
+    "feature1": "Focus on one task at a time",
+    "feature2": "Always add a date or a month to a task",
+    "feature3": "Complete unpleasant tasks (frogs) first",
+    "feature4": "Keep your inbox empty"
+  },
+  "signIn": "Sign in"
 }

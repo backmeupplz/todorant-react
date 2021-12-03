@@ -1,16 +1,18 @@
-import LanguageButtons from 'components/LanguageButtons'
 import LocalizationProvider from 'localization/LocalizationProvider'
-import MainBlock from 'components/MainBlock'
 import Root from 'components/Root'
+import React from 'preact/compat'
+import { Suspense } from 'react'
+const Landing = React.lazy(() => import('screens/Landing'))
 
 const App = () => {
   return (
-    <Root>
-      <LocalizationProvider>
-        <MainBlock />
-        <LanguageButtons />
-      </LocalizationProvider>
-    </Root>
+    <Suspense fallback={null}>
+      <Root>
+        <LocalizationProvider>
+          <Landing />
+        </LocalizationProvider>
+      </Root>
+    </Suspense>
   )
 }
 

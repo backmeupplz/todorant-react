@@ -7574,6 +7574,7 @@ __metadata:
     postcss: ^7
     preact: ^10.5.15
     prettier: ^2.4.1
+    react-lite-youtube-embed: ^2.1.0
     react-scripts: ^4.0.3
     rollup-plugin-visualizer: ^5.5.2
     tailwindcss: "npm:@tailwindcss/postcss7-compat@^2"
@@ -13129,6 +13130,16 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
+  languageName: node
+  linkType: hard
+
+"react-lite-youtube-embed@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "react-lite-youtube-embed@npm:2.1.0"
+  peerDependencies:
+    react: ">=16.0.8"
+    react-dom: ">=16.0.8"
+  checksum: e5874d87db8f0e960007fee989944d88bac87a19b8ecef75b0587fa9160a833c332042287312c62b049f12eff89610bbcc45a2da11805bb1d6ee9c79430036e3
   languageName: node
   linkType: hard
 
