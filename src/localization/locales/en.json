@@ -7,7 +7,11 @@
     "feature1": "Focus on one task at a time",
     "feature2": "Always add a date or a month to a task",
     "feature3": "Complete unpleasant tasks (frogs) first",
-    "feature4": "Keep your inbox empty"
+    "feature4": "Keep your inbox empty",
+    "differenceTitle": "What's the difference?",
+    "differenceText1": "All other productivity apps focus on storing, organizing and automating endless lists of tasks. Todorant focuses on the only thing that matters: it makes you complete the tasks.",
+    "differenceText2": "Todorant uses a carefully crafted set of limits and praise to punish bad behaviour and support good habits. It affects the primitive part of the brain to make it crave completing todos like people crave sugar.",
+    "differenceText3": "I've read and tried 20+ productivity books and methodologies. When all of them failed one by one I combined their components and simplified the result. This is how Todorant was created."
   },
   "signIn": "Sign in"
 }

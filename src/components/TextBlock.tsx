@@ -2,18 +2,18 @@ import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
 import { FC } from 'react'
 
-const block = classnames('flex-col')
+const block = classnames('flex', 'flex-col', 'justify-between')
 
 const title = classnames(
   'items-start',
-  'text-title',
+  'text-xl',
   'font-extrabold',
   'font-montserrat',
   'text-white'
 )
 const text = classnames(
   'items-start',
-  'text-regular',
+  'text-base',
   'font-medium',
   'pt-lg',
   'font-montserrat',

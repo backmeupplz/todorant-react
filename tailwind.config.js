@@ -4,20 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        black: {
-          background: '#040404',
-          'background-purpose': '#12141D',
-          'perk-gradient-light': 'rgba(4, 6, 14, 0.9)',
-          'perk-gradient-dark': '#04060E',
-        },
         gold: {
           dark: '#FA6641',
           light: '#EAE100',
         },
         orange: {
-          dark: '#FF5F13',
-          light: '#FF8A53',
           button: '#FF9A6A',
+        },
+        screenshot: {
+          yellow: '#ffd166',
+          blue: '#3366ff',
         },
       },
       borderRadius: {
@@ -28,38 +24,50 @@ module.exports = {
       width: {
         test: '54px',
         video: '460px',
+        screenshot_container: '425px',
+        screenshot: '300px',
       },
       height: {
         test: '47px',
         video: '246px',
+        screenshot_container: '425px',
+        screenshot: '300px',
       },
       fontSize: {
-        title: [
-          '28px',
-          {
-            lineHeight: '34,13px',
-          },
-        ],
-        regular: [
+        base: [
           '16px',
           {
             lineHeight: '30px',
           },
         ],
-        button: [
+        lg: [
           '18px',
           {
             lineHeight: '22px',
           },
         ],
+        xl: [
+          '28px',
+          {
+            lineHeight: '34,13px',
+          },
+        ],
+        xxl: [
+          '48px',
+          {
+            lineHeight: '58,51px',
+          },
+        ],
       },
       spacing: {
-        test: '-112px',
-        sdsd: '43px',
+        video_right: '-64px',
+        video_top: '-182px',
         sm: '8px',
         lg: '24px',
-        xl: '48px',
+        xl: '30px',
+        xxl: '40px',
         12: '12px',
+        15: '15px',
         45: '45px',
       },
       fontFamily: {
@@ -67,8 +75,8 @@ module.exports = {
       },
     },
     gradientColorStops: (theme) => ({
-      dark: '#FF5F13',
-      light: '#FF8A53',
+      orange_dark: '#FF5F13',
+      orange_light: '#FF8A53',
     }),
     container: {
       center: true,

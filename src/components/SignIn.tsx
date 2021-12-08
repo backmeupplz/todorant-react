@@ -1,27 +1,12 @@
 import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
 import { FC } from 'react'
-import Button from './Button'
 import React from 'react'
-const LandingVideo = React.lazy(() => import('components/LandingVideo'))
-
-type ButtonProps = {
-  onClick: () => void
-  path: string
-  alt: string
-}
+const Button = React.lazy(() => import('components/Button'))
+const StoreButton = React.lazy(() => import('components/StoreButton'))
 
 const block = classnames('flex-col')
 const buttons = classnames('flex', 'flex-row', 'justify-end')
-const storeBtn = classnames('rounded-lg', 'w-test', 'h-test', 'ml-sm')
-
-const StoreButton: FC<ButtonProps> = ({ onClick, path, alt }) => {
-  return (
-    <button className={storeBtn} onClick={onClick}>
-      <img src={path} alt={alt} />
-    </button>
-  )
-}
 
 const SignIn: FC = () => {
   const { translate } = useLocalize()
@@ -36,7 +21,7 @@ const SignIn: FC = () => {
           props={[
             'ml-sm',
             'font-montserrat',
-            'text-button',
+            'text-lg',
             'text-white',
             'bg-orange-button',
             'font-bold',
@@ -57,7 +42,6 @@ const SignIn: FC = () => {
           alt={'Play Store logo'}
         ></StoreButton>
       </div>
-      <LandingVideo />
     </div>
   )
 }

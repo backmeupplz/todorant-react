@@ -4,13 +4,12 @@ import React from 'react'
 const TextBlock = React.lazy(() => import('components/TextBlock'))
 const SignIn = React.lazy(() => import('components/SignIn'))
 
-const box = classnames(
+const orangeBox = classnames(
   'bg-gradient-to-r',
-  'from-dark',
-  'to-light',
+  'from-orange_dark',
+  'to-orange_light',
   'rounded-xl',
   'w-full',
-  'h-80',
   'flex',
   'justify-between',
   'p-xl'
@@ -18,7 +17,7 @@ const box = classnames(
 
 const OrangeBox: FC = () => {
   return (
-    <div className={box}>
+    <div className={orangeBox}>
       <TextBlock />
       <SignIn />
     </div>
