@@ -28,7 +28,6 @@
     "@borodutch-labs/localize-react": "^1.7.4",
     "@vitejs/plugin-react": "^1.0.9",
     "preact": "^10.5.15",
-    "react-lite-youtube-embed": "^2.1.0",
     "unfetch": "^4.2.0",
     "valtio": "^1.2.6"
   },

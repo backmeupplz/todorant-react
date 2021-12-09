@@ -1,21 +1,41 @@
 import { FC } from 'react'
-import { classnames, TArg } from 'classnames/tailwind'
+import { classnames } from 'classnames/tailwind'
 
 type ButtonProps = {
   onClick: () => void
-  title: string
-  props: TArg[]
 }
 
-const button = (props: TArg[] = []) =>
-  classnames('rounded-lg', 'px-45', 'py-12', ...props)
+const signInBtn = classnames(
+  'rounded-lg',
+  'px-45',
+  'py-12',
+  'ml-sm',
+  'font-BodyText',
+  'text-lg',
+  'text-white',
+  'bg-signInButton',
+  'font-bold'
+)
+const storeBtn = classnames('rounded-lg', 'w-storeBtn', 'h-storeBtn', 'ml-sm')
 
-const Button: FC<ButtonProps> = ({ onClick, title, props }) => {
+export const SignInButton: FC<ButtonProps & { title: string }> = ({
+  onClick,
+  title,
+}) => {
   return (
-    <button className={button(props)} onClick={onClick}>
+    <button className={signInBtn} onClick={onClick}>
       {title}
     </button>
   )
 }
-
-export default Button
+export const StoreButton: FC<ButtonProps & { path: string; alt: string }> = ({
+  onClick,
+  path,
+  alt,
+}) => {
+  return (
+    <button className={storeBtn} onClick={onClick}>
+      <img src={path} alt={alt} />
+    </button>
+  )
+}

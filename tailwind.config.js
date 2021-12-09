@@ -4,13 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gold: {
-          dark: '#FA6641',
-          light: '#EAE100',
-        },
-        orange: {
-          button: '#FF9A6A',
-        },
+        signInButton: '#FF9A6A',
         screenshot: {
           yellow: '#ffd166',
           blue: '#3366ff',
@@ -20,18 +14,19 @@ module.exports = {
         md: '8px',
         lg: '10px',
         xl: '20px',
+        xxl: '64px',
       },
       width: {
-        test: '54px',
-        video: '460px',
-        screenshot_container: '425px',
+        storeBtn: '54px',
+        video: '437px',
+        screenshotContainer: '384px',
         screenshot: '300px',
       },
       height: {
-        test: '47px',
+        storeBtn: '47px',
         video: '246px',
-        screenshot_container: '425px',
-        screenshot: '300px',
+        screenshotContainer: '425px',
+        screenshot: '607px',
       },
       fontSize: {
         base: [
@@ -60,23 +55,33 @@ module.exports = {
         ],
       },
       spacing: {
-        video_right: '-64px',
-        video_top: '-182px',
+        videoTop: '-182px',
         sm: '8px',
         lg: '24px',
         xl: '30px',
         xxl: '40px',
         12: '12px',
         15: '15px',
+        22: '22px',
         45: '45px',
+        64: '64px',
       },
       fontFamily: {
-        montserrat: ['Montserrat'],
+        BodyText: ['Montserrat'],
+      },
+      boxShadow: {
+        landingVideo: '0px 5px 40px rgba(0, 0, 0, 0.1)',
+      },
+      rotate: {
+        screenshotYellow: '-10deg',
+        screenshotBlue: '10deg',
       },
     },
-    gradientColorStops: (theme) => ({
-      orange_dark: '#FF5F13',
-      orange_light: '#FF8A53',
+    gradientColorStops: () => ({
+      orangeBoxGradient: {
+        primary: '#FF5F13',
+        secondary: '#FF8A53',
+      },
     }),
     container: {
       center: true,

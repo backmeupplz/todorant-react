@@ -1,15 +1,14 @@
 import { classnames } from 'classnames/tailwind'
-import { FC } from 'react'
 
 const frame = classnames(
   'w-video',
   'h-video',
   'rounded-md',
-  'self-end',
-  'mr-video_right',
-  'mt-video_top'
+  'mt-videoTop',
+  'shadow-landingVideo'
 )
-const LandingVideo: FC = () => {
+
+const Video = () => {
   return (
     <iframe
       title="How to use Todorant"
@@ -19,4 +18,4 @@ const LandingVideo: FC = () => {
   )
 }
 
-export default LandingVideo
+export default Video
