@@ -1,11 +1,10 @@
 import { classnames } from 'classnames/tailwind'
-import React from 'react'
-
-const OrangeBox = React.lazy(() => import('components/Landing/OrangeBox'))
-const Video = React.lazy(() => import('components/Landing/Video'))
-const TodorantDifference = React.lazy(
-  () => import('components/Landing/TodorantDifference')
-)
+import OrangeBox from 'components/Landing/OrangeBox'
+import Video from 'components/Landing/Video'
+import Difference from 'components/Landing/Difference'
+import Crossplatform from 'components/Landing/Crossplatform'
+import Deal from 'components/Landing/Deal'
+import Feedback from 'components/Landing/Feedback'
 
 const container = classnames('flex', 'flex-col', 'items-end')
 
@@ -14,7 +13,10 @@ const Landing = () => {
     <div className={container}>
       <OrangeBox />
       <Video />
-      <TodorantDifference />
+      <Difference />
+      <Crossplatform />
+      <Deal />
+      <Feedback />
     </div>
   )
 }

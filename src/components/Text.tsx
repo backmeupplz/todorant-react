@@ -1,4 +1,4 @@
-import { classnames } from 'classnames/tailwind'
+import { classnames, TArg } from 'classnames/tailwind'
 import { FC } from 'react'
 
 type TextProps = {
@@ -22,20 +22,22 @@ const orangeBoxList = classnames(
   'list-inside',
   'text-white'
 )
-const todorantDifferenceTitle = classnames(
+const landingBodyTitle = classnames(
   'items-start',
   'text-xxl',
   'font-bold',
   'font-BodyText'
 )
-const todorantDifferenceText = classnames(
-  'items-start',
-  'text-lg',
-  'font-normal',
-  'font-BodyText',
-  'text-black',
-  'text-opacity-80'
-)
+const landingBodyText = (margin?: TArg) =>
+  classnames(
+    'items-start',
+    'text-lg',
+    'font-normal',
+    'font-BodyText',
+    'text-black',
+    'text-opacity-80',
+    margin
+  )
 
 export const OrangeBoxTitle: FC<TextProps> = ({ textArray }) => {
   return (
@@ -55,14 +57,17 @@ export const OrangeBoxList: FC<TextProps> = ({ textArray }) => {
     </ul>
   )
 }
-export const TodorantDifferenceTitle: FC<{ text: string }> = ({ text }) => {
-  return <p className={todorantDifferenceTitle}>{text}</p>
+export const LandingBodyTitle: FC<{ text: string }> = ({ text }) => {
+  return <p className={landingBodyTitle}>{text}</p>
 }
-export const TodorantDifferenceText: FC<TextProps> = ({ textArray }) => {
+export const LandingBodyText: FC<TextProps & { margin: TArg }> = ({
+  textArray,
+  margin,
+}) => {
   return (
     <>
       {textArray.map((text) => (
-        <p className={todorantDifferenceText}>{text}</p>
+        <p className={landingBodyText(margin)}>{text}</p>
       ))}
     </>
   )

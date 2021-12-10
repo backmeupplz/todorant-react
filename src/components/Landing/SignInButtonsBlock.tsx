@@ -20,14 +20,14 @@ const SignInButtonsBlock = () => {
           onClick={() => {
             console.log('click')
           }}
-          path="/img/appstore.svg"
+          path="appstore"
           alt="App Store logo"
         />
         <StoreButton
           onClick={() => {
             console.log('click')
           }}
-          path="/img/playstore.svg"
+          path="playstore"
           alt="Play Store logo"
         />
       </div>

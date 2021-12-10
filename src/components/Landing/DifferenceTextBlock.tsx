@@ -1,31 +1,24 @@
 import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
-import { TodorantDifferenceTitle, TodorantDifferenceText } from '../Text'
+import { LandingBodyTitle, LandingBodyText } from '../Text'
 
-const block = classnames(
-  'flex',
-  'flex-col',
-  'justify-between',
-  'max-w-xl',
-  'mt-8'
-)
+const block = classnames('flex', 'flex-col', 'max-w-xl', 'mt-8')
 
-const TodorantDifferenceTextBlock = () => {
+const DifferenceTextBlock = () => {
   const { translate } = useLocalize()
   return (
     <div className={block}>
-      <TodorantDifferenceTitle
-        text={translate('landingShort.differenceTitle')}
-      />
-      <TodorantDifferenceText
+      <LandingBodyTitle text={translate('landingShort.differenceTitle')} />
+      <LandingBodyText
         textArray={[
           translate('landingShort.differenceText1'),
           translate('landingShort.differenceText2'),
           translate('landingShort.differenceText3'),
         ]}
+        margin="mt-lg"
       />
     </div>
   )
 }
 
-export default TodorantDifferenceTextBlock
+export default DifferenceTextBlock

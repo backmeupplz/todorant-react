@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        signInButton: '#FF9A6A',
+        button: {
+          signIn: '#FF9A6A',
+          platform: 'rgba(0, 0, 0, 0.03)',
+          platformHover: 'rgba(0, 0, 0, 0.1)',
+        },
         screenshot: {
           yellow: '#ffd166',
           blue: '#3366ff',
@@ -15,20 +19,31 @@ module.exports = {
         lg: '10px',
         xl: '20px',
         xxl: '64px',
+        12: '12px',
       },
       width: {
         storeBtn: '54px',
         video: '437px',
         screenshotContainer: '384px',
         screenshot: '300px',
+        platformBtn: '100px',
+        platformLogo: '40px',
       },
       height: {
         storeBtn: '47px',
         video: '246px',
         screenshotContainer: '425px',
         screenshot: '607px',
+        platformBtn: '96px',
+        platformLogo: '40px',
       },
       fontSize: {
+        sm: [
+          '14px',
+          {
+            lineHeight: '17px',
+          },
+        ],
         base: [
           '16px',
           {
@@ -62,6 +77,7 @@ module.exports = {
         xxl: '40px',
         12: '12px',
         15: '15px',
+        16: '16px',
         22: '22px',
         45: '45px',
         64: '64px',
@@ -75,6 +91,10 @@ module.exports = {
       rotate: {
         screenshotYellow: '-10deg',
         screenshotBlue: '10deg',
+      },
+      maxWidth: {
+        crossplatformButtons: '600px',
+        platformLogo: '40px',
       },
     },
     gradientColorStops: () => ({
