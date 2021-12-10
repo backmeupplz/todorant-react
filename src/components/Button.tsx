@@ -187,5 +187,7 @@ const iconButton = classnames(
   'hover:bg-gray-100',
   'focus:outline-none',
   'text-generalButton',
-  'rounded-md'
+  'rounded-md',
+  'font-BodyText',
+  'font-medium'
 )
