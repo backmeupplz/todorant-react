@@ -1,12 +1,6 @@
 import { classnames } from 'classnames/tailwind'
-import React from 'react'
-
-const TodorantWorksTextBlock = React.lazy(
-  () => import('components/Landing/TodorantWorksTextBlock')
-)
-const SignInButtonsBlock = React.lazy(
-  () => import('components/Landing/SignInButtonsBlock')
-)
+import SignInButtonsBlock from 'components/Landing/SignInButtonsBlock'
+import TodorantWorksTextBlock from 'components/Landing/TodorantWorksTextBlock'
 
 const container = classnames('pr-64', 'flex', 'w-full')
 

@@ -9,7 +9,8 @@ const container = classnames(
   'flex',
   'w-full',
   'h-screenshotContainer',
-  'w-screenshotContainer'
+  'w-screenshotContainer',
+  'z-underModal'
 )
 const screen = classnames(
   'transform-gpu',

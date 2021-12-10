@@ -5151,6 +5151,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"country-flag-icons@npm:^1.4.19":
+  version: 1.4.19
+  resolution: "country-flag-icons@npm:1.4.19"
+  checksum: bd8eeebb207b48f88296fb879e23b57beb6eaf4f50a784d2954a6ecb65f225545a916a003af6067e144bb8392ac2823930e8dcb97da16af3c2d1f86374097c2a
+  languageName: node
+  linkType: hard
+
 "create-ecdh@npm:^4.0.0":
   version: 4.0.4
   resolution: "create-ecdh@npm:4.0.4"
@@ -7561,6 +7568,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.3.1
     "@vitejs/plugin-react": ^1.0.9
     autoprefixer: ^9
+    country-flag-icons: ^1.4.19
     cross-env: 7.0.3
     eslint: ^8.2.0
     eslint-config-prettier: ^8.3.0

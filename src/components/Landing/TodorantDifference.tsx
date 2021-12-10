@@ -1,12 +1,6 @@
 import { classnames } from 'classnames/tailwind'
-import React from 'react'
-
-const TodorantDifferenceTextBlock = React.lazy(
-  () => import('components/Landing/TodorantDifferenceTextBlock')
-)
-const TodorantDifferenceScreenshot = React.lazy(
-  () => import('components/Landing/TodorantDifferenceScreenshot')
-)
+import TodorantDifferenceScreenshot from 'components/Landing/TodorantDifferenceScreenshot'
+import TodorantDifferenceTextBlock from 'components/Landing/TodorantDifferenceTextBlock'
 
 const container = classnames('flex', 'justify-between', 'w-full', 'pr-22')
 

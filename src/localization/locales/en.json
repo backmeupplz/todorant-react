@@ -13,5 +13,12 @@
     "differenceText2": "Todorant uses a carefully crafted set of limits and praise to punish bad behaviour and support good habits. It affects the primitive part of the brain to make it crave completing todos like people crave sugar.",
     "differenceText3": "I've read and tried 20+ productivity books and methodologies. When all of them failed one by one I combined their components and simplified the result. This is how Todorant was created."
   },
-  "signIn": "Sign in"
+  "signIn": "Sign in",
+  "menu": {
+    "darkMode": {
+      "on": "Dark mode: on",
+      "off": "Dark mode: off"
+    },
+    "logout": "Logout"
+  }
 }

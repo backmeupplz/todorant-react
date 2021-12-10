@@ -3,12 +3,15 @@ module.exports = {
   purge: ['./public/index.html', './src/**/!(tailwind).{ts,tsx}'],
   theme: {
     extend: {
+      minWidth: { 24: '24px' },
+      zIndex: { underModal: '-1' },
       colors: {
         signInButton: '#FF9A6A',
         screenshot: {
           yellow: '#ffd166',
           blue: '#3366ff',
         },
+        generalButton: '#a7a9b5',
       },
       borderRadius: {
         md: '8px',
@@ -21,12 +24,14 @@ module.exports = {
         video: '437px',
         screenshotContainer: '384px',
         screenshot: '300px',
+        mediumButton: '48px',
       },
       height: {
         storeBtn: '47px',
         video: '246px',
         screenshotContainer: '425px',
         screenshot: '607px',
+        mediumButton: '48px',
       },
       fontSize: {
         base: [
@@ -60,7 +65,7 @@ module.exports = {
         lg: '24px',
         xl: '30px',
         xxl: '40px',
-        12: '12px',
+        // 12: '12px',
         15: '15px',
         22: '22px',
         45: '45px',

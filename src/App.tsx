@@ -1,18 +1,18 @@
-import LocalizationProvider from 'localization/LocalizationProvider'
-import Root from 'components/Root'
-import React from 'preact/compat'
 import { Suspense } from 'react'
-const Landing = React.lazy(() => import('screens/Landing'))
+import Landing from 'screens/Landing'
+import LocalizationProvider from 'localization/LocalizationProvider'
+import Navbar from 'components/Navbar'
+import React from 'preact/compat'
+import Root from 'components/Root'
 
 const App = () => {
   return (
-    <Suspense fallback={null}>
-      <Root>
-        <LocalizationProvider>
-          <Landing />
-        </LocalizationProvider>
-      </Root>
-    </Suspense>
+    <Root>
+      <LocalizationProvider>
+        <Navbar />
+        <Landing />
+      </LocalizationProvider>
+    </Root>
   )
 }
 
