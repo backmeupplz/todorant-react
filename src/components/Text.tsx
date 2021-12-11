@@ -36,8 +36,16 @@ const landingBodyText = (margin?: TArg) =>
     'font-BodyText',
     'text-black',
     'text-opacity-80',
+    'whitespace-pre-line',
     margin
   )
+const link = classnames(
+  'font-BodyText',
+  'text-screenshot-blue',
+  'font-semibold',
+  'text-sm',
+  'underline'
+)
 
 export const OrangeBoxTitle: FC<TextProps> = ({ textArray }) => {
   return (
@@ -60,7 +68,7 @@ export const OrangeBoxList: FC<TextProps> = ({ textArray }) => {
 export const LandingBodyTitle: FC<{ text: string }> = ({ text }) => {
   return <p className={landingBodyTitle}>{text}</p>
 }
-export const LandingBodyText: FC<TextProps & { margin: TArg }> = ({
+export const LandingBodyText: FC<TextProps & { margin?: TArg }> = ({
   textArray,
   margin,
 }) => {
@@ -70,5 +78,12 @@ export const LandingBodyText: FC<TextProps & { margin: TArg }> = ({
         <p className={landingBodyText(margin)}>{text}</p>
       ))}
     </>
+  )
+}
+export const Link: FC<{ url: string; text: string }> = ({ url, text }) => {
+  return (
+    <a href={url} target="_blank" rel="noreferrer noopener" className={link}>
+      {text}
+    </a>
   )
 }

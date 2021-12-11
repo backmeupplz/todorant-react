@@ -2,7 +2,13 @@ import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
 import { OrangeBoxTitle, OrangeBoxList } from '../Text'
 
-const block = classnames('flex', 'flex-col', 'justify-between')
+const block = classnames(
+  'flex',
+  'flex-col',
+  'justify-between',
+  'flex-wrap',
+  'max-w-todorantWorksText'
+)
 
 const TodorantWorksTextBlock = () => {
   const { translate } = useLocalize()

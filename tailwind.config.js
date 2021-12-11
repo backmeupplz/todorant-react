@@ -8,6 +8,8 @@ module.exports = {
           signIn: '#FF9A6A',
           platform: 'rgba(0, 0, 0, 0.03)',
           platformHover: 'rgba(0, 0, 0, 0.1)',
+          circle: '#868a9a',
+          circleHover: 'rgba(4, 0, 0, 0.996)',
         },
         screenshot: {
           yellow: '#ffd166',
@@ -28,6 +30,9 @@ module.exports = {
         screenshot: '300px',
         platformBtn: '100px',
         platformLogo: '40px',
+        signInBtn: '160px',
+        avatar: '48px',
+        circleBtn: '8px',
       },
       height: {
         storeBtn: '47px',
@@ -36,6 +41,9 @@ module.exports = {
         screenshot: '607px',
         platformBtn: '96px',
         platformLogo: '40px',
+        signInBtn: '47px',
+        avatar: '48px',
+        circleBtn: '8px',
       },
       fontSize: {
         sm: [
@@ -95,6 +103,8 @@ module.exports = {
       maxWidth: {
         crossplatformButtons: '600px',
         platformLogo: '40px',
+        todorantWorksText: '60%',
+        reviewText: '85%',
       },
     },
     gradientColorStops: () => ({

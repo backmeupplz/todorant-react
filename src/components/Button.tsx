@@ -1,5 +1,7 @@
 import { FC } from 'react'
 import { classnames } from 'classnames/tailwind'
+import LeftArrow from './icons/ChevronLeft'
+import RightArrow from './icons/ChevronRight'
 
 type ButtonProps = {
   onClick: () => void
@@ -20,7 +22,9 @@ const signInBtn = classnames(
   'text-lg',
   'text-white',
   'bg-button-signIn',
-  'font-bold'
+  'font-bold',
+  'w-signInBtn',
+  'h-signInBtn'
 )
 const storeBtn = classnames('rounded-lg', 'w-storeBtn', 'h-storeBtn', 'ml-sm')
 const platformBtn = classnames(
@@ -49,6 +53,25 @@ const platformTitle = classnames(
   'text-sm',
   'mt-sm',
   'font-BodyText'
+)
+const arrowBtn = classnames(
+  'rounded-full',
+  'bg-button-platform',
+  'hover:bg-button-platformHover',
+  'w-platformLogo',
+  'h-platformLogo',
+  'flex',
+  'justify-center',
+  'items-center'
+)
+const circleButton = classnames(
+  'rounded-full',
+  'bg-button-circle',
+  'hover:bg-button-circleHover',
+  'w-circleBtn',
+  'h-circleBtn',
+  'm-sm',
+  'opacity-30'
 )
 
 export const SignInButton: FC<ButtonProps> = ({ onClick, title }) => {
@@ -85,4 +108,23 @@ export const PlatformButton: FC<LogoButtonProps & { title: string }> = ({
       <p className={platformTitle}>{title}</p>
     </button>
   )
+}
+
+export const LeftArrowButton: FC<{ onClick: () => void }> = ({ onClick }) => {
+  return (
+    <button className={arrowBtn} onClick={onClick}>
+      <LeftArrow />
+    </button>
+  )
+}
+export const RightArrowButton: FC<{ onClick: () => void }> = ({ onClick }) => {
+  return (
+    <button className={arrowBtn} onClick={onClick}>
+      <RightArrow />
+    </button>
+  )
+}
+
+export const CircleButton: FC<{ onClick: () => void }> = ({ onClick }) => {
+  return <button className={circleButton} onClick={onClick} />
 }
