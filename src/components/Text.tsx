@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { classnames } from 'classnames/tailwind'
+import { TArg, classnames } from 'classnames/tailwind'
 
 type TextProps = {
   textArray: string[]
@@ -24,19 +24,29 @@ const orangeBoxList = classnames(
   'list-inside',
   'text-white'
 )
-const todorantDifferenceTitle = classnames(
+const landingBodyTitle = classnames(
   'items-start',
   'text-xxl',
   'font-bold',
   'font-BodyText'
 )
-const todorantDifferenceText = classnames(
-  'items-start',
-  'text-lg',
-  'font-normal',
+const landingBodyText = (margin?: TArg) =>
+  classnames(
+    'items-start',
+    'text-lg',
+    'font-normal',
+    'font-BodyText',
+    'text-black',
+    'text-opacity-80',
+    'whitespace-pre-line',
+    margin
+  )
+const link = classnames(
   'font-BodyText',
-  'text-black',
-  'text-opacity-80'
+  'text-screenshot-blue',
+  'font-semibold',
+  'text-sm',
+  'underline'
 )
 
 const modalHeaderTitle = classnames(basicText, 'font-medium', 'text-xl')
@@ -61,14 +71,17 @@ export const OrangeBoxList: FC<TextProps> = ({ textArray }) => {
     </ul>
   )
 }
-export const TodorantDifferenceTitle: FC<{ text: string }> = ({ text }) => {
-  return <p className={todorantDifferenceTitle}>{text}</p>
+export const LandingBodyTitle: FC<{ text: string }> = ({ text }) => {
+  return <p className={landingBodyTitle}>{text}</p>
 }
-export const TodorantDifferenceText: FC<TextProps> = ({ textArray }) => {
+export const LandingBodyText: FC<TextProps & { margin?: TArg }> = ({
+  textArray,
+  margin,
+}) => {
   return (
     <>
       {textArray.map((text) => (
-        <p className={todorantDifferenceText}>{text}</p>
+        <p className={landingBodyText(margin)}>{text}</p>
       ))}
     </>
   )
@@ -80,4 +93,12 @@ export const ModalHeaderTitle: FC<{ text: string }> = ({ text }) => {
 
 export const ModalText: FC<{ text?: string }> = ({ children, text }) => {
   return <div className={modalText}>{children || text}</div>
+}
+
+export const Link: FC<{ url: string; text: string }> = ({ url, text }) => {
+  return (
+    <a href={url} target="_blank" rel="noreferrer noopener" className={link}>
+      {text}
+    </a>
+  )
 }

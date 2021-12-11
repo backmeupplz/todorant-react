@@ -10,12 +10,20 @@ import { useMemo } from 'preact/hooks'
 import { useSnapshot } from 'valtio'
 import AppStore from 'stores/AppStore'
 import Language from 'models/Language'
+import LeftArrow from './icons/ChevronLeft'
 import Modal from 'components/Modal'
+import RightArrow from './icons/ChevronRight'
 import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 import useClickOutside from 'hooks/useClickOutside'
 
 type ButtonProps = {
   onClick: () => void
+  // title: string
+}
+type LogoButtonProps = {
+  onClick: () => void
+  path: string
+  alt: string
 }
 
 const signInBtn = classnames(
@@ -26,10 +34,58 @@ const signInBtn = classnames(
   'font-BodyText',
   'text-lg',
   'text-white',
-  'bg-signInButton',
-  'font-bold'
+  'bg-button-signIn',
+  'font-bold',
+  'w-signInBtn',
+  'h-signInBtn'
 )
 const storeBtn = classnames('rounded-lg', 'w-storeBtn', 'h-storeBtn', 'ml-sm')
+const platformBtn = classnames(
+  'rounded-12',
+  'w-platformBtn',
+  'h-platformBtn',
+  'm-sm',
+  'p-16',
+  'bg-button-platform',
+  'hover:bg-button-platformHover',
+  'flex',
+  'flex-col',
+  'justify-center',
+  'items-center'
+)
+const platformLogoContainer = classnames(
+  'flex',
+  'w-platformLogo',
+  'h-platformLogo',
+  'justify-center',
+  'content-center'
+)
+const platformLogo = classnames('max-w-platformLogo')
+const platformTitle = classnames(
+  'font-medium',
+  'text-sm',
+  'mt-sm',
+  'font-BodyText'
+)
+const arrowBtn = classnames(
+  'rounded-full',
+  'bg-button-platform',
+  'hover:bg-button-platformHover',
+  'w-platformLogo',
+  'h-platformLogo',
+  'flex',
+  'justify-center',
+  'items-center'
+)
+const circleButton = classnames(
+  'rounded-full',
+  'bg-button-circle',
+  'hover:bg-button-circleHover',
+  'w-circleBtn',
+  'h-circleBtn',
+  'm-sm',
+  'opacity-30'
+)
 
 const logoBtn = classnames('w-28')
 
@@ -91,14 +147,11 @@ export const SignInButton: FC<ButtonProps & { title: string }> = ({
     </button>
   )
 }
-export const StoreButton: FC<ButtonProps & { path: string; alt: string }> = ({
-  onClick,
-  path,
-  alt,
-}) => {
+
+export const StoreButton: FC<LogoButtonProps> = ({ onClick, path, alt }) => {
   return (
     <button className={storeBtn} onClick={onClick}>
-      <img src={path} alt={alt} />
+      <img src={`/img/${path}.svg`} alt={alt} />
     </button>
   )
 }
@@ -305,4 +358,42 @@ export const InfoButton = () => {
       )}
     </>
   )
+}
+export const PlatformButton: FC<LogoButtonProps & { title: string }> = ({
+  onClick,
+  path,
+  alt,
+  title,
+}) => {
+  return (
+    <button className={platformBtn} onClick={onClick}>
+      <div className={platformLogoContainer}>
+        <img
+          src={`/img/platforms/${path}.svg`}
+          alt={alt}
+          className={platformLogo}
+        />
+      </div>
+      <p className={platformTitle}>{title}</p>
+    </button>
+  )
+}
+
+export const LeftArrowButton: FC<{ onClick: () => void }> = ({ onClick }) => {
+  return (
+    <button className={arrowBtn} onClick={onClick}>
+      <LeftArrow />
+    </button>
+  )
+}
+export const RightArrowButton: FC<{ onClick: () => void }> = ({ onClick }) => {
+  return (
+    <button className={arrowBtn} onClick={onClick}>
+      <RightArrow />
+    </button>
+  )
+}
+
+export const CircleButton: FC<{ onClick: () => void }> = ({ onClick }) => {
+  return <button className={circleButton} onClick={onClick} />
 }

@@ -9,7 +9,13 @@ module.exports = {
       minWidth: { 24: '24px' },
       zIndex: { underModal: '-1' },
       colors: {
-        signInButton: '#FF9A6A',
+        button: {
+          signIn: '#FF9A6A',
+          platform: 'rgba(0, 0, 0, 0.03)',
+          platformHover: 'rgba(0, 0, 0, 0.1)',
+          circle: '#868a9a',
+          circleHover: 'rgba(4, 0, 0, 0.996)',
+        },
         screenshot: {
           yellow: '#ffd166',
           blue: '#3366ff',
@@ -23,6 +29,7 @@ module.exports = {
         lg: '10px',
         xl: '20px',
         xxl: '64px',
+        12: '12px',
       },
       width: {
         storeBtn: '54px',
@@ -31,6 +38,11 @@ module.exports = {
         screenshotMobile: '200px',
         screenshot: '300px',
         mediumButton: '48px',
+        platformBtn: '100px',
+        platformLogo: '40px',
+        signInBtn: '160px',
+        avatar: '48px',
+        circleBtn: '8px',
       },
       height: {
         storeBtn: '47px',
@@ -39,8 +51,19 @@ module.exports = {
         screenshot: '607px',
         screenshotMobile: '200px',
         mediumButton: '48px',
+        platformBtn: '96px',
+        platformLogo: '40px',
+        signInBtn: '47px',
+        avatar: '48px',
+        circleBtn: '8px',
       },
       fontSize: {
+        sm: [
+          '14px',
+          {
+            lineHeight: '17px',
+          },
+        ],
         base: [
           '16px',
           {
@@ -74,6 +97,7 @@ module.exports = {
         xxl: '40px',
         // 12: '12px',
         15: '15px',
+        16: '16px',
         22: '22px',
         45: '45px',
         64: '64px',
@@ -87,6 +111,12 @@ module.exports = {
       rotate: {
         screenshotYellow: '-10deg',
         screenshotBlue: '10deg',
+      },
+      maxWidth: {
+        crossplatformButtons: '600px',
+        platformLogo: '40px',
+        todorantWorksText: '60%',
+        reviewText: '85%',
       },
     },
     gradientColorStops: () => ({

@@ -33,7 +33,7 @@ const yellowScreen = classnames(
 )
 const frame = classnames('flex', 'absolute', 'mt-xxl')
 
-const TodorantDifferenceScreenshot = () => {
+const DifferenceScreenshot = () => {
   return (
     <div className={container}>
       <div className={blueScreen} />
@@ -43,4 +43,4 @@ const TodorantDifferenceScreenshot = () => {
   )
 }
 
-export default TodorantDifferenceScreenshot
+export default DifferenceScreenshot
