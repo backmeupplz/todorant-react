@@ -3,6 +3,9 @@ module.exports = {
   purge: ['./public/index.html', './src/**/!(tailwind).{ts,tsx}'],
   theme: {
     extend: {
+      maxHeight: {
+        'almost-full': '90%',
+      },
       minWidth: { 24: '24px' },
       zIndex: { underModal: '-1' },
       colors: {
@@ -12,6 +15,8 @@ module.exports = {
           blue: '#3366ff',
         },
         generalButton: '#a7a9b5',
+        semiTransparentBackground: 'rgba(0, 0, 0, 0.6)',
+        neutralButton: 'rgba(96, 165, 250, 0.1)',
       },
       borderRadius: {
         md: '8px',
@@ -23,6 +28,7 @@ module.exports = {
         storeBtn: '54px',
         video: '437px',
         screenshotContainer: '384px',
+        screenshotMobile: '200px',
         screenshot: '300px',
         mediumButton: '48px',
       },
@@ -31,6 +37,7 @@ module.exports = {
         video: '246px',
         screenshotContainer: '425px',
         screenshot: '607px',
+        screenshotMobile: '200px',
         mediumButton: '48px',
       },
       fontSize: {

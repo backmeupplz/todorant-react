@@ -1,6 +1,6 @@
+import { TodorantDifferenceText, TodorantDifferenceTitle } from '../Text'
 import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
-import { TodorantDifferenceTitle, TodorantDifferenceText } from '../Text'
 
 const block = classnames(
   'flex',

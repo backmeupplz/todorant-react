@@ -1,9 +1,11 @@
-import { classnames } from 'classnames/tailwind'
 import { FC } from 'react'
+import { classnames } from 'classnames/tailwind'
 
 type TextProps = {
   textArray: string[]
 }
+
+const basicText = classnames('font-BodyText')
 
 const orangeBoxTitle = classnames(
   'items-start',
@@ -37,6 +39,10 @@ const todorantDifferenceText = classnames(
   'text-opacity-80'
 )
 
+const modalHeaderTitle = classnames(basicText, 'font-medium', 'text-xl')
+
+const modalText = classnames(basicText, 'text-gray-500')
+
 export const OrangeBoxTitle: FC<TextProps> = ({ textArray }) => {
   return (
     <div className={orangeBoxTitle}>
@@ -66,4 +72,12 @@ export const TodorantDifferenceText: FC<TextProps> = ({ textArray }) => {
       ))}
     </>
   )
+}
+
+export const ModalHeaderTitle: FC<{ text: string }> = ({ text }) => {
+  return <div className={modalHeaderTitle}>{text}</div>
+}
+
+export const ModalText: FC<{ text?: string }> = ({ children, text }) => {
+  return <div className={modalText}>{children || text}</div>
 }

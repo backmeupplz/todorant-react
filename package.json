@@ -30,7 +30,8 @@
     "country-flag-icons": "^1.4.19",
     "preact": "^10.5.15",
     "unfetch": "^4.2.0",
-    "valtio": "^1.2.6"
+    "valtio": "^1.2.6",
+    "wouter": "^2.8.0-alpha.2"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.1.5",

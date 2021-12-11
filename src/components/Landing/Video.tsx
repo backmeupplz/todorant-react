@@ -1,11 +1,13 @@
 import { classnames } from 'classnames/tailwind'
 
 const frame = classnames(
-  'w-video',
-  'h-video',
+  'lg:w-video',
+  'lg:h-video',
   'rounded-md',
   'mt-videoTop',
-  'shadow-landingVideo'
+  'shadow-landingVideo',
+  'h-full',
+  'w-full'
 )
 
 const Video = () => {
