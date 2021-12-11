@@ -2,7 +2,7 @@ import { classnames } from 'classnames/tailwind'
 import SignInButtonsBlock from 'components/Landing/SignInButtonsBlock'
 import TodorantWorksTextBlock from 'components/Landing/TodorantWorksTextBlock'
 
-const container = classnames('pr-64', 'flex', 'w-full')
+const container = classnames('lg:pr-64', 'flex', 'w-full')
 
 const orangeBox = classnames(
   'bg-gradient-to-r',
@@ -12,7 +12,9 @@ const orangeBox = classnames(
   'w-full',
   'flex',
   'justify-between',
-  'p-xl'
+  'p-xl',
+  'flex-col',
+  'lg:flex-row'
 )
 
 const OrangeBox = () => {

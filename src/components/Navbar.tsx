@@ -1,4 +1,9 @@
-import { LanguageButton, LogoButton, SettingsButton } from 'components/Button'
+import {
+  InfoButton,
+  LanguageButton,
+  LogoButton,
+  SettingsButton,
+} from 'components/Button'
 import { classnames } from 'classnames/tailwind'
 
 const navbar = classnames(
@@ -19,6 +24,7 @@ export default function Navbar() {
       <LogoButton />
       <div className={navbarBtnsContaine}>
         <LanguageButton />
+        <InfoButton />
         <SettingsButton />
       </div>
     </nav>

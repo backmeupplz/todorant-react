@@ -7,14 +7,15 @@ const container = classnames(
   'relative',
   'justify-center',
   'flex',
-  'w-full',
   'h-screenshotContainer',
-  'w-screenshotContainer',
+  'w-screenshotMobile',
+  'lg:w-screenshotContainer',
   'z-underModal'
 )
 const screen = classnames(
   'transform-gpu',
-  'w-screenshot',
+  'w-screenshotMobile',
+  'lg:w-screenshot',
   'h-screenshot',
   'absolute',
   'mt-xxl',

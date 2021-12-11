@@ -2,7 +2,14 @@ import { classnames } from 'classnames/tailwind'
 import TodorantDifferenceScreenshot from 'components/Landing/TodorantDifferenceScreenshot'
 import TodorantDifferenceTextBlock from 'components/Landing/TodorantDifferenceTextBlock'
 
-const container = classnames('flex', 'justify-between', 'w-full', 'pr-22')
+const container = classnames(
+  'flex',
+  'justify-between',
+  'w-full',
+  'max-w-full',
+  'flex-col',
+  'lg:flex-row'
+)
 
 const TodorantDifference = () => {
   return (
