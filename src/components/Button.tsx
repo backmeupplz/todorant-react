@@ -235,7 +235,7 @@ export const SettingsButton = () => {
 
 const iconImage = classnames('h-6')
 
-const IconButton: FC<ButtonProps & { text?: string; img?: string }> = ({
+export const IconButton: FC<ButtonProps & { text?: string; img?: string }> = ({
   onClick,
   text,
   img,
