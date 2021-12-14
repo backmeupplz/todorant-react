@@ -40,8 +40,6 @@ const modalItems = (topPadding = true) =>
     'pt-5': topPadding,
   })
 
-const modalContentHeader = classnames('text-xl', 'font-bold', 'py-4')
-
 const modalContentBody = classnames(
   modalItems(false),
   'flex-auto',

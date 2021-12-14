@@ -248,6 +248,8 @@ export const SettingsButton = () => {
   )
 }
 
+const iconImage = classnames('h-6')
+
 const IconButton: FC<ButtonProps & { text?: string; img?: string }> = ({
   onClick,
   text,
@@ -264,7 +266,7 @@ const IconButton: FC<ButtonProps & { text?: string; img?: string }> = ({
       onClick={onClick}
     >
       {children || text}
-      {img && <img src={img} className={classnames('h-6')} />}
+      {img && <img src={img} className={iconImage} />}
     </button>
   )
 }
@@ -318,7 +320,9 @@ export const GrayButton: FC<
   )
 }
 
-const InfoRules = classnames('mb-4')
+const infoRules = classnames('mb-4')
+const infoRulesList = classnames('list-disc', 'list-inside')
+const infoFooter = classnames('flex', 'justify-end')
 export const InfoButton = () => {
   const [modalOpened, setModalOpened] = useState(false)
   const { translate } = useLocalize()
@@ -328,7 +332,7 @@ export const InfoButton = () => {
     return (
       <ModalText>
         {/* Hack to make localized array reactive. TODO: Fix internal of localize-react to make arrays reactive by default */}
-        <li className={InfoRules}>{translate(`rules.${[index]}`)}</li>
+        <li className={infoRules}>{translate(`rules.${[index]}`)}</li>
       </ModalText>
     )
   })
@@ -345,13 +349,9 @@ export const InfoButton = () => {
         <Modal
           closeModal={() => setModalOpened(false)}
           header={<ModalHeaderTitle text={translate('howto.title')} />}
-          body={
-            <ul className={classnames('list-disc', 'list-inside')}>
-              {rulesEl}
-            </ul>
-          }
+          body={<ul className={infoRulesList}>{rulesEl}</ul>}
           footer={
-            <div className={classnames('flex', 'justify-end')}>
+            <div className={infoFooter}>
               <BlueButton
                 onClick={() => setModalOpened(false)}
                 text={translate('cookie.button')}
