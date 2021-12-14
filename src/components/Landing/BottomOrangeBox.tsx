@@ -1,6 +1,6 @@
-import { useLocalize } from '@borodutch-labs/localize-react'
+import { OrangeBoxAct } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
-import { OrangeBoxAct } from '../Text'
+import { useLocalize } from '@borodutch-labs/localize-react'
 import SignInButtonsBlock from 'components/Landing/SignInButtonsBlock'
 
 const orangeBox = classnames(

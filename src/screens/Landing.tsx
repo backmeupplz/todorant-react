@@ -1,12 +1,12 @@
 import { classnames } from 'classnames/tailwind'
-import TopOrangeBox from 'components/Landing/TopOrangeBox'
-import Video from 'components/Landing/Video'
-import Difference from 'components/Landing/Difference'
+import BottomOrangeBox from 'components/Landing/BottomOrangeBox'
 import Crossplatform from 'components/Landing/Crossplatform'
 import Deal from 'components/Landing/Deal'
+import Difference from 'components/Landing/Difference'
 import Feedback from 'components/Landing/Feedback'
-import BottomOrangeBox from 'components/Landing/BottomOrangeBox'
 import PrivacyPolicy from 'components/Landing/PrivacyPolicy'
+import TopOrangeBox from 'components/Landing/TopOrangeBox'
+import Video from 'components/Landing/Video'
 
 const container = classnames('flex', 'flex-col', 'items-end')
 

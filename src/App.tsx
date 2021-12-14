@@ -1,12 +1,18 @@
-import LocalizationProvider from 'localization/LocalizationProvider'
-import Root from 'components/Root'
+import { Route } from 'wouter'
 import Landing from 'screens/Landing'
+import LocalizationProvider from 'localization/LocalizationProvider'
+import Navbar from 'components/Navbar'
+import ProtectedRoute from 'components/ProtectedRoute'
+import Root from 'components/Root'
+import Superpower from 'screens/Superpower'
 
 const App = () => {
   return (
     <Root>
       <LocalizationProvider>
-        <Landing />
+        <Navbar />
+        <Route path="/" component={Landing} />
+        <ProtectedRoute path="/superpower" component={Superpower} />
       </LocalizationProvider>
     </Root>
   )

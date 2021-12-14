@@ -5151,6 +5151,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"country-flag-icons@npm:^1.4.19":
+  version: 1.4.19
+  resolution: "country-flag-icons@npm:1.4.19"
+  checksum: bd8eeebb207b48f88296fb879e23b57beb6eaf4f50a784d2954a6ecb65f225545a916a003af6067e144bb8392ac2823930e8dcb97da16af3c2d1f86374097c2a
+  languageName: node
+  linkType: hard
+
 "create-ecdh@npm:^4.0.0":
   version: 4.0.4
   resolution: "create-ecdh@npm:4.0.4"
@@ -7561,6 +7568,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.3.1
     "@vitejs/plugin-react": ^1.0.9
     autoprefixer: ^9
+    country-flag-icons: ^1.4.19
     cross-env: 7.0.3
     eslint: ^8.2.0
     eslint-config-prettier: ^8.3.0
@@ -7583,6 +7591,7 @@ __metadata:
     valtio: ^1.2.6
     vite: ^2.6.14
     vite-tsconfig-paths: ^3.3.17
+    wouter: ^2.8.0-alpha.2
   languageName: unknown
   linkType: soft
 
@@ -16370,6 +16379,15 @@ __metadata:
   dependencies:
     microevent.ts: ~0.1.1
   checksum: 8f8607506172f44c05490f3ccf13e5c1f430eeb9b6116a405919c186b8b17add13bbb22467a0dbcd18ec7fcb080709a15738182e0003c5fbe2144721ea00f357
+  languageName: node
+  linkType: hard
+
+"wouter@npm:^2.8.0-alpha.2":
+  version: 2.8.0-alpha.2
+  resolution: "wouter@npm:2.8.0-alpha.2"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 748002712b6511ec2b93bd18966ae85ac99e66aa344b672c92f972bf4332d809d6466e831017bdf3030f4163d5cdb04a6993b27dea68993f2a3d845ed08f2b02
   languageName: node
   linkType: hard
 

@@ -1,6 +1,6 @@
+import { SignInButton, StoreButton } from 'components/Button'
 import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
-import { SignInButton, StoreButton } from '../Button'
 
 const block = classnames('flex-col')
 const buttons = classnames('flex', 'flex-row', 'justify-end')

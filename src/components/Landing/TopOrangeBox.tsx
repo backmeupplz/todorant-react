@@ -1,6 +1,7 @@
 import { classnames } from 'classnames/tailwind'
-import TodorantWorksTextBlock from 'components/Landing/TodorantWorksTextBlock'
+
 import SignInButtonsBlock from 'components/Landing/SignInButtonsBlock'
+import TodorantWorksTextBlock from 'components/Landing/TodorantWorksTextBlock'
 
 const container = classnames('pr-xxxl', 'flex', 'w-full')
 
@@ -12,6 +13,8 @@ const orangeBox = classnames(
   'w-full',
   'flex',
   'justify-between',
+  'flex-col',
+  'lg:flex-row',
   'p-topOrangeBox'
 )
 

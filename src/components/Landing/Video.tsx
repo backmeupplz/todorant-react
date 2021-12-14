@@ -5,7 +5,9 @@ const frame = classnames(
   'h-video',
   'rounded-sm',
   'mt-videoTop',
-  'shadow-landingVideo'
+  'shadow-landingVideo',
+  'h-full',
+  'w-full'
 )
 
 const Video = () => {

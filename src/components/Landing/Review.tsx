@@ -1,7 +1,7 @@
+import { FC } from 'react'
+import { LandingBodyText, Link } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
-import { LandingBodyText, Link } from 'components/Text'
-import { FC } from 'react'
 
 const container = classnames('flex', 'flex-row', 'mb-lg22')
 const text = classnames('flex', 'flex-col', 'ml-md12')

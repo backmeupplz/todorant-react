@@ -1,6 +1,6 @@
+import { LandingBodyText, LandingBodyTitle } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
-import { LandingBodyTitle, LandingBodyText } from '../Text'
 
 const block = classnames('flex', 'flex-col', 'max-w-xl', 'mt-8')
 

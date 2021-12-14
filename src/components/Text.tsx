@@ -1,9 +1,13 @@
-import { classnames, TArg } from 'classnames/tailwind'
 import { FC } from 'react'
+import { TArg, classnames } from 'classnames/tailwind'
 
 type TextProps = {
   textArray: string[]
 }
+
+const discList = classnames('list-disc', 'list-inside')
+
+const basicText = classnames('font-BodyText')
 
 const orangeBoxTitle = classnames(
   'items-start',
@@ -13,13 +17,12 @@ const orangeBoxTitle = classnames(
   'text-white'
 )
 const orangeBoxList = classnames(
+  discList,
   'items-start',
   'text-base',
   'font-medium',
   'pt-lg24',
   'font-BodyText',
-  'list-disc',
-  'list-inside',
   'text-white'
 )
 const landingBodyTitle = classnames(
@@ -62,6 +65,10 @@ const privacyPolicyText = classnames(
   'whitespace-pre-line'
 )
 
+const modalHeaderTitle = classnames(basicText, 'font-medium', 'text-xl')
+
+const modalText = classnames(basicText, 'text-gray-500')
+
 export const OrangeBoxTitle: FC<TextProps> = ({ textArray }) => {
   return (
     <div className={orangeBoxTitle}>
@@ -95,12 +102,25 @@ export const LandingBodyText: FC<TextProps & { margin?: TArg }> = ({
     </>
   )
 }
+
+export const ModalHeaderTitle: FC<{ text: string }> = ({ text }) => {
+  return <div className={modalHeaderTitle}>{text}</div>
+}
+
+export const ModalText: FC<{ text?: string }> = ({ children, text }) => {
+  return <div className={modalText}>{children || text}</div>
+}
+
 export const Link: FC<{ url: string; text: string }> = ({ url, text }) => {
   return (
     <a href={url} target="_blank" rel="noreferrer noopener" className={link}>
       {text}
     </a>
   )
+}
+
+export const DiskList: FC = ({ children }) => {
+  return <ul className={discList}>{children}</ul>
 }
 export const OrangeBoxAct: FC<{ text: string }> = ({ text }) => {
   return <p className={orangeBoxAct}>{text}</p>
