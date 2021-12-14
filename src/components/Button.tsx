@@ -148,7 +148,8 @@ export const LogoButton = () => {
   )
 }
 
-const DropDownButtn: FC<{
+const dropDownWrapper = classnames('relative', 'inline-block')
+export const DropDownButton: FC<{
   text?: string
   img?: string
   ButtonHandler: FC<any>
@@ -164,7 +165,7 @@ const DropDownButtn: FC<{
   useEscape(ref, closeModal)
 
   return (
-    <div ref={ref} className="relative inline-block">
+    <div ref={ref} className={dropDownWrapper}>
       <ButtonHandler
         {...props}
         onClick={() => {
@@ -174,9 +175,7 @@ const DropDownButtn: FC<{
 
       {showDropDown && (
         <div
-          onClick={() => {
-            setShowDropDown(!showDropDown)
-          }}
+          onClick={closeModal}
           className={dropdownContainer}
           role="menu"
           aria-orientation="vertical"
@@ -199,7 +198,7 @@ export const LanguageButton: FC = () => {
   const { language } = useSnapshot(AppStore)
 
   return (
-    <DropDownButtn text={language.toUpperCase()} ButtonHandler={IconButton}>
+    <DropDownButton text={language.toUpperCase()} ButtonHandler={IconButton}>
       {Object.keys(flags).map((k) => (
         <IconButton
           key={flags[k]}
@@ -210,7 +209,7 @@ export const LanguageButton: FC = () => {
           {getUnicodeFlagIcon(k.toUpperCase())}
         </IconButton>
       ))}
-    </DropDownButtn>
+    </DropDownButton>
   )
 }
 
@@ -219,7 +218,7 @@ export const SettingsButton = () => {
   const { translate } = useLocalize()
 
   return (
-    <DropDownButtn img={'/img/settings.svg'} ButtonHandler={IconButton}>
+    <DropDownButton img={'/img/settings.svg'} ButtonHandler={IconButton}>
       <GrayButton
         onClick={() => {
           AppStore.dark = !AppStore.dark
@@ -227,7 +226,7 @@ export const SettingsButton = () => {
       >
         {dark ? translate('menu.darkMode.on') : translate('menu.darkMode.off')}
       </GrayButton>
-    </DropDownButtn>
+    </DropDownButton>
   )
 }
 
