@@ -3,18 +3,6 @@ module.exports = {
   purge: ['./public/index.html', './src/**/!(tailwind).{ts,tsx}'],
   theme: {
     extend: {
-      maxHeight: {
-        'almost-full': '90%',
-      },
-      minWidth: { 24: '24px' },
-      zIndex: { underModal: '-1' },
-      borderRadius: {
-        md: '8px',
-        lg: '10px',
-        xl: '20px',
-        xxl: '64px',
-        12: '12px',
-      },
       maxWidth: {
         crossplatformButtons: '600px',
         platformLogo: '40px',
@@ -47,6 +35,7 @@ module.exports = {
         avatar: '48px',
         circleBtn: '8px',
       },
+      zIndex: { underModal: '-1' },
       colors: {
         button: {
           signIn: '#FF9A6A',
@@ -90,6 +79,9 @@ module.exports = {
         screenshotYellow: '-10deg',
         screenshotBlue: '10deg',
       },
+      fontFamily: {
+        BodyText: ['Montserrat'],
+      },
       fontSize: {
         sm: [
           '14px',
@@ -123,22 +115,12 @@ module.exports = {
           },
         ],
       },
-      fontFamily: {
-        BodyText: ['Montserrat'],
-      },
-      boxShadow: {
-        landingVideo: '0px 5px 40px rgba(0, 0, 0, 0.1)',
-      },
-      rotate: {
-        screenshotYellow: '-10deg',
-        screenshotBlue: '10deg',
-      },
-      gradientColorStops: () => ({
-        orangeBoxGradient: {
-          primary: '#FF5F13',
-          secondary: '#FF8A53',
-        },
-      }),
     },
+    gradientColorStops: () => ({
+      orangeBoxGradient: {
+        primary: '#FF5F13',
+        secondary: '#FF8A53',
+      },
+    }),
   },
 }

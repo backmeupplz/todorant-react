@@ -15,7 +15,6 @@ const modalWrapper = classnames(
   'inset-0',
   'z-50',
   'outline-none',
-  'focus:outline-none',
   'bg-semiTransparentBackground',
   'max-h-full',
   'p-4'

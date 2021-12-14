@@ -1,8 +1,6 @@
 import { classnames } from 'classnames/tailwind'
-
-import DifferenceTextBlock from 'components/Landing/DifferenceTextBlock'
-
 import DifferenceScreenshot from 'components/Landing/DifferenceScreenshot'
+import DifferenceTextBlock from 'components/Landing/DifferenceTextBlock'
 
 const container = classnames('flex', 'justify-between', 'w-full', 'pr-lg22')
 

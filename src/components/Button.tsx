@@ -21,6 +21,23 @@ type LogoButtonProps = {
   alt: string
 }
 
+const iconButton = classnames(
+  'flex',
+  'justify-center',
+  'items-center',
+  'w-mediumButton',
+  'h-mediumButton',
+  'hover:bg-gray-100',
+  'text-gray-700',
+  'hover:bg-gray-100',
+  'focus:outline-none',
+  'text-generalButton',
+  'rounded-md',
+  'font-BodyText',
+  'font-medium',
+  'whitespace-nowrap'
+)
+
 const signInBtn = classnames(
   'rounded-md',
   'px-signInBtn',
@@ -75,29 +92,10 @@ const circleButton = (opacity?: TArg) =>
 
 const logoBtn = classnames('w-28')
 
-const iconButton = classnames(
-  'flex',
-  'justify-center',
-  'items-center',
-  'w-mediumButton',
-  'h-mediumButton',
-  'hover:bg-gray-100',
-  'focus:outline-none',
-  'text-gray-700',
-  'hover:bg-gray-100',
-  'focus:outline-none',
-  'text-generalButton',
-  'rounded-md',
-  'font-BodyText',
-  'font-medium',
-  'whitespace-nowrap'
-)
-
 const regularButton = classnames(
   'flex',
   'justify-center',
   'items-center',
-  'focus:outline-none',
   'focus:outline-none',
   'rounded-md',
   'font-BodyText',
