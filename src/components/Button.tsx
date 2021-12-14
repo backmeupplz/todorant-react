@@ -121,25 +121,6 @@ const dropdownContainer = classnames(
   'p-2'
 )
 
-export const SignInButton: FC<ButtonProps & { title: string }> = ({
-  onClick,
-  title,
-}) => {
-  return (
-    <button className={signInBtn} onClick={onClick}>
-      {title}
-    </button>
-  )
-}
-
-export const StoreButton: FC<LogoButtonProps> = ({ onClick, path, alt }) => {
-  return (
-    <button className={storeBtn} onClick={onClick}>
-      <img src={`/img/${path}.svg`} alt={alt} />
-    </button>
-  )
-}
-
 export const LogoButton = () => {
   return (
     <button className={logoBtn}>
@@ -249,6 +230,25 @@ export const IconButton: FC<ButtonProps & { text?: string; img?: string }> = ({
     >
       {children || text}
       {img && <img src={img} className={iconImage} />}
+    </button>
+  )
+}
+
+export const SignInButton: FC<ButtonProps & { title: string }> = ({
+  onClick,
+  title,
+}) => {
+  return (
+    <button className={signInBtn} onClick={onClick}>
+      {title}
+    </button>
+  )
+}
+
+export const StoreButton: FC<LogoButtonProps> = ({ onClick, path, alt }) => {
+  return (
+    <button className={storeBtn} onClick={onClick}>
+      <img src={`/img/${path}.svg`} alt={alt} />
     </button>
   )
 }
