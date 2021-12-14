@@ -1,12 +1,10 @@
 import { classnames } from 'classnames/tailwind'
-import { useLocalize } from '@borodutch-labs/localize-react'
-import { LandingBodyText, Link } from 'components/Text'
-import {
-  CircleButton,
-  LeftArrowButton,
-  RightArrowButton,
-} from 'components/Button'
+import { IconButton } from 'components/Button'
 import { useState } from 'react'
+import LeftArrow from 'components/icons/ChevronLeft'
+import RightArrow from 'components/icons/ChevronRight'
+import CircleButtons from './CircleButtons'
+import Review from './Review'
 
 const block = classnames(
   'flex',
@@ -15,18 +13,15 @@ const block = classnames(
   'justify-between',
   'content-start'
 )
-const sdds = classnames('max-w-reviewText', 'flex', 'flex-col', 'items-center')
-const reviewContainer = classnames('flex', 'flex-row', 'mb-22')
-const text = classnames('flex', 'flex-col', 'ml-12')
-const avatar = classnames('w-avatar', 'h-avatar', 'rounded-full')
+const reviewContainer = classnames(
+  'max-w-reviewText',
+  'flex',
+  'flex-col',
+  'items-center'
+)
 
 const ReviewBlock = () => {
-  const { translate } = useLocalize()
   const [count, setCount] = useState(0)
-  const review = {
-    text: translate(`feedback.reviews.${count}.text`),
-    userName: translate(`feedback.reviews.${count}.username`),
-  }
 
   function moveLeft() {
     if (count - 1 < 0) {
@@ -45,33 +40,16 @@ const ReviewBlock = () => {
 
   return (
     <div className={block}>
-      <LeftArrowButton onClick={moveLeft} />
-      <div className={sdds}>
-        <div className={reviewContainer}>
-          <img
-            src={`/avatars/${review.userName}.webp`}
-            alt={`${review.userName} avatar`}
-            className={avatar}
-          />
-          <div className={text}>
-            <Link
-              url={`https://t.me/${review.userName}`}
-              text={`@${review.userName}`}
-            />
-            <LandingBodyText textArray={[review.text]} margin={'mt-15'} />
-          </div>
-        </div>
-        <div className={reviewContainer}>
-          {[...Array(9)].map((_, j) => (
-            <CircleButton
-              onClick={() => {
-                setCount(j)
-              }}
-            />
-          ))}
-        </div>
+      <IconButton onClick={moveLeft}>
+        <LeftArrow />
+      </IconButton>
+      <div className={reviewContainer}>
+        <Review count={count} />
+        <CircleButtons count={count} setCount={setCount} />
       </div>
-      <RightArrowButton onClick={moveRight} />
+      <IconButton onClick={moveRight}>
+        <RightArrow />
+      </IconButton>
     </div>
   )
 }

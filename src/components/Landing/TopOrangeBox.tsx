@@ -1,8 +1,9 @@
 import { classnames } from 'classnames/tailwind'
+
 import SignInButtonsBlock from 'components/Landing/SignInButtonsBlock'
 import TodorantWorksTextBlock from 'components/Landing/TodorantWorksTextBlock'
 
-const container = classnames('lg:pr-64', 'flex', 'w-full')
+const container = classnames('pr-xxxl', 'flex', 'w-full')
 
 const orangeBox = classnames(
   'bg-gradient-to-r',
@@ -12,12 +13,12 @@ const orangeBox = classnames(
   'w-full',
   'flex',
   'justify-between',
-  'p-xl',
   'flex-col',
-  'lg:flex-row'
+  'lg:flex-row',
+  'p-topOrangeBox'
 )
 
-const OrangeBox = () => {
+const TopOrangeBox = () => {
   return (
     <div className={container}>
       <div className={orangeBox}>
@@ -28,4 +29,4 @@ const OrangeBox = () => {
   )
 }
 
-export default OrangeBox
+export default TopOrangeBox

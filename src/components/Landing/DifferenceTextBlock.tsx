@@ -15,7 +15,7 @@ const DifferenceTextBlock = () => {
           translate('landingShort.differenceText2'),
           translate('landingShort.differenceText3'),
         ]}
-        margin="mt-lg"
+        margin="mt-lg24"
       />
     </div>
   )

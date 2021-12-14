@@ -1,6 +1,6 @@
 import { DiskList, ModalHeaderTitle, ModalText } from 'components/Text'
 import { FC, useRef, useState } from 'react'
-import { classnames } from 'classnames/tailwind'
+import { TArg, classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
 import { useSnapshot } from 'valtio'
 import AppStore from 'stores/AppStore'
@@ -14,7 +14,6 @@ import useEscape from 'hooks/useEscape'
 
 type ButtonProps = {
   onClick: () => void
-  // title: string
 }
 type LogoButtonProps = {
   onClick: () => void
@@ -23,9 +22,9 @@ type LogoButtonProps = {
 }
 
 const signInBtn = classnames(
-  'rounded-lg',
-  'px-45',
-  'py-12',
+  'rounded-md',
+  'px-signInBtn',
+  'py-md12',
   'ml-sm',
   'font-BodyText',
   'text-lg',
@@ -35,13 +34,13 @@ const signInBtn = classnames(
   'w-signInBtn',
   'h-signInBtn'
 )
-const storeBtn = classnames('rounded-lg', 'w-storeBtn', 'h-storeBtn', 'ml-sm')
+const storeBtn = classnames('rounded-md', 'w-storeBtn', 'h-storeBtn', 'ml-sm')
 const platformBtn = classnames(
-  'rounded-12',
+  'rounded-lg',
   'w-platformBtn',
   'h-platformBtn',
   'm-sm',
-  'p-16',
+  'p-md16',
   'bg-button-platform',
   'hover:bg-button-platformHover',
   'flex',
@@ -63,25 +62,16 @@ const platformTitle = classnames(
   'mt-sm',
   'font-BodyText'
 )
-const arrowBtn = classnames(
-  'rounded-full',
-  'bg-button-platform',
-  'hover:bg-button-platformHover',
-  'w-platformLogo',
-  'h-platformLogo',
-  'flex',
-  'justify-center',
-  'items-center'
-)
-const circleButton = classnames(
-  'rounded-full',
-  'bg-button-circle',
-  'hover:bg-button-circleHover',
-  'w-circleBtn',
-  'h-circleBtn',
-  'm-sm',
-  'opacity-30'
-)
+const circleButton = (opacity?: TArg) =>
+  classnames(
+    'rounded-full',
+    'bg-button-circle',
+    'w-circleBtn',
+    'h-circleBtn',
+    'm-sm',
+    'hover:opacity-100',
+    opacity
+  )
 
 const logoBtn = classnames('w-28')
 
@@ -377,21 +367,11 @@ export const PlatformButton: FC<LogoButtonProps & { title: string }> = ({
   )
 }
 
-export const LeftArrowButton: FC<{ onClick: () => void }> = ({ onClick }) => {
-  return (
-    <button className={arrowBtn} onClick={onClick}>
-      <LeftArrow />
-    </button>
-  )
-}
-export const RightArrowButton: FC<{ onClick: () => void }> = ({ onClick }) => {
-  return (
-    <button className={arrowBtn} onClick={onClick}>
-      <RightArrow />
-    </button>
-  )
-}
-
-export const CircleButton: FC<{ onClick: () => void }> = ({ onClick }) => {
-  return <button className={circleButton} onClick={onClick} />
+export const CircleButton: FC<{ onClick: () => void; inactive?: boolean }> = ({
+  onClick,
+  inactive,
+}) => {
+  let opacity: TArg
+  if (inactive) opacity = 'opacity-30'
+  return <button className={circleButton(opacity)} onClick={onClick} />
 }
