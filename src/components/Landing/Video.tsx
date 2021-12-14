@@ -3,7 +3,7 @@ import { classnames } from 'classnames/tailwind'
 const frame = classnames(
   'w-video',
   'h-video',
-  'rounded-md',
+  'rounded-sm',
   'mt-videoTop',
   'shadow-landingVideo'
 )

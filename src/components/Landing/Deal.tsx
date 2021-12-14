@@ -21,7 +21,7 @@ const Deal = () => {
           translate('landingShort.dealText2'),
           translate('landingShort.dealText3'),
         ]}
-        margin="mt-16"
+        margin="mt-md16"
       />
     </div>
   )

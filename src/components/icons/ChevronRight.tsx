@@ -1,4 +1,4 @@
-const LeftArrow = () => {
+const RightArrow = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,4 +13,4 @@ const LeftArrow = () => {
   )
 }
 
-export default LeftArrow
+export default RightArrow

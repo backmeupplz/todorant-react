@@ -1,11 +1,8 @@
 import { FC } from 'react'
-import { classnames } from 'classnames/tailwind'
-import LeftArrow from './icons/ChevronLeft'
-import RightArrow from './icons/ChevronRight'
+import { classnames, TArg } from 'classnames/tailwind'
 
 type ButtonProps = {
   onClick: () => void
-  title: string
 }
 type LogoButtonProps = {
   onClick: () => void
@@ -13,10 +10,28 @@ type LogoButtonProps = {
   alt: string
 }
 
+const iconButton = classnames(
+  'flex',
+  'justify-center',
+  'items-center',
+  'w-mediumButton',
+  'h-mediumButton',
+  'hover:bg-gray-100',
+  'focus:outline-none',
+  'text-gray-700',
+  'hover:bg-gray-100',
+  'focus:outline-none',
+  'text-generalButton',
+  'rounded-sm',
+  'font-BodyText',
+  'font-medium',
+  'whitespace-nowrap'
+)
+
 const signInBtn = classnames(
-  'rounded-lg',
-  'px-45',
-  'py-12',
+  'rounded-md',
+  'px-signInBtn',
+  'py-md12',
   'ml-sm',
   'font-BodyText',
   'text-lg',
@@ -26,13 +41,13 @@ const signInBtn = classnames(
   'w-signInBtn',
   'h-signInBtn'
 )
-const storeBtn = classnames('rounded-lg', 'w-storeBtn', 'h-storeBtn', 'ml-sm')
+const storeBtn = classnames('rounded-md', 'w-storeBtn', 'h-storeBtn', 'ml-sm')
 const platformBtn = classnames(
-  'rounded-12',
+  'rounded-lg',
   'w-platformBtn',
   'h-platformBtn',
   'm-sm',
-  'p-16',
+  'p-md16',
   'bg-button-platform',
   'hover:bg-button-platformHover',
   'flex',
@@ -54,27 +69,42 @@ const platformTitle = classnames(
   'mt-sm',
   'font-BodyText'
 )
-const arrowBtn = classnames(
-  'rounded-full',
-  'bg-button-platform',
-  'hover:bg-button-platformHover',
-  'w-platformLogo',
-  'h-platformLogo',
-  'flex',
-  'justify-center',
-  'items-center'
-)
-const circleButton = classnames(
-  'rounded-full',
-  'bg-button-circle',
-  'hover:bg-button-circleHover',
-  'w-circleBtn',
-  'h-circleBtn',
-  'm-sm',
-  'opacity-30'
-)
+const circleButton = (opacity?: TArg) =>
+  classnames(
+    'rounded-full',
+    'bg-button-circle',
+    'w-circleBtn',
+    'h-circleBtn',
+    'm-sm',
+    'hover:opacity-100',
+    opacity
+  )
 
-export const SignInButton: FC<ButtonProps> = ({ onClick, title }) => {
+export const IconButton: FC<ButtonProps & { text?: string; img?: string }> = ({
+  onClick,
+  text,
+  img,
+  children,
+}) => {
+  return (
+    <button
+      type="button"
+      className={iconButton}
+      id="menu-button"
+      aria-expanded="true"
+      aria-haspopup="true"
+      onClick={onClick}
+    >
+      {children || text}
+      {img && <img src={img} className={classnames('h-6')} />}
+    </button>
+  )
+}
+
+export const SignInButton: FC<ButtonProps & { title: string }> = ({
+  onClick,
+  title,
+}) => {
   return (
     <button className={signInBtn} onClick={onClick}>
       {title}
@@ -110,21 +140,11 @@ export const PlatformButton: FC<LogoButtonProps & { title: string }> = ({
   )
 }
 
-export const LeftArrowButton: FC<{ onClick: () => void }> = ({ onClick }) => {
-  return (
-    <button className={arrowBtn} onClick={onClick}>
-      <LeftArrow />
-    </button>
-  )
-}
-export const RightArrowButton: FC<{ onClick: () => void }> = ({ onClick }) => {
-  return (
-    <button className={arrowBtn} onClick={onClick}>
-      <RightArrow />
-    </button>
-  )
-}
-
-export const CircleButton: FC<{ onClick: () => void }> = ({ onClick }) => {
-  return <button className={circleButton} onClick={onClick} />
+export const CircleButton: FC<{ onClick: () => void; inactive?: boolean }> = ({
+  onClick,
+  inactive,
+}) => {
+  let opacity: TArg
+  if (inactive) opacity = 'opacity-30'
+  return <button className={circleButton(opacity)} onClick={onClick} />
 }

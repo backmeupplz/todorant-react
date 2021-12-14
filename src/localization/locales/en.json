@@ -16,7 +16,13 @@
     "dealTitle": "What's the deal?",
     "dealText1": "Todorant is free for the first 30 days and then it is $5/month. It is more expensive than competitors because it works. If you don't get $5 worth of productivity in the first 30 days of the free trial, you are welcome not to continue to use Todorant.",
     "dealText2": "No strings attached. You don't need to give us any information like a credit card at all before your trial ends. You don't even need an account if you install the mobile apps!",
-    "dealText3": "The only exception is if you signup on iOS, Apple has forced us to make you commit to a free trial before you can use the app. The way to avoid this limit is to create an account here, on the website, and then log in on the iOS app."
+    "dealText3": "The only exception is if you signup on iOS, Apple has forced us to make you commit to a free trial before you can use the app. The way to avoid this limit is to create an account here, on the website, and then log in on the iOS app.",
+    "act": "Act!",
+    "contact": [
+      "Still got questions? Contact me directly at ",
+      ". Thank you. "
+    ],
+    "privacy": "Privacy policy"
   },
   "signIn": "Sign in",
 

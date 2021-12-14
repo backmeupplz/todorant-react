@@ -1,14 +1,8 @@
 import { classnames } from 'classnames/tailwind'
-import React from 'react'
+import TodorantWorksTextBlock from 'components/Landing/TodorantWorksTextBlock'
+import SignInButtonsBlock from 'components/Landing/SignInButtonsBlock'
 
-const TodorantWorksTextBlock = React.lazy(
-  () => import('components/Landing/TodorantWorksTextBlock')
-)
-const SignInButtonsBlock = React.lazy(
-  () => import('components/Landing/SignInButtonsBlock')
-)
-
-const container = classnames('pr-64', 'flex', 'w-full')
+const container = classnames('pr-xxxl', 'flex', 'w-full')
 
 const orangeBox = classnames(
   'bg-gradient-to-r',
@@ -18,10 +12,10 @@ const orangeBox = classnames(
   'w-full',
   'flex',
   'justify-between',
-  'p-xl'
+  'p-topOrangeBox'
 )
 
-const OrangeBox = () => {
+const TopOrangeBox = () => {
   return (
     <div className={container}>
       <div className={orangeBox}>
@@ -32,4 +26,4 @@ const OrangeBox = () => {
   )
 }
 
-export default OrangeBox
+export default TopOrangeBox

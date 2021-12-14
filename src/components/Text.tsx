@@ -16,7 +16,7 @@ const orangeBoxList = classnames(
   'items-start',
   'text-base',
   'font-medium',
-  'pt-lg',
+  'pt-lg24',
   'font-BodyText',
   'list-disc',
   'list-inside',
@@ -24,7 +24,7 @@ const orangeBoxList = classnames(
 )
 const landingBodyTitle = classnames(
   'items-start',
-  'text-xxl',
+  'text-xxxl',
   'font-bold',
   'font-BodyText'
 )
@@ -45,6 +45,21 @@ const link = classnames(
   'font-semibold',
   'text-sm',
   'underline'
+)
+const orangeBoxAct = classnames(
+  'items-center',
+  'text-xxl',
+  'font-bold',
+  'font-BodyText',
+  'text-white',
+  'pb-lg24'
+)
+const privacyPolicyText = classnames(
+  'text-button-circle',
+  'text-sm',
+  'font-medium',
+  'font-BodyText',
+  'whitespace-pre-line'
 )
 
 export const OrangeBoxTitle: FC<TextProps> = ({ textArray }) => {
@@ -85,5 +100,16 @@ export const Link: FC<{ url: string; text: string }> = ({ url, text }) => {
     <a href={url} target="_blank" rel="noreferrer noopener" className={link}>
       {text}
     </a>
+  )
+}
+export const OrangeBoxAct: FC<{ text: string }> = ({ text }) => {
+  return <p className={orangeBoxAct}>{text}</p>
+}
+export const PrivacyPolicyText: FC<{ text: string }> = ({ text, children }) => {
+  return (
+    <p className={privacyPolicyText}>
+      {text}
+      {children}
+    </p>
   )
 }
