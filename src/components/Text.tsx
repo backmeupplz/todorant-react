@@ -5,6 +5,8 @@ type TextProps = {
   textArray: string[]
 }
 
+const discList = classnames('list-disc', 'list-inside')
+
 const basicText = classnames('font-BodyText')
 
 const orangeBoxTitle = classnames(
@@ -15,13 +17,12 @@ const orangeBoxTitle = classnames(
   'text-white'
 )
 const orangeBoxList = classnames(
+  discList,
   'items-start',
   'text-base',
   'font-medium',
   'pt-lg',
   'font-BodyText',
-  'list-disc',
-  'list-inside',
   'text-white'
 )
 const landingBodyTitle = classnames(
@@ -101,4 +102,8 @@ export const Link: FC<{ url: string; text: string }> = ({ url, text }) => {
       {text}
     </a>
   )
+}
+
+export const DiskList: FC = ({ children }) => {
+  return <ul className={discList}>{children}</ul>
 }

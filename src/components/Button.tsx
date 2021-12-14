@@ -1,18 +1,13 @@
-import { FC, useEffect, useRef, useState } from 'react'
-import { ModalHeaderTitle, ModalText } from 'components/Text'
-import {
-  TBackgroundColor,
-  TPseudoClasses,
-  classnames,
-} from 'classnames/tailwind'
+import { DiskList, ModalHeaderTitle, ModalText } from 'components/Text'
+import { FC, useRef, useState } from 'react'
+import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
-import { useMemo } from 'preact/hooks'
 import { useSnapshot } from 'valtio'
 import AppStore from 'stores/AppStore'
 import Language from 'models/Language'
-import LeftArrow from './icons/ChevronLeft'
+import LeftArrow from 'components/icons/ChevronLeft'
 import Modal from 'components/Modal'
-import RightArrow from './icons/ChevronRight'
+import RightArrow from 'components/icons/ChevronRight'
 import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 import useClickOutside from 'hooks/useClickOutside'
 import useEscape from 'hooks/useEscape'
@@ -321,7 +316,6 @@ export const GrayButton: FC<
 }
 
 const infoRules = classnames('mb-4')
-const infoRulesList = classnames('list-disc', 'list-inside')
 const infoFooter = classnames('flex', 'justify-end')
 export const InfoButton = () => {
   const [modalOpened, setModalOpened] = useState(false)
@@ -332,7 +326,7 @@ export const InfoButton = () => {
     return (
       <ModalText>
         {/* Hack to make localized array reactive. TODO: Fix internal of localize-react to make arrays reactive by default */}
-        <li className={infoRules}>{translate(`rules.${[index]}`)}</li>
+        <li className={infoRules}>{translate(`rules.${index}`)}</li>
       </ModalText>
     )
   })
@@ -349,7 +343,7 @@ export const InfoButton = () => {
         <Modal
           closeModal={() => setModalOpened(false)}
           header={<ModalHeaderTitle text={translate('howto.title')} />}
-          body={<ul className={infoRulesList}>{rulesEl}</ul>}
+          body={<DiskList>{rulesEl}</DiskList>}
           footer={
             <div className={infoFooter}>
               <BlueButton
