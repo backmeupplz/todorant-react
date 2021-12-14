@@ -1,6 +1,6 @@
+import { Link, PrivacyPolicyText } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
-import { Link, PrivacyPolicyText } from '../Text'
 
 const block = classnames(
   'flex',

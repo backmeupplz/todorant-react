@@ -1,10 +1,10 @@
-import { classnames } from 'classnames/tailwind'
 import { IconButton } from 'components/Button'
+import { classnames } from 'classnames/tailwind'
 import { useState } from 'react'
+import CircleButtons from 'components/Landing/CircleButtons'
 import LeftArrow from 'components/icons/ChevronLeft'
+import Review from 'components/Landing/Review'
 import RightArrow from 'components/icons/ChevronRight'
-import CircleButtons from './CircleButtons'
-import Review from './Review'
 
 const block = classnames(
   'flex',

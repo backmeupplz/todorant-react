@@ -35,6 +35,9 @@ module.exports = {
         avatar: '48px',
         circleBtn: '8px',
       },
+      maxHeight: {
+        '9/10': '90%',
+      },
       zIndex: { underModal: '-1' },
       colors: {
         button: {

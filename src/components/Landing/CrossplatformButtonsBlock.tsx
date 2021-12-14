@@ -1,5 +1,5 @@
+import { PlatformButton } from 'components/Button'
 import { classnames } from 'classnames/tailwind'
-import { PlatformButton } from '../Button'
 
 const block = classnames(
   'flex',

@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react'
+import { FC, useRef } from 'react'
 import { classnames } from 'classnames/tailwind'
 import useClickOutside from 'hooks/useClickOutside'
 import useEscape from 'hooks/useEscape'
@@ -28,7 +28,7 @@ const modalContent = classnames(
   'rounded-xl',
   'shadow-lg',
   'bg-white',
-  'max-h-almost-full',
+  'max-h-9/10',
   'flex-auto',
   'flex',
   'flex-col'

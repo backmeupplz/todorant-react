@@ -1,6 +1,6 @@
-import { useLocalize } from '@borodutch-labs/localize-react'
+import { LandingBodyText, LandingBodyTitle } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
-import { LandingBodyTitle, LandingBodyText } from '../Text'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 const container = classnames(
   'flex',

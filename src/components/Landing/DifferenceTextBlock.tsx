@@ -1,4 +1,4 @@
-import { LandingBodyText, LandingBodyTitle } from '../Text'
+import { LandingBodyText, LandingBodyTitle } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
 
