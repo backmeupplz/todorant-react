@@ -15,6 +15,7 @@ import Modal from 'components/Modal'
 import RightArrow from './icons/ChevronRight'
 import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 import useClickOutside from 'hooks/useClickOutside'
+import useEscape from 'hooks/useEscape'
 
 type ButtonProps = {
   onClick: () => void
@@ -169,11 +170,15 @@ const DropDownButtn: FC<{
   img?: string
   ButtonHandler: FC<any>
 }> = ({ children, ButtonHandler, ...props }) => {
-  const ref = useRef<HTMLDivElement | null>(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   const [showDropDown, setShowDropDown] = useState(false)
 
-  useClickOutside(ref, () => setShowDropDown(false))
+  const closeModal = () => setShowDropDown(false)
+
+  useClickOutside(ref, closeModal)
+
+  useEscape(ref, closeModal)
 
   return (
     <div ref={ref} className="relative inline-block">
@@ -186,6 +191,9 @@ const DropDownButtn: FC<{
 
       {showDropDown && (
         <div
+          onClick={() => {
+            setShowDropDown(!showDropDown)
+          }}
           className={dropdownContainer}
           role="menu"
           aria-orientation="vertical"
@@ -229,13 +237,13 @@ export const SettingsButton = () => {
 
   return (
     <DropDownButtn img={'/img/settings.svg'} ButtonHandler={IconButton}>
-      <Button
+      <GrayButton
         onClick={() => {
           AppStore.dark = !AppStore.dark
         }}
       >
         {dark ? translate('menu.darkMode.on') : translate('menu.darkMode.off')}
-      </Button>
+      </GrayButton>
     </DropDownButtn>
   )
 }
@@ -257,28 +265,6 @@ const IconButton: FC<ButtonProps & { text?: string; img?: string }> = ({
     >
       {children || text}
       {img && <img src={img} className={classnames('h-6')} />}
-    </button>
-  )
-}
-
-const Button: FC<
-  ButtonProps & {
-    text?: string
-    backgroundColor?: TPseudoClasses
-  }
-> = ({ onClick, text, children, backgroundColor }) => {
-  const regularButtonWithBgColor = classnames(regularButton)
-
-  return (
-    <button
-      type="button"
-      className={regularButtonWithBgColor}
-      id="menu-button"
-      aria-expanded="true"
-      aria-haspopup="true"
-      onClick={onClick}
-    >
-      {children || text}
     </button>
   )
 }
@@ -308,22 +294,44 @@ export const BlueButton: FC<
   )
 }
 
+const grayButton = classnames(
+  regularButton,
+  'text-gray-500',
+  'hover:bg-gray-100'
+)
+export const GrayButton: FC<
+  ButtonProps & {
+    text?: string
+  }
+> = ({ onClick, text, children }) => {
+  return (
+    <button
+      type="button"
+      className={grayButton}
+      id="menu-button"
+      aria-expanded="true"
+      aria-haspopup="true"
+      onClick={onClick}
+    >
+      {children || text}
+    </button>
+  )
+}
+
+const InfoRules = classnames('mb-4')
 export const InfoButton = () => {
   const [modalOpened, setModalOpened] = useState(false)
   const { translate } = useLocalize()
 
-  const ruleClassnames = classnames('mb-4')
-
   const rules = translate('rules') as unknown as string[]
-  const rulesEl = useMemo(() => {
-    return rules.map((rule) => {
-      return (
-        <ModalText>
-          <li className={ruleClassnames}>{rule}</li>
-        </ModalText>
-      )
-    })
-  }, [rules, ruleClassnames])
+  const rulesEl = rules.map((_, index) => {
+    return (
+      <ModalText>
+        {/* Hack to make localized array reactive. TODO: Fix internal of localize-react to make arrays reactive by default */}
+        <li className={InfoRules}>{translate(`rules.${[index]}`)}</li>
+      </ModalText>
+    )
+  })
 
   return (
     <>
@@ -343,11 +351,7 @@ export const InfoButton = () => {
             </ul>
           }
           footer={
-            <div className={classnames('flex', 'justify-between')}>
-              <BlueButton
-                onClick={() => setModalOpened(false)}
-                text={translate('introButton')}
-              />
+            <div className={classnames('flex', 'justify-end')}>
               <BlueButton
                 onClick={() => setModalOpened(false)}
                 text={translate('cookie.button')}
