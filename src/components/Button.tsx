@@ -1,16 +1,14 @@
 import { DiskList, ModalHeaderTitle, ModalText } from 'components/Text'
 import { FC, useRef, useState } from 'react'
 import { TArg, classnames } from 'classnames/tailwind'
-import { useLocalize } from '@borodutch-labs/localize-react'
 import { useSnapshot } from 'valtio'
 import AppStore from 'stores/AppStore'
 import Language from 'models/Language'
-import LeftArrow from 'components/icons/ChevronLeft'
 import Modal from 'components/Modal'
-import RightArrow from 'components/icons/ChevronRight'
 import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 import useClickOutside from 'hooks/useClickOutside'
 import useEscape from 'hooks/useEscape'
+import useI18N from 'hooks/useI18N'
 
 type ButtonProps = {
   onClick: () => void
@@ -177,13 +175,15 @@ const flags = {
 
 export const LanguageButton: FC = () => {
   const { language } = useSnapshot(AppStore)
+  const { setLocale } = useI18N()
 
   return (
     <DropDownButton text={language.toUpperCase()} ButtonHandler={IconButton}>
       {Object.keys(flags).map((k) => (
         <IconButton
           key={flags[k]}
-          onClick={() => {
+          onClick={async () => {
+            await setLocale(flags[k])
             AppStore.language = flags[k]
           }}
         >
@@ -196,7 +196,7 @@ export const LanguageButton: FC = () => {
 
 export const SettingsButton = () => {
   const { dark } = useSnapshot(AppStore)
-  const { translate } = useLocalize()
+  const { LL } = useI18N()
 
   return (
     <DropDownButton img={'/img/settings.svg'} ButtonHandler={IconButton}>
@@ -205,7 +205,7 @@ export const SettingsButton = () => {
           AppStore.dark = !AppStore.dark
         }}
       >
-        {dark ? translate('menu.darkMode.on') : translate('menu.darkMode.off')}
+        {dark ? LL.menu.darkMode.on() : LL.menu.darkMode.off()}
       </GrayButton>
     </DropDownButton>
   )
@@ -234,14 +234,26 @@ export const IconButton: FC<ButtonProps & { text?: string; img?: string }> = ({
   )
 }
 
-export const SignInButton: FC<ButtonProps & { title: string }> = ({
-  onClick,
-  title,
-}) => {
+export const SignInButton: FC<{ title: string }> = ({ title }) => {
+  const [modalOpened, setModalOpened] = useState(false)
   return (
-    <button className={signInBtn} onClick={onClick}>
-      {title}
-    </button>
+    <>
+      <button
+        className={signInBtn}
+        onClick={() => {
+          setModalOpened(!modalOpened)
+        }}
+      >
+        {title}
+      </button>
+      {modalOpened && (
+        <Modal
+          closeModal={() => setModalOpened(false)}
+          header={<ModalHeaderTitle text={title} />}
+          body={<div>{title}</div>}
+        />
+      )}
+    </>
   )
 }
 
@@ -306,14 +318,15 @@ const infoRules = classnames('mb-4')
 const infoFooter = classnames('flex', 'justify-end')
 export const InfoButton = () => {
   const [modalOpened, setModalOpened] = useState(false)
-  const { translate } = useLocalize()
+  const { LL } = useI18N()
 
-  const rules = translate('rules') as unknown as string[]
-  const rulesEl = rules.map((_, index) => {
+  const amountOfRules = [...Array(17)]
+  const rulesEl = amountOfRules.map((_, index) => {
     return (
       <ModalText>
-        {/* Hack to make localized array reactive. TODO: Fix internal of localize-react to make arrays reactive by default */}
-        <li className={infoRules}>{translate(`rules.${index}`)}</li>
+        <li className={infoRules}>
+          {LL.rules[`${index}` as keyof typeof LL.rules]()}
+        </li>
       </ModalText>
     )
   })
@@ -329,13 +342,13 @@ export const InfoButton = () => {
       {modalOpened && (
         <Modal
           closeModal={() => setModalOpened(false)}
-          header={<ModalHeaderTitle text={translate('howto.title')} />}
+          header={<ModalHeaderTitle text={LL.howto.title()} />}
           body={<DiskList>{rulesEl}</DiskList>}
           footer={
             <div className={infoFooter}>
               <BlueButton
                 onClick={() => setModalOpened(false)}
-                text={translate('cookie.button')}
+                text={LL.cookie.button()}
               />
             </div>
           }

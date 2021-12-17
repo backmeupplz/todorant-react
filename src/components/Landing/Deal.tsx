@@ -1,6 +1,7 @@
 import { LandingBodyText, LandingBodyTitle } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
-import { useLocalize } from '@borodutch-labs/localize-react'
+
+import useI18N from 'hooks/useI18N'
 
 const container = classnames(
   'flex',
@@ -11,15 +12,15 @@ const container = classnames(
 )
 
 const Deal = () => {
-  const { translate } = useLocalize()
+  const { LL } = useI18N()
   return (
     <div className={container}>
-      <LandingBodyTitle text={translate('landingShort.dealTitle')} />
+      <LandingBodyTitle text={LL.landingShort.dealTitle()} />
       <LandingBodyText
         textArray={[
-          translate('landingShort.dealText1'),
-          translate('landingShort.dealText2'),
-          translate('landingShort.dealText3'),
+          LL.landingShort.dealText1(),
+          LL.landingShort.dealText2(),
+          LL.landingShort.dealText3(),
         ]}
         margin="mt-md16"
       />

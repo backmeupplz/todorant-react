@@ -1,17 +1,22 @@
 import { FC } from 'react'
 import { LandingBodyText, Link } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
-import { useLocalize } from '@borodutch-labs/localize-react'
+import useI18N from 'hooks/useI18N'
 
 const container = classnames('flex', 'flex-row', 'mb-lg22')
 const text = classnames('flex', 'flex-col', 'ml-md12')
 const avatar = classnames('w-avatar', 'h-avatar', 'rounded-full')
 
 const Review: FC<{ count: number }> = ({ count }) => {
-  const { translate } = useLocalize()
+  const { LL } = useI18N()
   const review = {
-    text: translate(`feedback.reviews.${count}.text`),
-    userName: translate(`feedback.reviews.${count}.username`),
+    text: LL.feedback.reviews[
+      `${count}` as keyof typeof LL.feedback.reviews
+    ].text(),
+    userName:
+      LL.feedback.reviews[
+        `${count}` as keyof typeof LL.feedback.reviews
+      ].username(),
   }
 
   return (

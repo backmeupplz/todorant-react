@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { LocalizedString } from 'typesafe-i18n'
 import { TArg, classnames } from 'classnames/tailwind'
 
 type TextProps = {
@@ -125,7 +126,10 @@ export const DiskList: FC = ({ children }) => {
 export const OrangeBoxAct: FC<{ text: string }> = ({ text }) => {
   return <p className={orangeBoxAct}>{text}</p>
 }
-export const PrivacyPolicyText: FC<{ text: string }> = ({ text, children }) => {
+export const PrivacyPolicyText: FC<{ text: LocalizedString }> = ({
+  text,
+  children,
+}) => {
   return (
     <p className={privacyPolicyText}>
       {text}

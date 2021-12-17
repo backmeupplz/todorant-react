@@ -10,7 +10,8 @@
     "generate-css-types": "tailwindcss-classnames -o src/classnames/tailwind.ts && prettier --write src/classnames/tailwind.ts",
     "prestart": "yarn generate-css-types",
     "prebuild": "yarn generate-css-types",
-    "update": "yarn build && git add . && git commit -m 'update' && git push"
+    "update": "yarn build && git add . && git commit -m 'update' && git push",
+    "typesafe-i18n": "typesafe-i18n --no-watch && prettier --write src/i18n/*.ts*"
   },
   "browserslist": {
     "production": [
@@ -25,10 +26,10 @@
     ]
   },
   "dependencies": {
-    "@borodutch-labs/localize-react": "^1.7.4",
     "@vitejs/plugin-react": "^1.0.9",
     "country-flag-icons": "^1.4.19",
     "preact": "^10.5.15",
+    "typesafe-i18n": "^2.56.0",
     "unfetch": "^4.2.0",
     "valtio": "^1.2.6",
     "wouter": "^2.8.0-alpha.2"

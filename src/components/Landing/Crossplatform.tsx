@@ -1,7 +1,8 @@
 import { LandingBodyTitle } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
-import { useLocalize } from '@borodutch-labs/localize-react'
+
 import CrossplatformButtonsBlock from 'components/Landing/CrossplatformButtonsBlock'
+import useI18N from 'hooks/useI18N'
 
 const container = classnames(
   'flex',
@@ -9,15 +10,14 @@ const container = classnames(
   'justify-start',
   'w-full',
   'mt-xxl',
-  'max-w-full',
-  'break-all'
+  'max-w-full'
 )
 
 const Crossplatform = () => {
-  const { translate } = useLocalize()
+  const { LL } = useI18N()
   return (
     <div className={container}>
-      <LandingBodyTitle text={translate('landingShort.crossplatform')} />
+      <LandingBodyTitle text={LL.landingShort.crossplatform()} />
       <CrossplatformButtonsBlock />
     </div>
   )

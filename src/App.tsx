@@ -1,19 +1,20 @@
 import { Route } from 'wouter'
+import AppStore from 'stores/AppStore'
 import Landing from 'screens/Landing'
-import LocalizationProvider from 'localization/LocalizationProvider'
 import Navbar from 'components/Navbar'
 import ProtectedRoute from 'components/ProtectedRoute'
 import Root from 'components/Root'
 import Superpower from 'screens/Superpower'
+import TypesafeI18n from 'i18n/i18n-react'
 
 const App = () => {
   return (
     <Root>
-      <LocalizationProvider>
+      <TypesafeI18n initialLocale={AppStore.language}>
         <Navbar />
         <Route path="/" component={Landing} />
         <ProtectedRoute path="/superpower" component={Superpower} />
-      </LocalizationProvider>
+      </TypesafeI18n>
     </Root>
   )
 }
