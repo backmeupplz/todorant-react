@@ -108,14 +108,14 @@ module.exports = {
         xl: [
           '28px',
           {
-            lineHeight: '34,13px',
+            lineHeight: '34.13px',
           },
         ],
         xxl: ['48px', { lineHeight: '30px' }],
         xxxl: [
           '48px',
           {
-            lineHeight: '58,51px',
+            lineHeight: '58.51px',
           },
         ],
         bodyTitleMobile: ['24px', { lineHeight: '28px' }],
