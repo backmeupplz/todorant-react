@@ -10,19 +10,19 @@ const navbar = classnames(
   'sticky',
   'flex',
   'justify-between',
-  'p-3',
+  'lg:p-3',
   'font-BodyText',
   'top-0',
   'bg-white'
 )
 
-const navbarBtnsContaine = classnames('items-center', 'flex')
+const navbarBtnsContainer = classnames('items-center', 'flex')
 
 export default function Navbar() {
   return (
     <nav className={navbar}>
       <LogoButton />
-      <div className={navbarBtnsContaine}>
+      <div className={navbarBtnsContainer}>
         <LanguageButton />
         <InfoButton />
         <SettingsButton />

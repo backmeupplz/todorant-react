@@ -16,12 +16,13 @@ const PrivacyPolicy = () => {
   const { LL } = useI18N()
   return (
     <div className={block}>
-      <PrivacyPolicyText text={LL.landingShort.contact[0]()}>
-        <Link url="mailto:n@borodutch.com" text="n@borodutch.com" />
-      </PrivacyPolicyText>
-      <PrivacyPolicyText text={LL.landingShort.contact[1]()}>
-        <Link url="" text={LL.landingShort.privacy()} />
-      </PrivacyPolicyText>
+      <PrivacyPolicyText
+        text={[LL.landingShort.contact[0](), LL.landingShort.contact[1]()]}
+        links={[
+          <Link url="mailto:n@borodutch.com" text="n@borodutch.com" />,
+          <Link url="" text={LL.landingShort.privacy()} />,
+        ]}
+      />
     </div>
   )
 }

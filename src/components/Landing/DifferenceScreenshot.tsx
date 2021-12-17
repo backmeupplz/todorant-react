@@ -8,7 +8,7 @@ const container = classnames(
   'justify-center',
   'flex',
   'h-screenshotContainer',
-  'w-screenshotMobile',
+  'w-screenshotContainer',
   'lg:w-screenshotContainer',
   'z-underModal'
 )
@@ -31,7 +31,13 @@ const yellowScreen = classnames(
   'rotate-screenshotYellow',
   screen
 )
-const frame = classnames('flex', 'absolute', 'mt-xxl')
+const frame = classnames(
+  'flex',
+  'absolute',
+  'mt-xxl',
+  'lg:w-screenshot',
+  'w-screenshotMobile'
+)
 
 const DifferenceScreenshot = () => {
   return (

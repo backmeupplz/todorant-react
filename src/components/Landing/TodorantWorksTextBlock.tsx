@@ -7,7 +7,9 @@ const block = classnames(
   'flex-col',
   'justify-between',
   'flex-wrap',
-  'max-w-todorantWorksText'
+  'lg:max-w-todorantWorksText',
+  'mb-md16',
+  'lg:mb-0'
 )
 
 const TodorantWorksTextBlock = () => {

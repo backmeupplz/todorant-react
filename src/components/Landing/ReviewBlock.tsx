@@ -11,7 +11,8 @@ const block = classnames(
   'flex-row',
   'mt-8',
   'justify-between',
-  'content-start'
+  'lg:items-start',
+  'items-end'
 )
 const reviewContainer = classnames(
   'max-w-reviewText',

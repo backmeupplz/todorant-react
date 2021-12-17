@@ -5,6 +5,10 @@ import { TArg, classnames } from 'classnames/tailwind'
 type TextProps = {
   textArray: string[]
 }
+type PrivacyPolicy = {
+  text: LocalizedString[]
+  links: React.ReactNode[]
+}
 
 const discList = classnames('list-disc', 'list-inside')
 
@@ -28,7 +32,8 @@ const orangeBoxList = classnames(
 )
 const landingBodyTitle = classnames(
   'items-start',
-  'text-xxxl',
+  'text-bodyTitleMobile',
+  'lg:text-xxxl',
   'font-bold',
   'font-BodyText'
 )
@@ -52,7 +57,8 @@ const link = classnames(
 )
 const orangeBoxAct = classnames(
   'items-center',
-  'text-xxl',
+  'lg:text-xxl',
+  'text-actMobile',
   'font-bold',
   'font-BodyText',
   'text-white',
@@ -126,14 +132,14 @@ export const DiskList: FC = ({ children }) => {
 export const OrangeBoxAct: FC<{ text: string }> = ({ text }) => {
   return <p className={orangeBoxAct}>{text}</p>
 }
-export const PrivacyPolicyText: FC<{ text: LocalizedString }> = ({
-  text,
-  children,
-}) => {
+
+export const PrivacyPolicyText: FC<PrivacyPolicy> = ({ text, links }) => {
   return (
-    <p className={privacyPolicyText}>
-      {text}
-      {children}
-    </p>
+    <span className={privacyPolicyText}>
+      {text[0]}
+      {links[0]}
+      {text[1]}
+      {links[1]}
+    </span>
   )
 }

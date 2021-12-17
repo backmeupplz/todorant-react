@@ -2,7 +2,15 @@ import { classnames } from 'classnames/tailwind'
 import DifferenceScreenshot from 'components/Landing/DifferenceScreenshot'
 import DifferenceTextBlock from 'components/Landing/DifferenceTextBlock'
 
-const container = classnames('flex', 'justify-between', 'w-full', 'pr-lg22')
+const container = classnames(
+  'flex',
+  'justify-between',
+  'w-full',
+  'pr-lg22',
+  'flex-col',
+  'lg:flex-row',
+  'items-center'
+)
 
 const Difference = () => {
   return (

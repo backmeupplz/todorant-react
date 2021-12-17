@@ -63,6 +63,7 @@ module.exports = {
       },
       spacing: {
         videoTop: '-182px',
+        mobileVideoTop: '-40px',
         reviewText: '15px',
         topOrangeBox: '30px',
         signInBtn: '45px',
@@ -117,6 +118,8 @@ module.exports = {
             lineHeight: '58,51px',
           },
         ],
+        bodyTitleMobile: ['24px', { lineHeight: '28px' }],
+        actMobile: ['24px', { lineHeight: '30px' }],
       },
     },
     gradientColorStops: () => ({
