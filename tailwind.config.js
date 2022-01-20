@@ -24,11 +24,10 @@ module.exports = {
       },
       zIndex: { underModal: '-1' },
       colors: {
+        mainBackground: 'var(--main-background)',
+        mainText: 'var(--main-text)',
         button: {
           signIn: '#FF9A6A',
-          platform: 'rgba(0, 0, 0, 0.03)',
-          platformHover: 'rgba(0, 0, 0, 0.1)',
-          circle: '#868a9a',
         },
         screenshot: {
           yellow: '#ffd166',

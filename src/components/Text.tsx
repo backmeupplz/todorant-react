@@ -34,7 +34,8 @@ const landingBodyTitle = classnames(
   'text-bodyTitleMobile',
   'lg:text-xxxl',
   'font-bold',
-  'font-BodyText'
+  'font-BodyText',
+  'text-mainText'
 )
 const landingBodyText = (margin?: TArg) =>
   classnames(
@@ -42,8 +43,8 @@ const landingBodyText = (margin?: TArg) =>
     'text-lg',
     'font-normal',
     'font-BodyText',
-    'text-black',
-    'text-opacity-80',
+    'text-mainText',
+    'opacity-80',
     'whitespace-pre-line',
     margin
   )
@@ -64,14 +65,19 @@ const orangeBoxAct = classnames(
   'pb-6'
 )
 const privacyPolicyText = classnames(
-  'text-button-circle',
+  'text-gray-500',
   'text-sm',
   'font-medium',
   'font-BodyText',
   'whitespace-pre-line'
 )
 
-const modalHeaderTitle = classnames(basicText, 'font-medium', 'text-xl')
+const modalHeaderTitle = classnames(
+  basicText,
+  'font-medium',
+  'text-xl',
+  'text-mainText'
+)
 
 const modalText = classnames(basicText, 'text-gray-500')
 

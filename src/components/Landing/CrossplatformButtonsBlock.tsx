@@ -1,5 +1,6 @@
 import { PlatformButton } from 'components/Button'
 import { classnames } from 'classnames/tailwind'
+import useDarkMode from 'hooks/useDarkMode'
 
 const block = classnames(
   'flex',
@@ -14,10 +15,11 @@ const CrossplatformButtonsBlock = () => {
   function open(url: string) {
     window.open(url, '_blank')
   }
+  const [isDark] = useDarkMode()
 
   const buttons = platforms.map((platform) => (
     <PlatformButton
-      path={platform.path}
+      path={isDark && platform.pathDark ? platform.pathDark : platform.path}
       alt={platform.alt}
       title={platform.title}
       onClick={() => {
@@ -40,6 +42,7 @@ const platforms = [
   },
   {
     path: 'apple-black',
+    pathDark: 'apple',
     alt: 'Apple logo',
     title: 'iOS',
     url: 'https://apps.apple.com/${appstoreLanguage}/app/todorant/id1482078243',
@@ -70,6 +73,7 @@ const platforms = [
   },
   {
     path: 'snapcraft',
+    pathDark: 'snapcraft-white',
     alt: 'Snap logo',
     title: 'Snapcraft',
     url: 'https://snapcraft.io/todorant',

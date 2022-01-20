@@ -27,7 +27,7 @@ const modalContent = classnames(
   'my-auto',
   'rounded-xl',
   'shadow-lg',
-  'bg-white',
+  'bg-mainBackground',
   'max-h-9/10',
   'flex-auto',
   'flex',

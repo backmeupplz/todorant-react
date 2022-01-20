@@ -8,6 +8,7 @@ import Language from 'models/Language'
 import Modal from 'components/Modal'
 import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 import useClickOutside from 'hooks/useClickOutside'
+import useDarkMode from 'hooks/useDarkMode'
 import useEscape from 'hooks/useEscape'
 
 type ButtonProps = {
@@ -25,9 +26,9 @@ const iconButton = classnames(
   'items-center',
   'w-12',
   'h-12',
-  'hover:bg-gray-100',
+  'hover:bg-gray-500',
+  'hover:bg-opacity-10',
   'text-gray-700',
-  'hover:bg-gray-100',
   'focus:outline-none',
   'text-generalButton',
   'rounded-md',
@@ -56,12 +57,15 @@ const platformBtn = classnames(
   'h-24',
   'm-2',
   'p-4',
-  'bg-button-platform',
-  'hover:bg-button-platformHover',
+  'bg-gray-500',
+  'bg-opacity-5',
+  'hover:bg-gray-500',
+  'hover:bg-opacity-20',
   'flex',
   'flex-col',
   'justify-center',
-  'items-center'
+  'items-center',
+  'text-mainText'
 )
 const platformLogoContainer = classnames(
   'flex',
@@ -80,7 +84,7 @@ const platformTitle = classnames(
 const circleButton = (opacity?: TArg) =>
   classnames(
     'rounded-full',
-    'bg-button-circle',
+    'bg-gray-500',
     'w-2',
     'h-2',
     'm-2',
@@ -109,7 +113,7 @@ const dropdownContainer = classnames(
   'mt-2',
   'rounded-md',
   'shadow-lg',
-  'bg-white',
+  'bg-mainBackground',
   'ring-1',
   'ring-black',
   'ring-opacity-5',
@@ -193,17 +197,19 @@ export const LanguageButton: FC = () => {
 }
 
 export const SettingsButton = () => {
-  const { dark } = useSnapshot(AppStore)
+  const [isDark, setIsDark] = useDarkMode()
   const { translate } = useLocalize()
 
   return (
     <DropDownButton img={'/img/settings.svg'} ButtonHandler={IconButton}>
       <GrayButton
         onClick={() => {
-          AppStore.dark = !AppStore.dark
+          setIsDark(!isDark)
         }}
       >
-        {dark ? translate('menu.darkMode.on') : translate('menu.darkMode.off')}
+        {isDark
+          ? translate('menu.darkMode.off')
+          : translate('menu.darkMode.on')}
       </GrayButton>
     </DropDownButton>
   )
@@ -266,7 +272,8 @@ export const StoreButton: FC<LogoButtonProps> = ({ onClick, path, alt }) => {
 const blueButton = classnames(
   regularButton,
   'text-blue-500',
-  'hover:bg-blue-100',
+  'hover:bg-blue-500',
+  'hover:bg-opacity-10',
   'uppercase'
 )
 export const BlueButton: FC<
@@ -291,7 +298,8 @@ export const BlueButton: FC<
 const grayButton = classnames(
   regularButton,
   'text-gray-500',
-  'hover:bg-gray-100'
+  'hover:bg-gray-500',
+  'hover:bg-opacity-10'
 )
 export const GrayButton: FC<
   ButtonProps & {
@@ -378,7 +386,7 @@ export const CircleButton: FC<{ onClick: () => void; inactive?: boolean }> = ({
   onClick,
   inactive,
 }) => {
-  let opacity: TArg
+  let opacity: TArg = 'opacity-50'
   if (inactive) opacity = 'opacity-30'
   return <button className={circleButton(opacity)} onClick={onClick} />
 }
