@@ -1,26 +1,28 @@
 import { Link, PrivacyPolicyText } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
-
-import useI18N from 'hooks/useI18N'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 const block = classnames(
   'flex',
   'flex-row',
   'content-start',
   'w-full',
-  'mt-xxl',
-  'mb-xxxl'
+  'mt-10',
+  'mb-16'
 )
 
 const PrivacyPolicy = () => {
-  const { LL } = useI18N()
+  const { translate } = useLocalize()
   return (
     <div className={block}>
       <PrivacyPolicyText
-        text={[LL.landingShort.contact[0](), LL.landingShort.contact[1]()]}
+        text={[
+          translate('landingShort.contact.0'),
+          translate('landingShort.contact.1'),
+        ]}
         links={[
           <Link url="mailto:n@borodutch.com" text="n@borodutch.com" />,
-          <Link url="" text={LL.landingShort.privacy()} />,
+          <Link url="" text={translate('landingShort.privacy')} />,
         ]}
       />
     </div>

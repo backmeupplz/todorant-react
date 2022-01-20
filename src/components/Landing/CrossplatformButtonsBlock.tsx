@@ -7,8 +7,8 @@ const block = classnames(
   'justify-center',
   'items-center',
   'flex-wrap',
-  'max-w-crossplatformButtons',
-  'mt-md16'
+  'max-w-xl',
+  'mt-4'
 )
 const CrossplatformButtonsBlock = () => {
   function open(url: string) {

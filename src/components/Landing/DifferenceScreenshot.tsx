@@ -3,7 +3,7 @@ import { classnames } from 'classnames/tailwind'
 const container = classnames(
   'overflow-hidden',
   'h-full',
-  'mt-xxl',
+  'mt-10',
   'relative',
   'justify-center',
   'flex',
@@ -18,7 +18,7 @@ const screen = classnames(
   'lg:w-screenshot',
   'h-screenshot',
   'absolute',
-  'mt-xxl',
+  'mt-10',
   'rounded-xxl'
 )
 const blueScreen = classnames(
@@ -34,7 +34,7 @@ const yellowScreen = classnames(
 const frame = classnames(
   'flex',
   'absolute',
-  'mt-xxl',
+  'mt-10',
   'lg:w-screenshot',
   'w-screenshotMobile'
 )

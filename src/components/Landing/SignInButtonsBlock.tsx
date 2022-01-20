@@ -1,15 +1,14 @@
 import { SignInButton, StoreButton } from 'components/Button'
 import { classnames } from 'classnames/tailwind'
-
-import useI18N from 'hooks/useI18N'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 const buttons = classnames('flex', 'flex-row', 'justify-end')
 
 const SignInButtonsBlock = () => {
-  const { LL } = useI18N()
+  const { translate } = useLocalize()
   return (
     <div className={buttons}>
-      <SignInButton title={LL.signIn()} />
+      <SignInButton title={translate('signIn')} />
       <StoreButton
         onClick={() => {
           console.log('click')

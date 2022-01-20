@@ -1,22 +1,22 @@
 import { LandingBodyTitle } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 import ReviewBlock from 'components/Landing/ReviewBlock'
-import useI18N from 'hooks/useI18N'
 
 const container = classnames(
   'flex',
   'flex-col',
   'justify-start',
   'w-full',
-  'mt-xxl'
+  'mt-10'
 )
 
 const Feedback = () => {
-  const { LL } = useI18N()
+  const { translate } = useLocalize()
   return (
     <div className={container}>
-      <LandingBodyTitle text={LL.feedback.title()} />
+      <LandingBodyTitle text={translate('feedback.title')} />
       <ReviewBlock />
     </div>
   )

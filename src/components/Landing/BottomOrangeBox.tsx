@@ -1,8 +1,8 @@
 import { OrangeBoxAct } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 import SignInButtonsBlock from 'components/Landing/SignInButtonsBlock'
-import useI18N from 'hooks/useI18N'
 
 const orangeBox = classnames(
   'bg-gradient-to-r',
@@ -14,15 +14,15 @@ const orangeBox = classnames(
   'flex-col',
   'justify-center',
   'items-center',
-  'p-xxl',
-  'mt-bottomOrangeBox'
+  'p-10',
+  'mt-12'
 )
 
 const BottomOrangeBox = () => {
-  const { LL } = useI18N()
+  const { translate } = useLocalize()
   return (
     <div className={orangeBox}>
-      <OrangeBoxAct text={LL.landingShort.act()} />
+      <OrangeBoxAct text={translate('landingShort.act')} />
       <SignInButtonsBlock />
     </div>
   )

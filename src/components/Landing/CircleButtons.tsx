@@ -7,7 +7,7 @@ type CircleBtnProps = {
   setCount: (count: React.SetStateAction<number>) => void
 }
 
-const container = classnames('flex', 'flex-row', 'mb-md12', 'lg:mb-md12')
+const container = classnames('flex', 'flex-row', 'mb-3')
 
 const CircleButtons: FC<CircleBtnProps> = ({ count, setCount }) => {
   return (

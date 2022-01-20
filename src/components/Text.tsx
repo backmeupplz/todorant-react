@@ -1,12 +1,11 @@
 import { FC } from 'react'
-import { LocalizedString } from 'typesafe-i18n'
 import { TArg, classnames } from 'classnames/tailwind'
 
 type TextProps = {
   textArray: string[]
 }
 type PrivacyPolicy = {
-  text: LocalizedString[]
+  text: string[]
   links: React.ReactNode[]
 }
 
@@ -26,7 +25,7 @@ const orangeBoxList = classnames(
   'items-start',
   'text-base',
   'font-medium',
-  'pt-lg24',
+  'pt-6',
   'font-BodyText',
   'text-white'
 )
@@ -62,7 +61,7 @@ const orangeBoxAct = classnames(
   'font-bold',
   'font-BodyText',
   'text-white',
-  'pb-lg24'
+  'pb-6'
 )
 const privacyPolicyText = classnames(
   'text-button-circle',

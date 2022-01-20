@@ -1,22 +1,21 @@
 import { LandingBodyText, LandingBodyTitle } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
-
-import useI18N from 'hooks/useI18N'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 const block = classnames('flex', 'flex-col', 'max-w-xl', 'mt-8')
 
 const DifferenceTextBlock = () => {
-  const { LL } = useI18N()
+  const { translate } = useLocalize()
   return (
     <div className={block}>
-      <LandingBodyTitle text={LL.landingShort.differenceTitle()} />
+      <LandingBodyTitle text={translate('landingShort.differenceTitle')} />
       <LandingBodyText
         textArray={[
-          LL.landingShort.differenceText1(),
-          LL.landingShort.differenceText2(),
-          LL.landingShort.differenceText3(),
+          translate('landingShort.differenceText1'),
+          translate('landingShort.differenceText2'),
+          translate('landingShort.differenceText3'),
         ]}
-        margin="mt-lg24"
+        margin="mt-6"
       />
     </div>
   )

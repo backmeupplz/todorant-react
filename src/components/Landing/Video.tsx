@@ -1,8 +1,8 @@
 import { classnames } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
 import { useSnapshot } from 'valtio'
 import AppStore from 'stores/AppStore'
 import Language from 'models/Language'
-import useI18N from 'hooks/useI18N'
 
 const frame = classnames(
   'lg:w-video',
@@ -16,13 +16,15 @@ const frame = classnames(
 )
 
 const Video = () => {
-  const { LL } = useI18N()
+  const { translate } = useLocalize()
   const { language } = useSnapshot(AppStore)
   const source =
     language === Language.ru
       ? 'https://www.youtube.com/embed/heR0rlllTVg'
       : 'https://www.youtube.com/embed/lYXhqHt7_QY'
-  return <iframe title={LL.howto.title()} src={source} className={frame} />
+  return (
+    <iframe title={translate('howto.title')} src={source} className={frame} />
+  )
 }
 
 export default Video

@@ -1,22 +1,17 @@
 import { FC } from 'react'
 import { LandingBodyText, Link } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
-import useI18N from 'hooks/useI18N'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
-const container = classnames('flex', 'flex-row', 'mb-lg22')
-const text = classnames('flex', 'flex-col', 'ml-md12')
-const avatar = classnames('w-avatar', 'h-avatar', 'rounded-full')
+const container = classnames('flex', 'flex-row', 'mb-5')
+const text = classnames('flex', 'flex-col', 'ml-3')
+const avatar = classnames('w-12', 'h-12', 'rounded-full')
 
 const Review: FC<{ count: number }> = ({ count }) => {
-  const { LL } = useI18N()
+  const { translate } = useLocalize()
   const review = {
-    text: LL.feedback.reviews[
-      `${count}` as keyof typeof LL.feedback.reviews
-    ].text(),
-    userName:
-      LL.feedback.reviews[
-        `${count}` as keyof typeof LL.feedback.reviews
-      ].username(),
+    text: translate(`feedback.reviews.${count}.text`),
+    userName: translate(`feedback.reviews.${count}.username`),
   }
 
   return (
@@ -31,7 +26,7 @@ const Review: FC<{ count: number }> = ({ count }) => {
           url={`https://t.me/${review.userName}`}
           text={`@${review.userName}`}
         />
-        <LandingBodyText textArray={[review.text]} margin={'mt-reviewText'} />
+        <LandingBodyText textArray={[review.text]} margin={'mt-3'} />
       </div>
     </div>
   )

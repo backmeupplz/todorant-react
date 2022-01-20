@@ -1,6 +1,7 @@
 import { DiskList, ModalHeaderTitle, ModalText } from 'components/Text'
 import { FC, useRef, useState } from 'react'
 import { TArg, classnames } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
 import { useSnapshot } from 'valtio'
 import AppStore from 'stores/AppStore'
 import Language from 'models/Language'
@@ -8,7 +9,6 @@ import Modal from 'components/Modal'
 import getUnicodeFlagIcon from 'country-flag-icons/unicode'
 import useClickOutside from 'hooks/useClickOutside'
 import useEscape from 'hooks/useEscape'
-import useI18N from 'hooks/useI18N'
 
 type ButtonProps = {
   onClick: () => void
@@ -23,8 +23,8 @@ const iconButton = classnames(
   'flex',
   'justify-center',
   'items-center',
-  'w-mediumButton',
-  'h-mediumButton',
+  'w-12',
+  'h-12',
   'hover:bg-gray-100',
   'text-gray-700',
   'hover:bg-gray-100',
@@ -38,24 +38,24 @@ const iconButton = classnames(
 
 const signInBtn = classnames(
   'rounded-md',
-  'px-signInBtn',
-  'py-md12',
-  'ml-sm',
+  'px-11',
+  'py-3',
+  'ml-2',
   'font-BodyText',
   'text-lg',
   'text-white',
   'bg-button-signIn',
   'font-bold',
-  'w-signInBtn',
-  'h-signInBtn'
+  'w-40',
+  'h-12'
 )
-const storeBtn = classnames('rounded-md', 'w-storeBtn', 'h-storeBtn', 'ml-sm')
+const storeBtn = classnames('rounded-md', 'w-14', 'h-12', 'ml-2')
 const platformBtn = classnames(
   'rounded-lg',
-  'w-platformBtn',
-  'h-platformBtn',
-  'm-sm',
-  'p-md16',
+  'w-24',
+  'h-24',
+  'm-2',
+  'p-4',
   'bg-button-platform',
   'hover:bg-button-platformHover',
   'flex',
@@ -65,25 +65,25 @@ const platformBtn = classnames(
 )
 const platformLogoContainer = classnames(
   'flex',
-  'w-platformLogo',
-  'h-platformLogo',
+  'w-10',
+  'h-10',
   'justify-center',
   'content-center'
 )
-const platformLogo = classnames('max-w-platformLogo')
+const platformLogo = classnames('max-w-xs')
 const platformTitle = classnames(
   'font-medium',
   'text-sm',
-  'mt-sm',
+  'mt-2',
   'font-BodyText'
 )
 const circleButton = (opacity?: TArg) =>
   classnames(
     'rounded-full',
     'bg-button-circle',
-    'w-circleBtn',
-    'h-circleBtn',
-    'm-sm',
+    'w-2',
+    'h-2',
+    'm-2',
     'hover:opacity-100',
     opacity
   )
@@ -175,15 +175,13 @@ const flags = {
 
 export const LanguageButton: FC = () => {
   const { language } = useSnapshot(AppStore)
-  const { setLocale } = useI18N()
 
   return (
     <DropDownButton text={language.toUpperCase()} ButtonHandler={IconButton}>
       {Object.keys(flags).map((k) => (
         <IconButton
           key={flags[k]}
-          onClick={async () => {
-            await setLocale(flags[k])
+          onClick={() => {
             AppStore.language = flags[k]
           }}
         >
@@ -196,7 +194,7 @@ export const LanguageButton: FC = () => {
 
 export const SettingsButton = () => {
   const { dark } = useSnapshot(AppStore)
-  const { LL } = useI18N()
+  const { translate } = useLocalize()
 
   return (
     <DropDownButton img={'/img/settings.svg'} ButtonHandler={IconButton}>
@@ -205,7 +203,7 @@ export const SettingsButton = () => {
           AppStore.dark = !AppStore.dark
         }}
       >
-        {dark ? LL.menu.darkMode.on() : LL.menu.darkMode.off()}
+        {dark ? translate('menu.darkMode.on') : translate('menu.darkMode.off')}
       </GrayButton>
     </DropDownButton>
   )
@@ -318,15 +316,14 @@ const infoRules = classnames('mb-4')
 const infoFooter = classnames('flex', 'justify-end')
 export const InfoButton = () => {
   const [modalOpened, setModalOpened] = useState(false)
-  const { LL } = useI18N()
+  const { translate } = useLocalize()
 
-  const amountOfRules = [...Array(17)]
-  const rulesEl = amountOfRules.map((_, index) => {
+  const rules = translate('rules') as unknown as string[]
+  const rulesEl = rules.map((_, index) => {
     return (
       <ModalText>
-        <li className={infoRules}>
-          {LL.rules[`${index}` as keyof typeof LL.rules]()}
-        </li>
+        {/* Hack to make localized array reactive. TODO: Fix internal of localize-react to make arrays reactive by default */}
+        <li className={infoRules}>{translate(`rules.${index}`)}</li>
       </ModalText>
     )
   })
@@ -342,13 +339,13 @@ export const InfoButton = () => {
       {modalOpened && (
         <Modal
           closeModal={() => setModalOpened(false)}
-          header={<ModalHeaderTitle text={LL.howto.title()} />}
+          header={<ModalHeaderTitle text={translate('howto.title')} />}
           body={<DiskList>{rulesEl}</DiskList>}
           footer={
             <div className={infoFooter}>
               <BlueButton
                 onClick={() => setModalOpened(false)}
-                text={LL.cookie.button()}
+                text={translate('cookie.button')}
               />
             </div>
           }

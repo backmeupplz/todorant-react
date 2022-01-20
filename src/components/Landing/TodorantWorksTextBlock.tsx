@@ -1,6 +1,6 @@
 import { OrangeBoxList, OrangeBoxTitle } from 'components/Text'
 import { classnames } from 'classnames/tailwind'
-import useI18N from 'hooks/useI18N'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 const block = classnames(
   'flex',
@@ -8,23 +8,26 @@ const block = classnames(
   'justify-between',
   'flex-wrap',
   'lg:max-w-todorantWorksText',
-  'mb-md16',
+  'mb-4',
   'lg:mb-0'
 )
 
 const TodorantWorksTextBlock = () => {
-  const { LL } = useI18N()
+  const { translate } = useLocalize()
   return (
     <div className={block}>
       <OrangeBoxTitle
-        textArray={[LL.landingShort.headline(), LL.landingShort.headline2()]}
+        textArray={[
+          translate('landingShort.headline'),
+          translate('landingShort.headline2'),
+        ]}
       />
       <OrangeBoxList
         textArray={[
-          LL.landingShort.feature1(),
-          LL.landingShort.feature2(),
-          LL.landingShort.feature3(),
-          LL.landingShort.feature4(),
+          translate('landingShort.feature1'),
+          translate('landingShort.feature2'),
+          translate('landingShort.feature3'),
+          translate('landingShort.feature4'),
         ]}
       />
     </div>
