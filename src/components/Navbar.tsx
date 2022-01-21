@@ -13,7 +13,9 @@ const navbar = classnames(
   'lg:p-3',
   'font-BodyText',
   'top-0',
-  'bg-mainBackground'
+  'bg-mainBackground',
+  'opacity-100',
+  'z-10'
 )
 
 const navbarBtnsContainer = classnames('items-center', 'flex')
