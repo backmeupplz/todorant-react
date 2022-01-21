@@ -1666,12 +1666,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@borodutch-labs/localize-react@npm:^1.7.4":
-  version: 1.7.4
-  resolution: "@borodutch-labs/localize-react@npm:1.7.4"
+"@borodutch-labs/localize-react@npm:^1.7.6":
+  version: 1.7.6
+  resolution: "@borodutch-labs/localize-react@npm:1.7.6"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: bc0a991f4e702cb0fbbf564d753569f4a5780d386e8e0a6e5c25b94d0ff289d7b6212a4146271984ae12443efcf1ae725626d92d19a0b54a487a958bfd32031c
+  checksum: 0e4f50072d47a239002b70e3dfa1b693b1426f0e1a907f83233fa66ad806c265b793a995d2f4617d99736f7f471607f02e7f15e8def0fbac50a4790c91f73683
   languageName: node
   linkType: hard
 
@@ -7560,7 +7560,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "frontend-starter@workspace:."
   dependencies:
-    "@borodutch-labs/localize-react": ^1.7.4
+    "@borodutch-labs/localize-react": ^1.7.6
     "@preact/preset-vite": ^2.1.5
     "@types/node": ^16.11.7
     "@types/react": ^17.0.34
