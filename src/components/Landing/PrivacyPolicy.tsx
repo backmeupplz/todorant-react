@@ -17,12 +17,12 @@ const PrivacyPolicy = () => {
     <div className={block}>
       <PrivacyPolicyText
         text={[
-          translate('landingShort.contact.0'),
-          translate('landingShort.contact.1'),
+          translate('home.texts.contact.0'),
+          translate('home.texts.contact.1'),
         ]}
         links={[
           <Link url="mailto:n@borodutch.com" text="n@borodutch.com" />,
-          <Link url="" text={translate('landingShort.privacy')} />,
+          <Link url="" text={translate('home.privacy')} />,
         ]}
       />
     </div>

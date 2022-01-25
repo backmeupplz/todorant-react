@@ -10,8 +10,8 @@ const avatar = classnames('w-12', 'h-12', 'rounded-full')
 const Review: FC<{ count: number }> = ({ count }) => {
   const { translate } = useLocalize()
   const review = {
-    text: translate(`feedback.reviews.${count}.text`),
-    userName: translate(`feedback.reviews.${count}.username`),
+    text: translate(`home.feedback.reviews.${count}.text`),
+    userName: translate(`home.feedback.reviews.${count}.username`),
   }
 
   return (

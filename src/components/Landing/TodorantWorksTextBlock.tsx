@@ -18,16 +18,16 @@ const TodorantWorksTextBlock = () => {
     <div className={block}>
       <OrangeBoxTitle
         textArray={[
-          translate('landingShort.headline'),
-          translate('landingShort.headline2'),
+          translate('homeShort.headline'),
+          translate('homeShort.headline2'),
         ]}
       />
       <OrangeBoxList
         textArray={[
-          translate('landingShort.feature1'),
-          translate('landingShort.feature2'),
-          translate('landingShort.feature3'),
-          translate('landingShort.feature4'),
+          translate('homeShort.feature1'),
+          translate('homeShort.feature2'),
+          translate('homeShort.feature3'),
+          translate('homeShort.feature4'),
         ]}
       />
     </div>

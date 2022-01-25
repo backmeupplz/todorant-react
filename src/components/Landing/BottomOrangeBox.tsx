@@ -22,7 +22,7 @@ const BottomOrangeBox = () => {
   const { translate } = useLocalize()
   return (
     <div className={orangeBox}>
-      <OrangeBoxAct text={translate('landingShort.act')} />
+      <OrangeBoxAct text={translate('home.act')} />
       <SignInButtonsBlock />
     </div>
   )

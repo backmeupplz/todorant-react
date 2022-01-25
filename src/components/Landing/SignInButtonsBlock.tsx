@@ -8,7 +8,7 @@ const SignInButtonsBlock = () => {
   const { translate } = useLocalize()
   return (
     <div className={buttons}>
-      <SignInButton title={translate('signIn')} />
+      <SignInButton title={translate('home.signIn')} />
       <StoreButton
         onClick={() => {
           console.log('click')

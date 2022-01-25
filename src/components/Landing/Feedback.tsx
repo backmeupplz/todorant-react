@@ -16,7 +16,7 @@ const Feedback = () => {
   const { translate } = useLocalize()
   return (
     <div className={container}>
-      <LandingBodyTitle text={translate('feedback.title')} />
+      <LandingBodyTitle text={translate('home.feedback.title')} />
       <ReviewBlock />
     </div>
   )

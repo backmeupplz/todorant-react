@@ -48,7 +48,9 @@ const signInBtn = classnames(
   'bg-button-signIn',
   'font-bold',
   'w-40',
-  'h-12'
+  'h-12',
+  'flex',
+  'justify-center'
 )
 const storeBtn = classnames('rounded-md', 'w-14', 'h-12', 'ml-2')
 const platformBtn = classnames(
@@ -175,6 +177,11 @@ export const DropDownButton: FC<{
 const flags = {
   US: Language.en,
   RU: Language.ru,
+  UA: Language.uk,
+  ES: Language.es,
+  IT: Language.it,
+  RO: Language.ro,
+  PT: Language.ptBR,
 } as { [key: string]: Language }
 
 export const LanguageButton: FC = () => {

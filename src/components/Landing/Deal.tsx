@@ -14,12 +14,12 @@ const Deal = () => {
   const { translate } = useLocalize()
   return (
     <div className={container}>
-      <LandingBodyTitle text={translate('landingShort.dealTitle')} />
+      <LandingBodyTitle text={translate('homeShort.dealTitle')} />
       <LandingBodyText
         textArray={[
-          translate('landingShort.dealText1'),
-          translate('landingShort.dealText2'),
-          translate('landingShort.dealText3'),
+          translate('homeShort.dealText1'),
+          translate('homeShort.dealText2'),
+          translate('homeShort.dealText3'),
         ]}
         margin="mt-4"
       />

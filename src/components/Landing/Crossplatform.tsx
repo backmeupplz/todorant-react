@@ -17,7 +17,7 @@ const Crossplatform = () => {
   const { translate } = useLocalize()
   return (
     <div className={container}>
-      <LandingBodyTitle text={translate('landingShort.crossplatform')} />
+      <LandingBodyTitle text={translate('home.crossplatform.title')} />
       <CrossplatformButtonsBlock />
     </div>
   )

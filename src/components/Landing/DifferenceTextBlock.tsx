@@ -8,12 +8,12 @@ const DifferenceTextBlock = () => {
   const { translate } = useLocalize()
   return (
     <div className={block}>
-      <LandingBodyTitle text={translate('landingShort.differenceTitle')} />
+      <LandingBodyTitle text={translate('homeShort.differenceTitle')} />
       <LandingBodyText
         textArray={[
-          translate('landingShort.differenceText1'),
-          translate('landingShort.differenceText2'),
-          translate('landingShort.differenceText3'),
+          translate('homeShort.differenceText1'),
+          translate('homeShort.differenceText2'),
+          translate('homeShort.differenceText3'),
         ]}
         margin="mt-6"
       />

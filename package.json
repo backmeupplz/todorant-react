@@ -29,6 +29,7 @@
     "@borodutch-labs/localize-react": "^1.7.6",
     "@vitejs/plugin-react": "^1.0.9",
     "country-flag-icons": "^1.4.19",
+    "lodash.merge": "^4.6.2",
     "preact": "^10.5.15",
     "unfetch": "^4.2.0",
     "valtio": "^1.2.6",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.1.5",
+    "@types/lodash.merge": "^4.6.6",
     "@types/node": "^16.11.7",
     "@types/react": "^17.0.34",
     "@typescript-eslint/eslint-plugin": "^5.3.1",

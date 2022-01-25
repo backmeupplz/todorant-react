@@ -1,4 +1,7 @@
 import { classnames } from 'classnames/tailwind'
+import { useSnapshot } from 'valtio'
+import AppStore from 'stores/AppStore'
+import useDarkMode from 'hooks/useDarkMode'
 
 const container = classnames(
   'overflow-hidden',
@@ -36,15 +39,24 @@ const frame = classnames(
   'absolute',
   'mt-10',
   'lg:w-screenshot',
-  'w-screenshotMobile'
+  'w-screenshotMobile',
+  'rounded-sm'
 )
 
 const DifferenceScreenshot = () => {
+  const { language } = useSnapshot(AppStore)
+  const [isDark] = useDarkMode()
   return (
     <div className={container}>
       <div className={blueScreen} />
       <div className={yellowScreen} />
-      <img alt="Screenshot" src="/img/screenshots/en.webp" className={frame} />
+      <img
+        alt="Screenshot"
+        src={`/img/screenshots/${
+          language === 'ptBR' || language === 'ro' ? 'en' : language
+        }${isDark ? '-dark' : ''}.webp`}
+        className={frame}
+      />
     </div>
   )
 }
