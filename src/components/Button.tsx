@@ -304,7 +304,7 @@ export const BlueButton: FC<
 
 const grayButton = classnames(
   regularButton,
-  'text-gray-500',
+  'text-modalText',
   'hover:bg-gray-500',
   'hover:bg-opacity-10'
 )
