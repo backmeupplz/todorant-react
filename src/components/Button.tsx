@@ -215,8 +215,8 @@ export const SettingsButton = () => {
         }}
       >
         {isDark
-          ? translate('menu.darkMode.off')
-          : translate('menu.darkMode.on')}
+          ? translate('menu.darkMode.on')
+          : translate('menu.darkMode.off')}
       </GrayButton>
     </DropDownButton>
   )

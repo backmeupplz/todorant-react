@@ -28,6 +28,7 @@ module.exports = {
       colors: {
         mainBackground: 'var(--main-background)',
         mainText: 'var(--main-text)',
+        modalText: 'var(--modal-text)',
         button: {
           signIn: '#FF9A6A',
         },

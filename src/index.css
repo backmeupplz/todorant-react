@@ -5,8 +5,10 @@
 .dark {
   --main-background: #121212;
   --main-text: #fafafa;
+  --modal-text: #e5e7eb;
 }
 .light {
   --main-background: #fafafa;
   --main-text: #121212;
+  --modal-text: #6b7280;
 }

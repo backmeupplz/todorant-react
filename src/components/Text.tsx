@@ -80,7 +80,7 @@ const modalHeaderTitle = classnames(
   'text-mainText'
 )
 
-const modalText = classnames(basicText, 'text-gray-500')
+const modalText = classnames(basicText, 'text-modalText')
 
 export const OrangeBoxTitle: FC<TextProps> = ({ textArray }) => {
   return (
