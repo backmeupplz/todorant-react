@@ -9,7 +9,8 @@ const block = classnames(
   'flex-wrap',
   'lg:max-w-todorantWorksText',
   'mb-4',
-  'lg:mb-0'
+  'lg:mb-0',
+  'p-4'
 )
 
 const TodorantWorksTextBlock = () => {
