@@ -10,16 +10,18 @@ const container = classnames(
   'relative',
   'justify-center',
   'flex',
-  'h-screenshotContainer',
-  'w-screenshotContainer',
-  'lg:w-screenshotContainer',
+  'h-screenshotContainerMobile',
+  'w-screenshotContainerMobile',
+  'sm:h-screenshotContainer',
+  'sm:w-screenshotContainer',
   'z-underModal'
 )
 const screen = classnames(
   'transform-gpu',
   'w-screenshotMobile',
-  'lg:w-screenshot',
-  'h-screenshot',
+  'h-screenshotMobile',
+  'sm:w-screenshot',
+  'sm:h-screenshot',
   'absolute',
   'mt-10',
   'rounded-xxl'
@@ -38,8 +40,8 @@ const frame = classnames(
   'flex',
   'absolute',
   'mt-10',
-  'lg:w-screenshot',
   'w-screenshotMobile',
+  'sm:w-screenshot',
   'rounded-sm'
 )
 

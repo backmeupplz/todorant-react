@@ -41,7 +41,7 @@ const signInBtn = classnames(
   'rounded-md',
   'px-11',
   'py-3',
-  'ml-2',
+  'lg:ml-2',
   'font-BodyText',
   'text-lg',
   'text-white',
@@ -52,7 +52,7 @@ const signInBtn = classnames(
   'flex',
   'justify-center'
 )
-const storeBtn = classnames('rounded-md', 'w-14', 'h-12', 'ml-2')
+const storeBtn = classnames('rounded-md', 'w-14', 'h-12', 'ml-1', 'lg:ml-2')
 const platformBtn = classnames(
   'rounded-lg',
   'w-24',

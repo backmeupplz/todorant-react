@@ -15,7 +15,7 @@ const orangeBox = classnames(
   'justify-between',
   'flex-col',
   'lg:flex-row',
-  'p-8',
+  'lg:p-8',
   'pb-16',
   'lg:pb-8'
 )

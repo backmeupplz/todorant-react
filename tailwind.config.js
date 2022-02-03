@@ -10,14 +10,16 @@ module.exports = {
       width: {
         video: '437px',
         screenshotContainer: '384px',
-        screenshotMobile: '200px',
+        screenshotContainerMobile: '256px',
         screenshot: '300px',
+        screenshotMobile: '200px',
       },
       height: {
         video: '246px',
         screenshotContainer: '425px',
+        screenshotContainerMobile: '283px',
         screenshot: '607px',
-        screenshotMobile: '200px',
+        screenshotMobile: '405px',
       },
       maxHeight: {
         '9/10': '90%',
@@ -92,6 +94,7 @@ module.exports = {
         ],
         bodyTitleMobile: ['24px', { lineHeight: '28px' }],
         actMobile: ['24px', { lineHeight: '30px' }],
+        orangeBoxTitleMobile: ['20px', { lineHeight: '26px' }],
       },
     },
     gradientColorStops: () => ({

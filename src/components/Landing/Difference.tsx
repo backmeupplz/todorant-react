@@ -6,7 +6,7 @@ const container = classnames(
   'flex',
   'justify-between',
   'w-full',
-  'pr-6',
+  'lg:pr-6',
   'flex-col',
   'lg:flex-row',
   'items-center'

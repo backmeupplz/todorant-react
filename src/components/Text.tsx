@@ -15,7 +15,8 @@ const basicText = classnames('font-BodyText')
 
 const orangeBoxTitle = classnames(
   'items-start',
-  'text-xl',
+  'text-orangeBoxTitleMobile',
+  'lg:text-xl',
   'font-extrabold',
   'font-BodyText',
   'text-white'
