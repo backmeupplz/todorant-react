@@ -1,5 +1,3 @@
-import DifferenceScreenshot from 'components/Landing/DifferenceScreenshot'
-import DifferenceTextBlock from 'components/Landing/DifferenceTextBlock'
 import {
   alignItems,
   classnames,
@@ -9,6 +7,8 @@ import {
   padding,
   width,
 } from 'classnames/tailwind'
+import DifferenceScreenshot from 'components/Landing/DifferenceScreenshot'
+import DifferenceTextBlock from 'components/Landing/DifferenceTextBlock'
 
 const container = classnames(
   display('flex'),

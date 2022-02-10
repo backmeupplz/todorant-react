@@ -23,8 +23,8 @@ const container = classnames(
 const orangeBox = classnames(
   backgroundImage('bg-gradient-to-r'),
   gradientColorStops(
-    'from-orangeBoxGradient-primary',
-    'to-orangeBoxGradient-secondary'
+    'from-orange-box-gradient-primary',
+    'to-orange-box-gradient-secondary'
   ),
   borderRadius('rounded-xl'),
   width('w-full'),

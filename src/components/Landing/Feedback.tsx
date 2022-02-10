@@ -1,5 +1,4 @@
 import { LandingBodyTitle } from 'components/Text'
-import { useLocalize } from '@borodutch-labs/localize-react'
 import {
   classnames,
   display,
@@ -8,6 +7,7 @@ import {
   margin,
   width,
 } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 import ReviewBlock from 'components/Landing/ReviewBlock'
 

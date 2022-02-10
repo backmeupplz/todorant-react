@@ -1,11 +1,11 @@
 import { SignInButton, StoreButton } from 'components/Button'
-import { useLocalize } from '@borodutch-labs/localize-react'
 import {
   classnames,
   display,
   flexDirection,
   justifyContent,
 } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 const buttons = classnames(
   display('flex'),

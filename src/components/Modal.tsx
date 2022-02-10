@@ -26,7 +26,7 @@ import useClickOutside from 'hooks/useClickOutside'
 import useEscape from 'hooks/useEscape'
 
 const modalWrapper = classnames(
-  backgroundColor('bg-semiTransparentBackground'),
+  backgroundColor('bg-semi-transparent-background'),
   minHeight('min-h-screen'),
   height('h-screen'),
   position('fixed'),
@@ -41,7 +41,7 @@ const modalWrapper = classnames(
 )
 
 const modalContent = classnames(
-  backgroundColor('bg-mainBackground'),
+  backgroundColor('bg-main-background'),
   maxHeight('max-h-9/10'),
   maxWidth('max-w-2xl'),
   position('relative'),

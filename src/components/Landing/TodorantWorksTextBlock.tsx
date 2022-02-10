@@ -1,5 +1,4 @@
 import { OrangeBoxList, OrangeBoxTitle } from 'components/Text'
-import { useLocalize } from '@borodutch-labs/localize-react'
 import {
   classnames,
   display,
@@ -10,9 +9,10 @@ import {
   maxWidth,
   padding,
 } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 const block = classnames(
-  maxWidth('lg:max-w-todorantWorksText'),
+  maxWidth('lg:max-w-todorant-works-text'),
   display('flex'),
   flexDirection('flex-col'),
   justifyContent('justify-between'),

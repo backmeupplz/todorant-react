@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import { LandingBodyText, Link } from 'components/Text'
-import { useLocalize } from '@borodutch-labs/localize-react'
 import {
   borderRadius,
   classnames,
@@ -10,6 +9,7 @@ import {
   margin,
   width,
 } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 const container = classnames(
   display('flex'),

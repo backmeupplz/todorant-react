@@ -1,5 +1,4 @@
 import { LandingBodyTitle } from 'components/Text'
-import { useLocalize } from '@borodutch-labs/localize-react'
 import {
   classnames,
   display,
@@ -9,6 +8,7 @@ import {
   maxWidth,
   width,
 } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 import CrossplatformButtonsBlock from 'components/Landing/CrossplatformButtonsBlock'
 

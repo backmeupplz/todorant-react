@@ -4,41 +4,40 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        todorantWorksText: '60%',
-        reviewText: '85%',
+        'todorant-works-text': '60%',
+        'review-text': '85%',
       },
       width: {
         video: '437px',
-        screenshotContainer: '384px',
-        screenshotContainerMobile: '256px',
+        'screenshot-container': '384px',
+        'screenshot-container-mobile': '256px',
         screenshot: '300px',
-        screenshotMobile: '200px',
+        'screenshot-mobile': '200px',
       },
       height: {
         video: '246px',
-        screenshotContainer: '425px',
-        screenshotContainerMobile: '283px',
+        'screenshot-container': '425px',
+        'screenshot-container-mobile': '283px',
         screenshot: '607px',
-        screenshotMobile: '405px',
+        'screenshot-mobile': '405px',
       },
       maxHeight: {
         '9/10': '90%',
       },
       zIndex: { underModal: '-1' },
       colors: {
-        mainBackground: 'var(--main-background)',
-        mainText: 'var(--main-text)',
-        modalText: 'var(--modal-text)',
+        'main-background': 'var(--main-background)',
+        'main-text': 'var(--main-text)',
+        'modal-text': 'var(--modal-text)',
         button: {
-          signIn: '#FF9A6A',
+          'sign-in': '#FF9A6A',
         },
         screenshot: {
           yellow: '#ffd166',
           blue: '#3366ff',
         },
-        generalButton: '#a7a9b5',
-        semiTransparentBackground: 'rgba(0, 0, 0, 0.6)',
-        neutralButton: 'rgba(96, 165, 250, 0.1)',
+        'general-button': '#a7a9b5',
+        'semi-transparent-background': 'rgba(0, 0, 0, 0.6)',
       },
       borderRadius: {
         sm: '8px',
@@ -48,18 +47,18 @@ module.exports = {
         xxl: '64px',
       },
       spacing: {
-        videoTop: '-182px',
-        mobileVideoTop: '-40px',
+        'video-top': '-182px',
+        'mobile-video-top': '-40px',
       },
       boxShadow: {
-        landingVideo: '0px 5px 40px rgba(0, 0, 0, 0.1)',
+        'landing-video': '0px 5px 40px rgba(0, 0, 0, 0.1)',
       },
       rotate: {
-        screenshotYellow: '-10deg',
-        screenshotBlue: '10deg',
+        'screenshot-primary': '-10deg',
+        'screenshot-secondary': '10deg',
       },
       fontFamily: {
-        BodyText: ['Montserrat'],
+        'body-text': ['Montserrat'],
       },
       fontSize: {
         sm: [
@@ -93,13 +92,13 @@ module.exports = {
             lineHeight: '58.51px',
           },
         ],
-        bodyTitleMobile: ['24px', { lineHeight: '28px' }],
-        actMobile: ['24px', { lineHeight: '30px' }],
-        orangeBoxTitleMobile: ['20px', { lineHeight: '26px' }],
+        'body-title-mobile': ['24px', { lineHeight: '28px' }],
+        'act-mobile': ['24px', { lineHeight: '30px' }],
+        'orange-box-title-mobile': ['20px', { lineHeight: '26px' }],
       },
     },
     gradientColorStops: () => ({
-      orangeBoxGradient: {
+      'orange-box-gradient': {
         primary: '#FF5F13',
         secondary: '#FF8A53',
       },

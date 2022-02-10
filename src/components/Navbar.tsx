@@ -19,8 +19,8 @@ import {
 } from 'classnames/tailwind'
 
 const navbar = classnames(
-  fontFamily('font-BodyText'),
-  backgroundColor('bg-mainBackground'),
+  fontFamily('font-body-text'),
+  backgroundColor('bg-main-background'),
   position('sticky'),
   display('flex'),
   justifyContent('justify-between'),

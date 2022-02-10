@@ -18,8 +18,8 @@ import SignInButtonsBlock from 'components/Landing/SignInButtonsBlock'
 
 const orangeBox = classnames(
   gradientColorStops(
-    'from-orangeBoxGradient-primary',
-    'to-orangeBoxGradient-secondary'
+    'from-orange-box-gradient-primary',
+    'to-orange-box-gradient-secondary'
   ),
   backgroundImage('bg-gradient-to-r'),
   borderRadius('rounded-xl'),

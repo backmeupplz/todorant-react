@@ -1,5 +1,3 @@
-import { useSnapshot } from 'valtio'
-import AppStore from 'stores/AppStore'
 import {
   backgroundColor,
   borderRadius,
@@ -15,21 +13,23 @@ import {
   width,
   zIndex,
 } from 'classnames/tailwind'
+import { useSnapshot } from 'valtio'
+import AppStore from 'stores/AppStore'
 import useDarkMode from 'hooks/useDarkMode'
 
 const container = classnames(
   zIndex('z-underModal'),
   overflow('overflow-hidden'),
-  height('h-screenshotContainerMobile', 'sm:h-screenshotContainer'),
-  width('w-screenshotContainerMobile', 'sm:w-screenshotContainer'),
+  height('h-screenshot-container-mobile', 'sm:h-screenshot-container'),
+  width('w-screenshot-container-mobile', 'sm:w-screenshot-container'),
   margin('mt-10'),
   position('relative'),
   justifyContent('justify-center'),
   display('flex')
 )
 const screen = classnames(
-  width('w-screenshotMobile', 'sm:w-screenshot'),
-  height('h-screenshotMobile', 'sm:h-screenshot'),
+  width('w-screenshot-mobile', 'sm:w-screenshot'),
+  height('h-screenshot-mobile', 'sm:h-screenshot'),
   borderRadius('rounded-xxl'),
   hardwareAcceleration('transform-gpu'),
   position('absolute'),
@@ -37,16 +37,16 @@ const screen = classnames(
 )
 const blueScreen = classnames(
   backgroundColor('bg-screenshot-blue'),
-  rotate('rotate-screenshotBlue'),
+  rotate('rotate-screenshot-secondary'),
   screen
 )
 const yellowScreen = classnames(
   backgroundColor('bg-screenshot-yellow'),
-  rotate('rotate-screenshotYellow'),
+  rotate('rotate-screenshot-primary'),
   screen
 )
 const frame = classnames(
-  width('w-screenshotMobile', 'sm:w-screenshot'),
+  width('w-screenshot-mobile', 'sm:w-screenshot'),
   display('flex'),
   position('absolute'),
   margin('mt-10'),

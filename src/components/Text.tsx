@@ -30,11 +30,11 @@ const discList = classnames(
   listStylePosition('list-inside')
 )
 
-const basicText = classnames(fontFamily('font-BodyText'))
+const basicText = classnames(fontFamily('font-body-text'))
 
 const orangeBoxTitle = classnames(
-  fontSize('text-orangeBoxTitleMobile'),
-  fontFamily('font-BodyText'),
+  fontSize('text-orange-box-title-mobile'),
+  fontFamily('font-body-text'),
   alignItems('items-start'),
   fontSize('lg:text-xl'),
   fontWeight('font-extrabold'),
@@ -42,7 +42,7 @@ const orangeBoxTitle = classnames(
 )
 const orangeBoxList = classnames(
   discList,
-  fontFamily('font-BodyText'),
+  fontFamily('font-body-text'),
   alignItems('items-start'),
   fontSize('text-base'),
   fontWeight('font-medium'),
@@ -50,16 +50,16 @@ const orangeBoxList = classnames(
   textColor('text-white')
 )
 const landingBodyTitle = classnames(
-  fontSize('text-bodyTitleMobile', 'lg:text-xxxl'),
-  fontFamily('font-BodyText'),
-  textColor('text-mainText'),
+  fontSize('text-body-title-mobile', 'lg:text-xxxl'),
+  fontFamily('font-body-text'),
+  textColor('text-main-text'),
   alignItems('items-start'),
   fontWeight('font-bold')
 )
 const landingBodyText = (ma?: TMargin) =>
   classnames(
-    fontFamily('font-BodyText'),
-    textColor('text-mainText'),
+    fontFamily('font-body-text'),
+    textColor('text-main-text'),
     margin(ma),
     alignItems('items-start'),
     fontSize('text-lg'),
@@ -68,22 +68,22 @@ const landingBodyText = (ma?: TMargin) =>
     whitespace('whitespace-pre-line')
   )
 const link = classnames(
-  fontFamily('font-BodyText'),
+  fontFamily('font-body-text'),
   textColor('text-screenshot-blue'),
   fontWeight('font-semibold'),
   fontSize('text-sm'),
   textDecoration('underline')
 )
 const orangeBoxAct = classnames(
-  fontSize('lg:text-xxl', 'text-actMobile'),
-  fontFamily('font-BodyText'),
+  fontSize('lg:text-xxl', 'text-act-mobile'),
+  fontFamily('font-body-text'),
   alignItems('items-center'),
   fontWeight('font-bold'),
   textColor('text-white'),
   padding('pb-6')
 )
 const privacyPolicyText = classnames(
-  fontFamily('font-BodyText'),
+  fontFamily('font-body-text'),
   textColor('text-gray-500'),
   fontSize('text-sm'),
   fontWeight('font-medium'),
@@ -92,12 +92,12 @@ const privacyPolicyText = classnames(
 
 const modalHeaderTitle = classnames(
   basicText,
-  textColor('text-mainText'),
+  textColor('text-main-text'),
   fontWeight('font-medium'),
   fontSize('text-xl')
 )
 
-const modalText = classnames(basicText, textColor('text-modalText'))
+const modalText = classnames(basicText, textColor('text-modal-text'))
 
 export const OrangeBoxTitle: FC<TextProps> = ({ textArray }) => {
   return (

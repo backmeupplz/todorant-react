@@ -52,8 +52,8 @@ type LogoButtonProps = {
 }
 
 const iconButton = classnames(
-  textColor('text-generalButton'),
-  fontFamily('font-BodyText'),
+  textColor('text-general-button'),
+  fontFamily('font-body-text'),
   display('flex'),
   justifyContent('justify-center'),
   alignItems('items-center'),
@@ -69,8 +69,8 @@ const iconButton = classnames(
 )
 
 const signInBtn = classnames(
-  fontFamily('font-BodyText'),
-  backgroundColor('bg-button-signIn'),
+  fontFamily('font-body-text'),
+  backgroundColor('bg-button-sign-in'),
   borderRadius('rounded-md'),
   padding('px-11', 'py-3'),
   margin('lg:ml-2'),
@@ -89,7 +89,7 @@ const storeBtn = classnames(
   margin('ml-1', 'lg:ml-2')
 )
 const platformBtn = classnames(
-  textColor('text-mainText'),
+  textColor('text-main-text'),
   borderRadius('rounded-lg'),
   width('w-24'),
   height('h-24'),
@@ -111,7 +111,7 @@ const platformLogoContainer = classnames(
 )
 const platformLogo = classnames(maxWidth('max-w-xs'))
 const platformTitle = classnames(
-  fontFamily('font-BodyText'),
+  fontFamily('font-body-text'),
   fontWeight('font-medium'),
   fontSize('text-sm'),
   margin('mt-2')
@@ -129,7 +129,7 @@ const circleButton = (op?: TOpacity) =>
 const logoBtn = classnames(width('w-28'))
 
 const regularButton = classnames(
-  fontFamily('font-BodyText'),
+  fontFamily('font-body-text'),
   display('flex'),
   justifyContent('justify-center'),
   alignItems('items-center'),
@@ -141,7 +141,7 @@ const regularButton = classnames(
 )
 
 const dropdownContainer = classnames(
-  backgroundColor('bg-mainBackground'),
+  backgroundColor('bg-main-background'),
   transformOrigin('origin-top-right'),
   position('absolute'),
   inset('right-0'),
@@ -339,7 +339,7 @@ export const BlueButton: FC<
 
 const grayButton = classnames(
   regularButton,
-  textColor('text-modalText'),
+  textColor('text-modal-text'),
   backgroundColor('hover:bg-gray-500'),
   backgroundOpacity('hover:bg-opacity-10')
 )

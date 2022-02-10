@@ -1,5 +1,4 @@
 import { LandingBodyText, LandingBodyTitle } from 'components/Text'
-import { useLocalize } from '@borodutch-labs/localize-react'
 import {
   classnames,
   display,
@@ -7,6 +6,7 @@ import {
   margin,
   maxWidth,
 } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
 
 const block = classnames(
   display('flex'),

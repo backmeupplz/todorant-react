@@ -1,9 +1,4 @@
 import { IconButton } from 'components/Button'
-import { useState } from 'react'
-import CircleButtons from 'components/Landing/CircleButtons'
-import LeftArrow from 'components/icons/ChevronLeft'
-import Review from 'components/Landing/Review'
-import RightArrow from 'components/icons/ChevronRight'
 import {
   alignItems,
   classnames,
@@ -13,6 +8,11 @@ import {
   margin,
   maxWidth,
 } from 'classnames/tailwind'
+import { useState } from 'react'
+import CircleButtons from 'components/Landing/CircleButtons'
+import LeftArrow from 'components/icons/ChevronLeft'
+import Review from 'components/Landing/Review'
+import RightArrow from 'components/icons/ChevronRight'
 
 const block = classnames(
   display('flex'),
@@ -22,7 +22,7 @@ const block = classnames(
   alignItems('lg:items-start', 'items-end')
 )
 const reviewContainer = classnames(
-  maxWidth('max-w-reviewText'),
+  maxWidth('max-w-review-text'),
   display('flex'),
   flexDirection('flex-col'),
   alignItems('items-center')

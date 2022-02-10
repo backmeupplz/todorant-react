@@ -1,7 +1,3 @@
-import { useLocalize } from '@borodutch-labs/localize-react'
-import { useSnapshot } from 'valtio'
-import AppStore from 'stores/AppStore'
-import Language from 'models/Language'
 import {
   borderRadius,
   boxShadow,
@@ -10,10 +6,14 @@ import {
   margin,
   width,
 } from 'classnames/tailwind'
+import { useLocalize } from '@borodutch-labs/localize-react'
+import { useSnapshot } from 'valtio'
+import AppStore from 'stores/AppStore'
+import Language from 'models/Language'
 
 const frame = classnames(
-  margin('mt-mobileVideoTop', 'lg:mt-videoTop'),
-  boxShadow('shadow-landingVideo'),
+  margin('mt-mobile-video-top', 'lg:mt-video-top'),
+  boxShadow('shadow-landing-video'),
   borderRadius('rounded-sm'),
   height('h-video'),
   width('lg:w-video', 'w-full')
