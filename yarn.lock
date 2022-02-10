@@ -2520,22 +2520,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash.merge@npm:^4.6.6":
-  version: 4.6.6
-  resolution: "@types/lodash.merge@npm:4.6.6"
-  dependencies:
-    "@types/lodash": "*"
-  checksum: 62ec56f14b3077f7174497856e9b277db811943cd11b1d67d2a8e51a1803bd49319e8aaf62e745c696af972354a575dbb8a85d3aecf4ae774caf062dc31ac46e
-  languageName: node
-  linkType: hard
-
-"@types/lodash@npm:*":
-  version: 4.14.178
-  resolution: "@types/lodash@npm:4.14.178"
-  checksum: a69a04a60bfc5257c3130a554b4efa0c383f0141b7b3db8ab7cf07ad2a46ea085fce66d0242da41da7e5647b133d5dfb2c15add9cbed8d7fef955e4a1e5b3128
-  languageName: node
-  linkType: hard
-
 "@types/minimatch@npm:*":
   version: 3.0.5
   resolution: "@types/minimatch@npm:3.0.5"
@@ -7586,7 +7570,6 @@ __metadata:
   dependencies:
     "@borodutch-labs/localize-react": ^1.7.6
     "@preact/preset-vite": ^2.1.5
-    "@types/lodash.merge": ^4.6.6
     "@types/node": ^16.11.7
     "@types/react": ^17.0.34
     "@typescript-eslint/eslint-plugin": ^5.3.1
@@ -7611,7 +7594,6 @@ __metadata:
     rollup-plugin-visualizer: ^5.5.2
     tailwindcss: ^3.0.19
     tailwindcss-classnames: ^3.0.2
-    twcn3: ^1.0.0-beta.15
     typescript: ^4.4.4
     unfetch: ^4.2.0
     valtio: ^1.2.6
@@ -12095,8 +12077,8 @@ __metadata:
   linkType: hard
 
 "postcss-load-config@npm:^3.1.0":
-  version: 3.1.1
-  resolution: "postcss-load-config@npm:3.1.1"
+  version: 3.1.2
+  resolution: "postcss-load-config@npm:3.1.2"
   dependencies:
     lilconfig: ^2.0.4
     yaml: ^1.10.2
@@ -12105,7 +12087,7 @@ __metadata:
   peerDependenciesMeta:
     ts-node:
       optional: true
-  checksum: d3bf9f159881dc2bab10362d1c782efc940a00148858df51c39e061a3b269c9a364a1fc953bba084d725f989c69f46fae96d625c27176a173f59a7bdc40d66e6
+  checksum: 1a21d1e7fa6ee2b80397f2639a9931952133889bafd151bf49399c2651e8a1bf85b215afd0bd4ea1d987dfe5370fb56dd06398645336c19f6b615d24a6d75db4
   languageName: node
   linkType: hard
 
@@ -15297,19 +15279,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"twcn3@npm:^1.0.0-beta.15":
-  version: 1.0.0-beta.15
-  resolution: "twcn3@npm:1.0.0-beta.15"
-  dependencies:
-    yargs: ^17.3.0
-  peerDependencies:
-    tailwindcss-classnames: ^3.0.0
-  bin:
-    twcn3: bin/twcn3.js
-  checksum: 63ff941aa1d41836562c6319d8ff95880938a72ba6510bc3896bdf1458b13362bfd502d197d7a0ed92d421e137c4a903d6793f90b2c6347590f1aada815ee2a1
-  languageName: node
-  linkType: hard
-
 "type-check@npm:^0.4.0, type-check@npm:~0.4.0":
   version: 0.4.0
   resolution: "type-check@npm:0.4.0"
@@ -16535,13 +16504,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:^21.0.0":
-  version: 21.0.0
-  resolution: "yargs-parser@npm:21.0.0"
-  checksum: 1e205fca1cb7a36a1585e2b94a64e641c12741b53627d338e12747f4dca3c3610cdd9bb235040621120548dd74c3ef03a8168d52a1eabfedccbe4a62462b6731
-  languageName: node
-  linkType: hard
-
 "yargs@npm:^13.3.2":
   version: 13.3.2
   resolution: "yargs@npm:13.3.2"
@@ -16591,21 +16553,6 @@ __metadata:
     y18n: ^5.0.5
     yargs-parser: ^20.2.2
   checksum: b14afbb51e3251a204d81937c86a7e9d4bdbf9a2bcee38226c900d00f522969ab675703bee2a6f99f8e20103f608382936034e64d921b74df82b63c07c5e8f59
-  languageName: node
-  linkType: hard
-
-"yargs@npm:^17.3.0":
-  version: 17.3.1
-  resolution: "yargs@npm:17.3.1"
-  dependencies:
-    cliui: ^7.0.2
-    escalade: ^3.1.1
-    get-caller-file: ^2.0.5
-    require-directory: ^2.1.1
-    string-width: ^4.2.3
-    y18n: ^5.0.5
-    yargs-parser: ^21.0.0
-  checksum: 64fc2e32c56739f1d14d2d24acd17a6944c3c8e3e3558f09fc1953ac112e868cc16013d282886b9d5be22187f8b9ed4f60741a6b1011f595ce2718805a656852
   languageName: node
   linkType: hard
 
