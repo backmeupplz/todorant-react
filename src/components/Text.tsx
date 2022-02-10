@@ -1,5 +1,21 @@
 import { FC } from 'react'
-import { TArg, classnames } from 'classnames/tailwind'
+import {
+  TArg,
+  TMargin,
+  alignItems,
+  classnames,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  listStylePosition,
+  listStyleType,
+  margin,
+  opacity,
+  padding,
+  textColor,
+  textDecoration,
+  whitespace,
+} from 'classnames/tailwind'
 
 type TextProps = {
   textArray: string[]
@@ -9,78 +25,79 @@ type PrivacyPolicy = {
   links: React.ReactNode[]
 }
 
-const discList = classnames('list-disc', 'list-inside')
+const discList = classnames(
+  listStyleType('list-disc'),
+  listStylePosition('list-inside')
+)
 
-const basicText = classnames('font-BodyText')
+const basicText = classnames(fontFamily('font-BodyText'))
 
 const orangeBoxTitle = classnames(
-  'items-start',
-  'text-orangeBoxTitleMobile',
-  'lg:text-xl',
-  'font-extrabold',
-  'font-BodyText',
-  'text-white'
+  fontSize('text-orangeBoxTitleMobile'),
+  fontFamily('font-BodyText'),
+  alignItems('items-start'),
+  fontSize('lg:text-xl'),
+  fontWeight('font-extrabold'),
+  textColor('text-white')
 )
 const orangeBoxList = classnames(
   discList,
-  'items-start',
-  'text-base',
-  'font-medium',
-  'pt-6',
-  'font-BodyText',
-  'text-white'
+  fontFamily('font-BodyText'),
+  alignItems('items-start'),
+  fontSize('text-base'),
+  fontWeight('font-medium'),
+  padding('pt-6'),
+  textColor('text-white')
 )
 const landingBodyTitle = classnames(
-  'items-start',
-  'text-bodyTitleMobile',
-  'lg:text-xxxl',
-  'font-bold',
-  'font-BodyText',
-  'text-mainText'
+  fontSize('text-bodyTitleMobile', 'lg:text-xxxl'),
+  fontFamily('font-BodyText'),
+  textColor('text-mainText'),
+  alignItems('items-start'),
+  fontWeight('font-bold')
 )
-const landingBodyText = (margin?: TArg) =>
+const landingBodyText = (ma?: TMargin) =>
   classnames(
-    'items-start',
-    'text-lg',
-    'font-normal',
-    'font-BodyText',
-    'text-mainText',
-    'opacity-80',
-    'whitespace-pre-line',
-    margin
+    fontFamily('font-BodyText'),
+    textColor('text-mainText'),
+    margin(ma),
+    alignItems('items-start'),
+    fontSize('text-lg'),
+    fontWeight('font-normal'),
+    opacity('opacity-80'),
+    whitespace('whitespace-pre-line')
   )
 const link = classnames(
-  'font-BodyText',
-  'text-screenshot-blue',
-  'font-semibold',
-  'text-sm',
-  'underline'
+  fontFamily('font-BodyText'),
+  textColor('text-screenshot-blue'),
+  fontWeight('font-semibold'),
+  fontSize('text-sm'),
+  textDecoration('underline')
 )
 const orangeBoxAct = classnames(
-  'items-center',
-  'lg:text-xxl',
-  'text-actMobile',
-  'font-bold',
-  'font-BodyText',
-  'text-white',
-  'pb-6'
+  fontSize('lg:text-xxl', 'text-actMobile'),
+  fontFamily('font-BodyText'),
+  alignItems('items-center'),
+  fontWeight('font-bold'),
+  textColor('text-white'),
+  padding('pb-6')
 )
 const privacyPolicyText = classnames(
-  'text-gray-500',
-  'text-sm',
-  'font-medium',
-  'font-BodyText',
-  'whitespace-pre-line'
+  fontFamily('font-BodyText'),
+  textColor('text-gray-500'),
+  fontSize('text-sm'),
+  fontWeight('font-medium'),
+  whitespace('whitespace-pre-line')
 )
 
 const modalHeaderTitle = classnames(
   basicText,
-  'font-medium',
-  'text-xl',
-  'text-mainText'
+  textColor('text-mainText'),
+  fontWeight('font-medium'),
+  fontSize('text-xl')
 )
 
-const modalText = classnames(basicText, 'text-modalText')
+const modalText = classnames(basicText, textColor('text-modalText'))
 
 export const OrangeBoxTitle: FC<TextProps> = ({ textArray }) => {
   return (
@@ -103,7 +120,7 @@ export const OrangeBoxList: FC<TextProps> = ({ textArray }) => {
 export const LandingBodyTitle: FC<{ text: string }> = ({ text }) => {
   return <p className={landingBodyTitle}>{text}</p>
 }
-export const LandingBodyText: FC<TextProps & { margin?: TArg }> = ({
+export const LandingBodyText: FC<TextProps & { margin?: TMargin }> = ({
   textArray,
   margin,
 }) => {

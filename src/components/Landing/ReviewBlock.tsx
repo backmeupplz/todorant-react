@@ -1,24 +1,31 @@
 import { IconButton } from 'components/Button'
-import { classnames } from 'classnames/tailwind'
 import { useState } from 'react'
 import CircleButtons from 'components/Landing/CircleButtons'
 import LeftArrow from 'components/icons/ChevronLeft'
 import Review from 'components/Landing/Review'
 import RightArrow from 'components/icons/ChevronRight'
+import {
+  alignItems,
+  classnames,
+  display,
+  flexDirection,
+  justifyContent,
+  margin,
+  maxWidth,
+} from 'classnames/tailwind'
 
 const block = classnames(
-  'flex',
-  'flex-row',
-  'mt-8',
-  'justify-between',
-  'lg:items-start',
-  'items-end'
+  display('flex'),
+  flexDirection('flex-row'),
+  margin('mt-8'),
+  justifyContent('justify-between'),
+  alignItems('lg:items-start', 'items-end')
 )
 const reviewContainer = classnames(
-  'max-w-reviewText',
-  'flex',
-  'flex-col',
-  'items-center'
+  maxWidth('max-w-reviewText'),
+  display('flex'),
+  flexDirection('flex-col'),
+  alignItems('items-center')
 )
 
 const ReviewBlock = () => {

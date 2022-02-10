@@ -1,51 +1,68 @@
 import { FC, useRef } from 'react'
-import { classnames } from 'classnames/tailwind'
+import {
+  alignItems,
+  backgroundColor,
+  borderRadius,
+  boxShadow,
+  classnames,
+  display,
+  flex,
+  flexDirection,
+  height,
+  inset,
+  justifyContent,
+  margin,
+  maxHeight,
+  maxWidth,
+  minHeight,
+  outlineStyle,
+  overflow,
+  padding,
+  position,
+  textAlign,
+  zIndex,
+} from 'classnames/tailwind'
 import useClickOutside from 'hooks/useClickOutside'
 import useEscape from 'hooks/useEscape'
 
 const modalWrapper = classnames(
-  'min-h-screen',
-  'h-screen',
-  'fixed',
-  'left-0',
-  'top-0',
-  'flex',
-  'justify-center',
-  'items-center',
-  'inset-0',
-  'z-50',
-  'outline-none',
-  'bg-semiTransparentBackground',
-  'max-h-full',
-  'p-4'
+  backgroundColor('bg-semiTransparentBackground'),
+  minHeight('min-h-screen'),
+  height('h-screen'),
+  position('fixed'),
+  inset('left-0', 'top-0', 'inset-0'),
+  display('flex'),
+  justifyContent('justify-center'),
+  alignItems('items-center'),
+  zIndex('z-50'),
+  outlineStyle('outline-none'),
+  maxHeight('max-h-full'),
+  padding('p-4')
 )
 
 const modalContent = classnames(
-  'max-w-2xl',
-  'relative',
-  'mx-auto',
-  'my-auto',
-  'rounded-xl',
-  'shadow-lg',
-  'bg-mainBackground',
-  'max-h-9/10',
-  'flex-auto',
-  'flex',
-  'flex-col'
+  backgroundColor('bg-mainBackground'),
+  maxHeight('max-h-9/10'),
+  maxWidth('max-w-2xl'),
+  position('relative'),
+  margin('mx-auto', 'my-auto'),
+  borderRadius('rounded-xl'),
+  boxShadow('shadow-lg'),
+  flex('flex-auto'),
+  display('flex'),
+  flexDirection('flex-col')
 )
 
 const modalItems = (topPadding = true) =>
-  classnames('px-8', 'pb-5', {
-    'pt-5': topPadding,
-  })
+  classnames(padding('px-8', 'pb-5'), padding({ 'pt-5': topPadding }))
 
 const modalContentBody = classnames(
   modalItems(false),
-  'flex-auto',
-  'justify-center',
-  'flex',
-  'overflow-auto',
-  'text-left'
+  flex('flex-auto'),
+  justifyContent('justify-center'),
+  display('flex'),
+  overflow('overflow-auto'),
+  textAlign('text-left')
 )
 
 interface Props {

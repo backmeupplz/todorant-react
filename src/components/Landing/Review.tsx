@@ -1,11 +1,31 @@
 import { FC } from 'react'
 import { LandingBodyText, Link } from 'components/Text'
-import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
+import {
+  borderRadius,
+  classnames,
+  display,
+  flexDirection,
+  height,
+  margin,
+  width,
+} from 'classnames/tailwind'
 
-const container = classnames('flex', 'flex-row', 'mb-5')
-const text = classnames('flex', 'flex-col', 'ml-3')
-const avatar = classnames('w-12', 'h-12', 'rounded-full')
+const container = classnames(
+  display('flex'),
+  flexDirection('flex-row'),
+  margin('mb-5')
+)
+const text = classnames(
+  display('flex'),
+  flexDirection('flex-col'),
+  margin('ml-3')
+)
+const avatar = classnames(
+  width('w-12'),
+  height('h-12'),
+  borderRadius('rounded-full')
+)
 
 const Review: FC<{ count: number }> = ({ count }) => {
   const { translate } = useLocalize()

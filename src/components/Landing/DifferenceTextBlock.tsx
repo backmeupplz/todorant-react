@@ -1,8 +1,19 @@
 import { LandingBodyText, LandingBodyTitle } from 'components/Text'
-import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
+import {
+  classnames,
+  display,
+  flexDirection,
+  margin,
+  maxWidth,
+} from 'classnames/tailwind'
 
-const block = classnames('flex', 'flex-col', 'max-w-xl', 'mt-8')
+const block = classnames(
+  display('flex'),
+  flexDirection('flex-col'),
+  maxWidth('max-w-xl'),
+  margin('mt-8')
+)
 
 const DifferenceTextBlock = () => {
   const { translate } = useLocalize()

@@ -1,15 +1,24 @@
 import { PlatformButton } from 'components/Button'
-import { classnames } from 'classnames/tailwind'
+import {
+  alignItems,
+  classnames,
+  display,
+  flexDirection,
+  flexWrap,
+  justifyContent,
+  margin,
+  maxWidth,
+} from 'classnames/tailwind'
 import useDarkMode from 'hooks/useDarkMode'
 
 const block = classnames(
-  'flex',
-  'flex-row',
-  'justify-center',
-  'items-center',
-  'flex-wrap',
-  'max-w-xl',
-  'mt-4'
+  display('flex'),
+  flexDirection('flex-row'),
+  justifyContent('justify-center'),
+  alignItems('items-center'),
+  flexWrap('flex-wrap'),
+  maxWidth('max-w-xl'),
+  margin('mt-4')
 )
 const CrossplatformButtonsBlock = () => {
   function open(url: string) {

@@ -1,6 +1,37 @@
 import { DiskList, ModalHeaderTitle, ModalText } from 'components/Text'
 import { FC, useRef, useState } from 'react'
-import { TArg, classnames } from 'classnames/tailwind'
+import {
+  TOpacity,
+  alignContent,
+  alignItems,
+  backgroundColor,
+  backgroundOpacity,
+  borderRadius,
+  boxShadow,
+  classnames,
+  display,
+  flexDirection,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  height,
+  inset,
+  justifyContent,
+  margin,
+  maxWidth,
+  opacity,
+  outlineStyle,
+  padding,
+  position,
+  ringColor,
+  ringOpacity,
+  ringWidth,
+  textColor,
+  textTransform,
+  transformOrigin,
+  whitespace,
+  width,
+} from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
 import { useSnapshot } from 'valtio'
 import AppStore from 'stores/AppStore'
@@ -21,108 +52,109 @@ type LogoButtonProps = {
 }
 
 const iconButton = classnames(
-  'flex',
-  'justify-center',
-  'items-center',
-  'w-12',
-  'h-12',
-  'hover:bg-gray-500',
-  'hover:bg-opacity-10',
-  'text-gray-700',
-  'focus:outline-none',
-  'text-generalButton',
-  'rounded-md',
-  'font-BodyText',
-  'font-medium',
-  'whitespace-nowrap'
+  textColor('text-generalButton'),
+  fontFamily('font-BodyText'),
+  display('flex'),
+  justifyContent('justify-center'),
+  alignItems('items-center'),
+  width('w-12'),
+  height('h-12'),
+  backgroundColor('hover:bg-gray-500'),
+  backgroundOpacity('hover:bg-opacity-10'),
+  textColor('text-gray-500'),
+  outlineStyle('focus:outline-none'),
+  borderRadius('rounded-md'),
+  fontWeight('font-medium'),
+  whitespace('whitespace-nowrap')
 )
 
 const signInBtn = classnames(
-  'rounded-md',
-  'px-11',
-  'py-3',
-  'lg:ml-2',
-  'font-BodyText',
-  'text-lg',
-  'text-white',
-  'bg-button-signIn',
-  'font-bold',
-  'w-40',
-  'h-12',
-  'flex',
-  'justify-center'
+  fontFamily('font-BodyText'),
+  backgroundColor('bg-button-signIn'),
+  borderRadius('rounded-md'),
+  padding('px-11', 'py-3'),
+  margin('lg:ml-2'),
+  fontSize('text-lg'),
+  textColor('text-white'),
+  fontWeight('font-bold'),
+  width('w-40'),
+  height('h-12'),
+  display('flex'),
+  justifyContent('justify-center')
 )
-const storeBtn = classnames('rounded-md', 'w-14', 'h-12', 'ml-1', 'lg:ml-2')
+const storeBtn = classnames(
+  borderRadius('rounded-md'),
+  width('w-14'),
+  height('h-12'),
+  margin('ml-1', 'lg:ml-2')
+)
 const platformBtn = classnames(
-  'rounded-lg',
-  'w-24',
-  'h-24',
-  'm-2',
-  'p-4',
-  'bg-gray-500',
-  'bg-opacity-5',
-  'hover:bg-gray-500',
-  'hover:bg-opacity-20',
-  'flex',
-  'flex-col',
-  'justify-center',
-  'items-center',
-  'text-mainText'
+  textColor('text-mainText'),
+  borderRadius('rounded-lg'),
+  width('w-24'),
+  height('h-24'),
+  margin('m-2'),
+  padding('p-4'),
+  backgroundColor('bg-gray-500', 'hover:bg-gray-500'),
+  backgroundOpacity('bg-opacity-5', 'hover:bg-opacity-20'),
+  display('flex'),
+  flexDirection('flex-col'),
+  justifyContent('justify-center'),
+  alignItems('items-center')
 )
 const platformLogoContainer = classnames(
-  'flex',
-  'w-10',
-  'h-10',
-  'justify-center',
-  'content-center'
+  display('flex'),
+  width('w-10'),
+  height('h-10'),
+  justifyContent('justify-center'),
+  alignContent('content-center')
 )
-const platformLogo = classnames('max-w-xs')
+const platformLogo = classnames(maxWidth('max-w-xs'))
 const platformTitle = classnames(
-  'font-medium',
-  'text-sm',
-  'mt-2',
-  'font-BodyText'
+  fontFamily('font-BodyText'),
+  fontWeight('font-medium'),
+  fontSize('text-sm'),
+  margin('mt-2')
 )
-const circleButton = (opacity?: TArg) =>
+const circleButton = (op?: TOpacity) =>
   classnames(
-    'rounded-full',
-    'bg-gray-500',
-    'w-2',
-    'h-2',
-    'm-2',
-    'hover:opacity-100',
-    opacity
+    borderRadius('rounded-full'),
+    backgroundColor('bg-gray-500'),
+    width('w-2'),
+    height('h-2'),
+    margin('m-2'),
+    opacity('hover:opacity-100', op)
   )
 
-const logoBtn = classnames('w-28')
+const logoBtn = classnames(width('w-28'))
 
 const regularButton = classnames(
-  'flex',
-  'justify-center',
-  'items-center',
-  'focus:outline-none',
-  'rounded-md',
-  'font-BodyText',
-  'font-medium',
-  'whitespace-nowrap',
-  'p-3'
+  fontFamily('font-BodyText'),
+  display('flex'),
+  justifyContent('justify-center'),
+  alignItems('items-center'),
+  outlineStyle('focus:outline-none'),
+  borderRadius('rounded-md'),
+  fontWeight('font-medium'),
+  whitespace('whitespace-nowrap'),
+  padding('p-3')
 )
 
 const dropdownContainer = classnames(
-  'origin-top-right',
-  'absolute',
-  'right-0',
-  'mt-2',
-  'rounded-md',
-  'shadow-lg',
-  'bg-mainBackground',
-  'ring-1',
-  'ring-black',
-  'ring-opacity-5',
-  'focus:outline-none',
-  'flex',
-  'flex-col',
-  'p-2'
+  backgroundColor('bg-mainBackground'),
+  transformOrigin('origin-top-right'),
+  position('absolute'),
+  inset('right-0'),
+  margin('mt-2'),
+  borderRadius('rounded-md'),
+  boxShadow('shadow-lg'),
+  ringWidth('ring-1'),
+  ringColor('ring-black'),
+  ringOpacity('ring-opacity-5'),
+  outlineStyle('focus:outline-none'),
+  display('flex'),
+  flexDirection('flex-col'),
+  padding('p-2')
 )
 
 export const LogoButton = () => {
@@ -133,7 +165,10 @@ export const LogoButton = () => {
   )
 }
 
-const dropDownWrapper = classnames('relative', 'inline-block')
+const dropDownWrapper = classnames(
+  position('relative'),
+  display('inline-block')
+)
 export const DropDownButton: FC<{
   text?: string
   img?: string
@@ -222,7 +257,7 @@ export const SettingsButton = () => {
   )
 }
 
-const iconImage = classnames('h-6')
+const iconImage = classnames(height('h-6'))
 
 export const IconButton: FC<ButtonProps & { text?: string; img?: string }> = ({
   onClick,
@@ -278,10 +313,10 @@ export const StoreButton: FC<LogoButtonProps> = ({ onClick, path, alt }) => {
 
 const blueButton = classnames(
   regularButton,
-  'text-blue-500',
-  'hover:bg-blue-500',
-  'hover:bg-opacity-10',
-  'uppercase'
+  textColor('text-blue-500'),
+  backgroundColor('hover:bg-blue-500'),
+  backgroundOpacity('hover:bg-opacity-10'),
+  textTransform('uppercase')
 )
 export const BlueButton: FC<
   ButtonProps & {
@@ -304,9 +339,9 @@ export const BlueButton: FC<
 
 const grayButton = classnames(
   regularButton,
-  'text-modalText',
-  'hover:bg-gray-500',
-  'hover:bg-opacity-10'
+  textColor('text-modalText'),
+  backgroundColor('hover:bg-gray-500'),
+  backgroundOpacity('hover:bg-opacity-10')
 )
 export const GrayButton: FC<
   ButtonProps & {
@@ -327,8 +362,8 @@ export const GrayButton: FC<
   )
 }
 
-const infoRules = classnames('mb-4')
-const infoFooter = classnames('flex', 'justify-end')
+const infoRules = classnames(margin('mb-4'))
+const infoFooter = classnames(display('flex'), justifyContent('justify-end'))
 export const InfoButton = () => {
   const [modalOpened, setModalOpened] = useState(false)
   const { translate } = useLocalize()
@@ -393,7 +428,7 @@ export const CircleButton: FC<{ onClick: () => void; inactive?: boolean }> = ({
   onClick,
   inactive,
 }) => {
-  let opacity: TArg = 'opacity-50'
+  let opacity: TOpacity = 'opacity-50'
   if (inactive) opacity = 'opacity-30'
   return <button className={circleButton(opacity)} onClick={onClick} />
 }

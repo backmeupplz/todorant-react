@@ -1,16 +1,24 @@
 import { OrangeBoxList, OrangeBoxTitle } from 'components/Text'
-import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
+import {
+  classnames,
+  display,
+  flexDirection,
+  flexWrap,
+  justifyContent,
+  margin,
+  maxWidth,
+  padding,
+} from 'classnames/tailwind'
 
 const block = classnames(
-  'flex',
-  'flex-col',
-  'justify-between',
-  'flex-wrap',
-  'lg:max-w-todorantWorksText',
-  'mb-4',
-  'lg:mb-0',
-  'p-4'
+  maxWidth('lg:max-w-todorantWorksText'),
+  display('flex'),
+  flexDirection('flex-col'),
+  justifyContent('justify-between'),
+  flexWrap('flex-wrap'),
+  margin('mb-4', 'lg:mb-0'),
+  padding('p-4')
 )
 
 const TodorantWorksTextBlock = () => {

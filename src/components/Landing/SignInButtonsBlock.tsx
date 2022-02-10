@@ -1,12 +1,16 @@
 import { SignInButton, StoreButton } from 'components/Button'
-import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
+import {
+  classnames,
+  display,
+  flexDirection,
+  justifyContent,
+} from 'classnames/tailwind'
 
 const buttons = classnames(
-  'flex',
-  'flex-row',
-  'justify-center',
-  'lg:justify-end'
+  display('flex'),
+  flexDirection('flex-row'),
+  justifyContent('justify-center', 'lg:justify-end')
 )
 
 const SignInButtonsBlock = () => {

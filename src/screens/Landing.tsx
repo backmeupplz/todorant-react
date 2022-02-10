@@ -1,4 +1,3 @@
-import { classnames } from 'classnames/tailwind'
 import BottomOrangeBox from 'components/Landing/BottomOrangeBox'
 import Crossplatform from 'components/Landing/Crossplatform'
 import Deal from 'components/Landing/Deal'
@@ -7,8 +6,18 @@ import Feedback from 'components/Landing/Feedback'
 import PrivacyPolicy from 'components/Landing/PrivacyPolicy'
 import TopOrangeBox from 'components/Landing/TopOrangeBox'
 import Video from 'components/Landing/Video'
+import {
+  alignItems,
+  classnames,
+  display,
+  flexDirection,
+} from 'classnames/tailwind'
 
-const container = classnames('flex', 'flex-col', 'items-end')
+const container = classnames(
+  display('flex'),
+  flexDirection('flex-col'),
+  alignItems('items-end')
+)
 
 const Landing = () => {
   return (

@@ -1,48 +1,56 @@
-import { classnames } from 'classnames/tailwind'
 import { useSnapshot } from 'valtio'
 import AppStore from 'stores/AppStore'
+import {
+  backgroundColor,
+  borderRadius,
+  classnames,
+  display,
+  hardwareAcceleration,
+  height,
+  justifyContent,
+  margin,
+  overflow,
+  position,
+  rotate,
+  width,
+  zIndex,
+} from 'classnames/tailwind'
 import useDarkMode from 'hooks/useDarkMode'
 
 const container = classnames(
-  'overflow-hidden',
-  'h-full',
-  'mt-10',
-  'relative',
-  'justify-center',
-  'flex',
-  'h-screenshotContainerMobile',
-  'w-screenshotContainerMobile',
-  'sm:h-screenshotContainer',
-  'sm:w-screenshotContainer',
-  'z-underModal'
+  zIndex('z-underModal'),
+  overflow('overflow-hidden'),
+  height('h-screenshotContainerMobile', 'sm:h-screenshotContainer'),
+  width('w-screenshotContainerMobile', 'sm:w-screenshotContainer'),
+  margin('mt-10'),
+  position('relative'),
+  justifyContent('justify-center'),
+  display('flex')
 )
 const screen = classnames(
-  'transform-gpu',
-  'w-screenshotMobile',
-  'h-screenshotMobile',
-  'sm:w-screenshot',
-  'sm:h-screenshot',
-  'absolute',
-  'mt-10',
-  'rounded-xxl'
+  width('w-screenshotMobile', 'sm:w-screenshot'),
+  height('h-screenshotMobile', 'sm:h-screenshot'),
+  borderRadius('rounded-xxl'),
+  hardwareAcceleration('transform-gpu'),
+  position('absolute'),
+  margin('mt-10')
 )
 const blueScreen = classnames(
-  'bg-screenshot-blue',
-  'rotate-screenshotBlue',
+  backgroundColor('bg-screenshot-blue'),
+  rotate('rotate-screenshotBlue'),
   screen
 )
 const yellowScreen = classnames(
-  'bg-screenshot-yellow',
-  'rotate-screenshotYellow',
+  backgroundColor('bg-screenshot-yellow'),
+  rotate('rotate-screenshotYellow'),
   screen
 )
 const frame = classnames(
-  'flex',
-  'absolute',
-  'mt-10',
-  'w-screenshotMobile',
-  'sm:w-screenshot',
-  'rounded-sm'
+  width('w-screenshotMobile', 'sm:w-screenshot'),
+  display('flex'),
+  position('absolute'),
+  margin('mt-10'),
+  borderRadius('rounded-sm')
 )
 
 const DifferenceScreenshot = () => {

@@ -1,15 +1,22 @@
 import { LandingBodyTitle } from 'components/Text'
-import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
+import {
+  classnames,
+  display,
+  flexDirection,
+  justifyContent,
+  margin,
+  width,
+} from 'classnames/tailwind'
 
 import ReviewBlock from 'components/Landing/ReviewBlock'
 
 const container = classnames(
-  'flex',
-  'flex-col',
-  'justify-start',
-  'w-full',
-  'mt-10'
+  display('flex'),
+  flexDirection('flex-col'),
+  justifyContent('justify-start'),
+  width('w-full'),
+  margin('mt-10')
 )
 
 const Feedback = () => {

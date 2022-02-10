@@ -1,14 +1,20 @@
 import { Link, PrivacyPolicyText } from 'components/Text'
-import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
+import {
+  alignContent,
+  classnames,
+  display,
+  flexDirection,
+  margin,
+  width,
+} from 'classnames/tailwind'
 
 const block = classnames(
-  'flex',
-  'flex-row',
-  'content-start',
-  'w-full',
-  'mt-10',
-  'mb-16'
+  display('flex'),
+  flexDirection('flex-row'),
+  alignContent('content-start'),
+  width('w-full'),
+  margin('mt-10', 'mb-16')
 )
 
 const PrivacyPolicy = () => {

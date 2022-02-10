@@ -1,21 +1,35 @@
 import { OrangeBoxAct } from 'components/Text'
-import { classnames } from 'classnames/tailwind'
+import {
+  alignItems,
+  backgroundImage,
+  borderRadius,
+  classnames,
+  display,
+  flexDirection,
+  gradientColorStops,
+  justifyContent,
+  margin,
+  padding,
+  width,
+} from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
 
 import SignInButtonsBlock from 'components/Landing/SignInButtonsBlock'
 
 const orangeBox = classnames(
-  'bg-gradient-to-r',
-  'from-orangeBoxGradient-primary',
-  'to-orangeBoxGradient-secondary',
-  'rounded-xl',
-  'w-full',
-  'flex',
-  'flex-col',
-  'justify-center',
-  'items-center',
-  'p-10',
-  'mt-12'
+  gradientColorStops(
+    'from-orangeBoxGradient-primary',
+    'to-orangeBoxGradient-secondary'
+  ),
+  backgroundImage('bg-gradient-to-r'),
+  borderRadius('rounded-xl'),
+  width('w-full'),
+  display('flex'),
+  flexDirection('flex-col'),
+  justifyContent('justify-center'),
+  alignItems('items-center'),
+  padding('p-10'),
+  margin('mt-12')
 )
 
 const BottomOrangeBox = () => {

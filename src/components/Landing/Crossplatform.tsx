@@ -1,16 +1,24 @@
 import { LandingBodyTitle } from 'components/Text'
-import { classnames } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
+import {
+  classnames,
+  display,
+  flexDirection,
+  justifyContent,
+  margin,
+  maxWidth,
+  width,
+} from 'classnames/tailwind'
 
 import CrossplatformButtonsBlock from 'components/Landing/CrossplatformButtonsBlock'
 
 const container = classnames(
-  'flex',
-  'flex-col',
-  'justify-start',
-  'w-full',
-  'mt-10',
-  'max-w-full'
+  display('flex'),
+  flexDirection('flex-col'),
+  justifyContent('justify-start'),
+  width('w-full'),
+  margin('mt-10'),
+  maxWidth('max-w-full')
 )
 
 const Crossplatform = () => {
