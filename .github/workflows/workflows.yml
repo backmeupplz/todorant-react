@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install modules
-        run: yarn
+        run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn
       - name: Compile code
         run: yarn tsc --skipLibCheck
       - name: Lint code
