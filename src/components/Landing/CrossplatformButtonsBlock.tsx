@@ -9,6 +9,7 @@ import {
   margin,
   maxWidth,
 } from 'classnames/tailwind'
+import open from 'helpers/open'
 import useDarkMode from 'hooks/useDarkMode'
 
 const block = classnames(
@@ -21,9 +22,6 @@ const block = classnames(
   maxWidth('max-w-xl')
 )
 const CrossplatformButtonsBlock = () => {
-  function open(url: string) {
-    window.open(url, '_blank')
-  }
   const [isDark] = useDarkMode()
 
   const buttons = platforms.map((platform) => (
