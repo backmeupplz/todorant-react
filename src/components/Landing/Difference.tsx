@@ -11,12 +11,12 @@ import DifferenceScreenshot from 'components/Landing/DifferenceScreenshot'
 import DifferenceTextBlock from 'components/Landing/DifferenceTextBlock'
 
 const container = classnames(
+  alignItems('items-center'),
   display('flex'),
-  justifyContent('justify-between'),
-  width('w-full'),
-  padding('lg:pr-6'),
   flexDirection('flex-col', 'lg:flex-row'),
-  alignItems('items-center')
+  justifyContent('justify-between'),
+  padding('lg:pr-6'),
+  width('w-full')
 )
 
 const Difference = () => {

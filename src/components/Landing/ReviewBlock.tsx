@@ -15,17 +15,17 @@ import Review from 'components/Landing/Review'
 import RightArrow from 'components/icons/ChevronRight'
 
 const block = classnames(
+  alignItems('lg:items-start', 'items-end'),
   display('flex'),
   flexDirection('flex-row'),
-  margin('mt-8'),
   justifyContent('justify-between'),
-  alignItems('lg:items-start', 'items-end')
+  margin('mt-8')
 )
 const reviewContainer = classnames(
-  maxWidth('max-w-review-text'),
+  alignItems('items-center'),
   display('flex'),
   flexDirection('flex-col'),
-  alignItems('items-center')
+  maxWidth('max-w-review-text')
 )
 
 const ReviewBlock = () => {

@@ -18,22 +18,22 @@ import AppStore from 'stores/AppStore'
 import useDarkMode from 'hooks/useDarkMode'
 
 const container = classnames(
-  zIndex('z-underModal'),
-  overflow('overflow-hidden'),
+  display('flex'),
   height('h-screenshot-container-mobile', 'sm:h-screenshot-container'),
-  width('w-screenshot-container-mobile', 'sm:w-screenshot-container'),
-  margin('mt-10'),
-  position('relative'),
   justifyContent('justify-center'),
-  display('flex')
+  margin('mt-10'),
+  overflow('overflow-hidden'),
+  position('relative'),
+  width('w-screenshot-container-mobile', 'sm:w-screenshot-container'),
+  zIndex('z-underModal')
 )
 const screen = classnames(
-  width('w-screenshot-mobile', 'sm:w-screenshot'),
-  height('h-screenshot-mobile', 'sm:h-screenshot'),
   borderRadius('rounded-xxl'),
   hardwareAcceleration('transform-gpu'),
+  height('h-screenshot-mobile', 'sm:h-screenshot'),
+  margin('mt-10'),
   position('absolute'),
-  margin('mt-10')
+  width('w-screenshot-mobile', 'sm:w-screenshot')
 )
 const blueScreen = classnames(
   backgroundColor('bg-screenshot-blue'),
@@ -46,11 +46,11 @@ const yellowScreen = classnames(
   screen
 )
 const frame = classnames(
-  width('w-screenshot-mobile', 'sm:w-screenshot'),
+  borderRadius('rounded-sm'),
   display('flex'),
-  position('absolute'),
   margin('mt-10'),
-  borderRadius('rounded-sm')
+  position('absolute'),
+  width('w-screenshot-mobile', 'sm:w-screenshot')
 )
 
 const DifferenceScreenshot = () => {

@@ -25,79 +25,13 @@ type PrivacyPolicy = {
   links: React.ReactNode[]
 }
 
-const discList = classnames(
-  listStyleType('list-disc'),
-  listStylePosition('list-inside')
-)
-
-const basicText = classnames(fontFamily('font-body-text'))
-
 const orangeBoxTitle = classnames(
-  fontSize('text-orange-box-title-mobile'),
-  fontFamily('font-body-text'),
   alignItems('items-start'),
-  fontSize('lg:text-xl'),
+  fontFamily('font-body-text'),
+  fontSize('lg:text-xl', 'text-orange-box-title-mobile'),
   fontWeight('font-extrabold'),
   textColor('text-white')
 )
-const orangeBoxList = classnames(
-  discList,
-  fontFamily('font-body-text'),
-  alignItems('items-start'),
-  fontSize('text-base'),
-  fontWeight('font-medium'),
-  padding('pt-6'),
-  textColor('text-white')
-)
-const landingBodyTitle = classnames(
-  fontSize('text-body-title-mobile', 'lg:text-xxxl'),
-  fontFamily('font-body-text'),
-  textColor('text-main-text'),
-  alignItems('items-start'),
-  fontWeight('font-bold')
-)
-const landingBodyText = (ma?: TMargin) =>
-  classnames(
-    fontFamily('font-body-text'),
-    textColor('text-main-text'),
-    margin(ma),
-    alignItems('items-start'),
-    fontSize('text-lg'),
-    fontWeight('font-normal'),
-    opacity('opacity-80'),
-    whitespace('whitespace-pre-line')
-  )
-const link = classnames(
-  fontFamily('font-body-text'),
-  textColor('text-screenshot-blue'),
-  fontWeight('font-semibold'),
-  fontSize('text-sm'),
-  textDecoration('underline')
-)
-const orangeBoxAct = classnames(
-  fontSize('lg:text-xxl', 'text-act-mobile'),
-  fontFamily('font-body-text'),
-  alignItems('items-center'),
-  fontWeight('font-bold'),
-  textColor('text-white'),
-  padding('pb-6')
-)
-const privacyPolicyText = classnames(
-  fontFamily('font-body-text'),
-  textColor('text-gray-500'),
-  fontSize('text-sm'),
-  fontWeight('font-medium'),
-  whitespace('whitespace-pre-line')
-)
-
-const modalHeaderTitle = classnames(
-  basicText,
-  textColor('text-main-text'),
-  fontWeight('font-medium'),
-  fontSize('text-xl')
-)
-
-const modalText = classnames(basicText, textColor('text-modal-text'))
 
 export const OrangeBoxTitle: FC<TextProps> = ({ textArray }) => {
   return (
@@ -108,6 +42,22 @@ export const OrangeBoxTitle: FC<TextProps> = ({ textArray }) => {
     </div>
   )
 }
+
+const discList = classnames(
+  listStylePosition('list-inside'),
+  listStyleType('list-disc')
+)
+
+const orangeBoxList = classnames(
+  alignItems('items-start'),
+  discList,
+  fontFamily('font-body-text'),
+  fontSize('text-base'),
+  fontWeight('font-medium'),
+  padding('pt-6'),
+  textColor('text-white')
+)
+
 export const OrangeBoxList: FC<TextProps> = ({ textArray }) => {
   return (
     <ul className={orangeBoxList}>
@@ -117,9 +67,30 @@ export const OrangeBoxList: FC<TextProps> = ({ textArray }) => {
     </ul>
   )
 }
+const landingBodyTitle = classnames(
+  alignItems('items-start'),
+  fontFamily('font-body-text'),
+  fontSize('text-body-title-mobile', 'lg:text-xxxl'),
+  fontWeight('font-bold'),
+  textColor('text-main-text')
+)
+
 export const LandingBodyTitle: FC<{ text: string }> = ({ text }) => {
   return <p className={landingBodyTitle}>{text}</p>
 }
+
+const landingBodyText = (ma?: TMargin) =>
+  classnames(
+    alignItems('items-start'),
+    fontFamily('font-body-text'),
+    fontSize('text-lg'),
+    fontWeight('font-normal'),
+    margin(ma),
+    opacity('opacity-80'),
+    textColor('text-main-text'),
+    whitespace('whitespace-pre-line')
+  )
+
 export const LandingBodyText: FC<TextProps & { margin?: TMargin }> = ({
   textArray,
   margin,
@@ -133,13 +104,32 @@ export const LandingBodyText: FC<TextProps & { margin?: TMargin }> = ({
   )
 }
 
+const basicText = classnames(fontFamily('font-body-text'))
+
+const modalHeaderTitle = classnames(
+  basicText,
+  fontSize('text-xl'),
+  fontWeight('font-medium'),
+  textColor('text-main-text')
+)
+
 export const ModalHeaderTitle: FC<{ text: string }> = ({ text }) => {
   return <div className={modalHeaderTitle}>{text}</div>
 }
 
+const modalText = classnames(basicText, textColor('text-modal-text'))
+
 export const ModalText: FC<{ text?: string }> = ({ children, text }) => {
   return <div className={modalText}>{children || text}</div>
 }
+
+const link = classnames(
+  fontFamily('font-body-text'),
+  fontSize('text-sm'),
+  fontWeight('font-semibold'),
+  textColor('text-screenshot-blue'),
+  textDecoration('underline')
+)
 
 export const Link: FC<{ url: string; text: string }> = ({ url, text }) => {
   return (
@@ -152,9 +142,27 @@ export const Link: FC<{ url: string; text: string }> = ({ url, text }) => {
 export const DiskList: FC = ({ children }) => {
   return <ul className={discList}>{children}</ul>
 }
+
+const orangeBoxAct = classnames(
+  alignItems('items-center'),
+  fontFamily('font-body-text'),
+  fontSize('lg:text-xxl', 'text-act-mobile'),
+  fontWeight('font-bold'),
+  padding('pb-6'),
+  textColor('text-white')
+)
+
 export const OrangeBoxAct: FC<{ text: string }> = ({ text }) => {
   return <p className={orangeBoxAct}>{text}</p>
 }
+
+const privacyPolicyText = classnames(
+  fontFamily('font-body-text'),
+  fontSize('text-sm'),
+  fontWeight('font-medium'),
+  textColor('text-gray-500'),
+  whitespace('whitespace-pre-line')
+)
 
 export const PrivacyPolicyText: FC<PrivacyPolicy> = ({ text, links }) => {
   return (

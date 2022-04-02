@@ -14,9 +14,9 @@ import TopOrangeBox from 'components/Landing/TopOrangeBox'
 import Video from 'components/Landing/Video'
 
 const container = classnames(
+  alignItems('items-end'),
   display('flex'),
-  flexDirection('flex-col'),
-  alignItems('items-end')
+  flexDirection('flex-col')
 )
 
 const Landing = () => {
