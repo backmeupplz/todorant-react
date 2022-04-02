@@ -12,13 +12,13 @@ import {
 import useDarkMode from 'hooks/useDarkMode'
 
 const block = classnames(
+  alignItems('items-center'),
   display('flex'),
   flexDirection('flex-row'),
-  justifyContent('justify-center'),
-  alignItems('items-center'),
   flexWrap('flex-wrap'),
-  maxWidth('max-w-xl'),
-  margin('mt-4')
+  justifyContent('justify-center'),
+  margin('mt-4'),
+  maxWidth('max-w-xl')
 )
 const CrossplatformButtonsBlock = () => {
   function open(url: string) {

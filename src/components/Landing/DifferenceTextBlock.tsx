@@ -11,8 +11,8 @@ import { useLocalize } from '@borodutch-labs/localize-react'
 const block = classnames(
   display('flex'),
   flexDirection('flex-col'),
-  maxWidth('max-w-xl'),
-  margin('mt-8')
+  margin('mt-8'),
+  maxWidth('max-w-xl')
 )
 
 const DifferenceTextBlock = () => {

@@ -22,9 +22,9 @@ const text = classnames(
   margin('ml-3')
 )
 const avatar = classnames(
-  width('w-12'),
+  borderRadius('rounded-full'),
   height('h-12'),
-  borderRadius('rounded-full')
+  width('w-12')
 )
 
 const Review: FC<{ count: number }> = ({ count }) => {
@@ -46,7 +46,7 @@ const Review: FC<{ count: number }> = ({ count }) => {
           url={`https://t.me/${review.userName}`}
           text={`@${review.userName}`}
         />
-        <LandingBodyText textArray={[review.text]} margin={'mt-3'} />
+        <LandingBodyText textArray={[review.text]} margin="mt-3" />
       </div>
     </div>
   )

@@ -16,9 +16,9 @@ const container = classnames(
   display('flex'),
   flexDirection('flex-col'),
   justifyContent('justify-start'),
-  width('w-full'),
   margin('mt-10'),
-  maxWidth('max-w-full')
+  maxWidth('max-w-full'),
+  width('w-full')
 )
 
 const Crossplatform = () => {

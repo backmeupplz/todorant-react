@@ -51,129 +51,45 @@ type LogoButtonProps = {
   alt: string
 }
 
-const iconButton = classnames(
-  textColor('text-general-button'),
-  fontFamily('font-body-text'),
-  display('flex'),
-  justifyContent('justify-center'),
-  alignItems('items-center'),
-  width('w-12'),
-  height('h-12'),
-  backgroundColor('hover:bg-gray-500'),
-  backgroundOpacity('hover:bg-opacity-10'),
-  textColor('text-gray-500'),
-  outlineStyle('focus:outline-none'),
-  borderRadius('rounded-md'),
-  fontWeight('font-medium'),
-  whitespace('whitespace-nowrap')
-)
-
-const signInBtn = classnames(
-  fontFamily('font-body-text'),
-  backgroundColor('bg-button-sign-in'),
-  borderRadius('rounded-md'),
-  padding('px-11', 'py-3'),
-  margin('lg:ml-2'),
-  fontSize('text-lg'),
-  textColor('text-white'),
-  fontWeight('font-bold'),
-  width('w-40'),
-  height('h-12'),
-  display('flex'),
-  justifyContent('justify-center')
-)
-const storeBtn = classnames(
-  borderRadius('rounded-md'),
-  width('w-14'),
-  height('h-12'),
-  margin('ml-1', 'lg:ml-2')
-)
-const platformBtn = classnames(
-  textColor('text-main-text'),
-  borderRadius('rounded-lg'),
-  width('w-24'),
-  height('h-24'),
-  margin('m-2'),
-  padding('p-4'),
-  backgroundColor('bg-gray-500', 'hover:bg-gray-500'),
-  backgroundOpacity('bg-opacity-5', 'hover:bg-opacity-20'),
-  display('flex'),
-  flexDirection('flex-col'),
-  justifyContent('justify-center'),
-  alignItems('items-center')
-)
-const platformLogoContainer = classnames(
-  display('flex'),
-  width('w-10'),
-  height('h-10'),
-  justifyContent('justify-center'),
-  alignContent('content-center')
-)
-const platformLogo = classnames(maxWidth('max-w-xs'))
-const platformTitle = classnames(
-  fontFamily('font-body-text'),
-  fontWeight('font-medium'),
-  fontSize('text-sm'),
-  margin('mt-2')
-)
-const circleButton = (op?: TOpacity) =>
-  classnames(
-    borderRadius('rounded-full'),
-    backgroundColor('bg-gray-500'),
-    width('w-2'),
-    height('h-2'),
-    margin('m-2'),
-    opacity('hover:opacity-100', op)
-  )
-
 const logoBtn = classnames(width('w-28'))
-
-const regularButton = classnames(
-  fontFamily('font-body-text'),
-  display('flex'),
-  justifyContent('justify-center'),
-  alignItems('items-center'),
-  outlineStyle('focus:outline-none'),
-  borderRadius('rounded-md'),
-  fontWeight('font-medium'),
-  whitespace('whitespace-nowrap'),
-  padding('p-3')
-)
-
-const dropdownContainer = classnames(
-  backgroundColor('bg-main-background'),
-  transformOrigin('origin-top-right'),
-  position('absolute'),
-  inset('right-0'),
-  margin('mt-2'),
-  borderRadius('rounded-md'),
-  boxShadow('shadow-lg'),
-  ringWidth('ring-1'),
-  ringColor('ring-black'),
-  ringOpacity('ring-opacity-5'),
-  outlineStyle('focus:outline-none'),
-  display('flex'),
-  flexDirection('flex-col'),
-  padding('p-2')
-)
 
 export const LogoButton = () => {
   return (
     <button className={logoBtn}>
-      <img src={'public/img/logo.svg'} />
+      <img src="public/img/logo.svg" />
     </button>
   )
 }
 
 const dropDownWrapper = classnames(
-  position('relative'),
-  display('inline-block')
+  display('inline-block'),
+  position('relative')
 )
+
+const dropdownContainer = classnames(
+  backgroundColor('bg-main-background'),
+  borderRadius('rounded-md'),
+  boxShadow('shadow-lg'),
+  display('flex'),
+  flexDirection('flex-col'),
+  inset('right-0'),
+  margin('mt-2'),
+  outlineStyle('focus:outline-none'),
+  padding('p-2'),
+  position('absolute'),
+  ringColor('ring-black'),
+  ringOpacity('ring-opacity-5'),
+  ringWidth('ring-1'),
+  transformOrigin('origin-top-right')
+)
+
 export const DropDownButton: FC<{
   text?: string
   img?: string
-  ButtonHandler: FC<any>
-}> = ({ children, ButtonHandler, ...props }) => {
+  wrapper: FC<any>
+}> = ({ children, wrapper, ...props }) => {
+  const ButtonHandler = wrapper
+
   const ref = useRef<HTMLDivElement>(null)
 
   const [showDropDown, setShowDropDown] = useState(false)
@@ -209,6 +125,22 @@ export const DropDownButton: FC<{
   )
 }
 
+const iconButton = classnames(
+  alignItems('items-center'),
+  backgroundColor('hover:bg-gray-500'),
+  backgroundOpacity('hover:bg-opacity-10'),
+  borderRadius('rounded-md'),
+  display('flex'),
+  fontFamily('font-body-text'),
+  fontWeight('font-medium'),
+  height('h-12'),
+  justifyContent('justify-center'),
+  outlineStyle('focus:outline-none'),
+  textColor('text-general-button'),
+  whitespace('whitespace-nowrap'),
+  width('w-12')
+)
+
 const flags = {
   US: Language.en,
   RU: Language.ru,
@@ -223,7 +155,7 @@ export const LanguageButton: FC = () => {
   const { language } = useSnapshot(AppStore)
 
   return (
-    <DropDownButton text={language.toUpperCase()} ButtonHandler={IconButton}>
+    <DropDownButton text={language.toUpperCase()} wrapper={IconButton}>
       {Object.keys(flags).map((k) => (
         <IconButton
           key={flags[k]}
@@ -243,7 +175,7 @@ export const SettingsButton = () => {
   const { translate } = useLocalize()
 
   return (
-    <DropDownButton img={'/img/settings.svg'} ButtonHandler={IconButton}>
+    <DropDownButton img="/img/settings.svg" wrapper={IconButton}>
       <GrayButton
         onClick={() => {
           setIsDark(!isDark)
@@ -280,6 +212,21 @@ export const IconButton: FC<ButtonProps & { text?: string; img?: string }> = ({
   )
 }
 
+const signInBtn = classnames(
+  backgroundColor('bg-button-sign-in'),
+  borderRadius('rounded-md'),
+  display('flex'),
+  fontFamily('font-body-text'),
+  fontSize('text-lg'),
+  fontWeight('font-bold'),
+  height('h-12'),
+  justifyContent('justify-center'),
+  margin('lg:ml-2'),
+  padding('px-11', 'py-3'),
+  textColor('text-white'),
+  width('w-40')
+)
+
 export const SignInButton: FC<{ title: string }> = ({ title }) => {
   const [modalOpened, setModalOpened] = useState(false)
   return (
@@ -303,6 +250,13 @@ export const SignInButton: FC<{ title: string }> = ({ title }) => {
   )
 }
 
+const storeBtn = classnames(
+  borderRadius('rounded-md'),
+  height('h-12'),
+  margin('ml-1', 'lg:ml-2'),
+  width('w-14')
+)
+
 export const StoreButton: FC<LogoButtonProps> = ({ onClick, path, alt }) => {
   return (
     <button className={storeBtn} onClick={onClick}>
@@ -311,11 +265,23 @@ export const StoreButton: FC<LogoButtonProps> = ({ onClick, path, alt }) => {
   )
 }
 
+const regularButton = classnames(
+  alignItems('items-center'),
+  borderRadius('rounded-md'),
+  display('flex'),
+  fontFamily('font-body-text'),
+  fontWeight('font-medium'),
+  justifyContent('justify-center'),
+  outlineStyle('focus:outline-none'),
+  padding('p-3'),
+  whitespace('whitespace-nowrap')
+)
+
 const blueButton = classnames(
-  regularButton,
-  textColor('text-blue-500'),
   backgroundColor('hover:bg-blue-500'),
   backgroundOpacity('hover:bg-opacity-10'),
+  regularButton,
+  textColor('text-blue-500'),
   textTransform('uppercase')
 )
 export const BlueButton: FC<
@@ -338,10 +304,10 @@ export const BlueButton: FC<
 }
 
 const grayButton = classnames(
-  regularButton,
-  textColor('text-modal-text'),
   backgroundColor('hover:bg-gray-500'),
-  backgroundOpacity('hover:bg-opacity-10')
+  backgroundOpacity('hover:bg-opacity-10'),
+  regularButton,
+  textColor('text-modal-text')
 )
 export const GrayButton: FC<
   ButtonProps & {
@@ -381,7 +347,7 @@ export const InfoButton = () => {
   return (
     <>
       <IconButton
-        img={'/img/info.svg'}
+        img="/img/info.svg"
         onClick={() => {
           setModalOpened(!modalOpened)
         }}
@@ -404,6 +370,39 @@ export const InfoButton = () => {
     </>
   )
 }
+
+const platformBtn = classnames(
+  alignItems('items-center'),
+  backgroundColor('bg-gray-500', 'hover:bg-gray-500'),
+  backgroundOpacity('bg-opacity-5', 'hover:bg-opacity-20'),
+  borderRadius('rounded-lg'),
+  display('flex'),
+  flexDirection('flex-col'),
+  height('h-24'),
+  justifyContent('justify-center'),
+  margin('m-2'),
+  padding('p-4'),
+  textColor('text-main-text'),
+  width('w-24')
+)
+
+const platformLogoContainer = classnames(
+  alignContent('content-center'),
+  display('flex'),
+  height('h-10'),
+  justifyContent('justify-center'),
+  width('w-10')
+)
+
+const platformLogo = classnames(maxWidth('max-w-xs'))
+
+const platformTitle = classnames(
+  fontFamily('font-body-text'),
+  fontSize('text-sm'),
+  fontWeight('font-medium'),
+  margin('mt-2')
+)
+
 export const PlatformButton: FC<LogoButtonProps & { title: string }> = ({
   onClick,
   path,
@@ -424,11 +423,25 @@ export const PlatformButton: FC<LogoButtonProps & { title: string }> = ({
   )
 }
 
+const circleButton = (op?: TOpacity) =>
+  classnames(
+    backgroundColor('bg-gray-500'),
+    borderRadius('rounded-full'),
+    height('h-2'),
+    margin('m-2'),
+    opacity('hover:opacity-100', op),
+    width('w-2')
+  )
+
+function circleButtonOpacity(inactive?: boolean) {
+  if (inactive) return 'opacity-30'
+  return 'opacity-50'
+}
+
 export const CircleButton: FC<{ onClick: () => void; inactive?: boolean }> = ({
   onClick,
   inactive,
 }) => {
-  let opacity: TOpacity = 'opacity-50'
-  if (inactive) opacity = 'opacity-30'
+  const opacity: TOpacity = circleButtonOpacity(inactive)
   return <button className={circleButton(opacity)} onClick={onClick} />
 }

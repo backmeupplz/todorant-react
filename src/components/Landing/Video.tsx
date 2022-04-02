@@ -12,10 +12,10 @@ import AppStore from 'stores/AppStore'
 import Language from 'models/Language'
 
 const frame = classnames(
-  margin('mt-mobile-video-top', 'lg:mt-video-top'),
-  boxShadow('shadow-landing-video'),
   borderRadius('rounded-sm'),
+  boxShadow('shadow-landing-video'),
   height('h-video'),
+  margin('mt-mobile-video-top', 'lg:mt-video-top'),
   width('lg:w-video', 'w-full')
 )
 

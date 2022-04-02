@@ -13,8 +13,8 @@ const container = classnames(
   display('flex'),
   flexDirection('flex-col'),
   justifyContent('justify-start'),
-  width('w-full'),
-  margin('mt-10')
+  margin('mt-10'),
+  width('w-full')
 )
 
 const Deal = () => {

@@ -26,41 +26,41 @@ import useClickOutside from 'hooks/useClickOutside'
 import useEscape from 'hooks/useEscape'
 
 const modalWrapper = classnames(
-  backgroundColor('bg-semi-transparent-background'),
-  minHeight('min-h-screen'),
-  height('h-screen'),
-  position('fixed'),
-  inset('left-0', 'top-0', 'inset-0'),
-  display('flex'),
-  justifyContent('justify-center'),
   alignItems('items-center'),
-  zIndex('z-50'),
-  outlineStyle('outline-none'),
+  backgroundColor('bg-semi-transparent-background'),
+  display('flex'),
+  height('h-screen'),
+  inset('left-0', 'top-0', 'inset-0'),
+  justifyContent('justify-center'),
   maxHeight('max-h-full'),
-  padding('p-4')
+  minHeight('min-h-screen'),
+  outlineStyle('outline-none'),
+  padding('p-4'),
+  position('fixed'),
+  zIndex('z-50')
 )
 
 const modalContent = classnames(
   backgroundColor('bg-main-background'),
-  maxHeight('max-h-9/10'),
-  maxWidth('max-w-2xl'),
-  position('relative'),
-  margin('mx-auto', 'my-auto'),
   borderRadius('rounded-xl'),
   boxShadow('shadow-lg'),
-  flex('flex-auto'),
   display('flex'),
-  flexDirection('flex-col')
+  flex('flex-auto'),
+  flexDirection('flex-col'),
+  margin('mx-auto', 'my-auto'),
+  maxHeight('max-h-9/10'),
+  maxWidth('max-w-2xl'),
+  position('relative')
 )
 
 const modalItems = (topPadding = true) =>
   classnames(padding('px-8', 'pb-5'), padding({ 'pt-5': topPadding }))
 
 const modalContentBody = classnames(
-  modalItems(false),
+  display('flex'),
   flex('flex-auto'),
   justifyContent('justify-center'),
-  display('flex'),
+  modalItems(false),
   overflow('overflow-auto'),
   textAlign('text-left')
 )

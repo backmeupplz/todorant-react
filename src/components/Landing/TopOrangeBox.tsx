@@ -15,23 +15,23 @@ import SignInButtonsBlock from 'components/Landing/SignInButtonsBlock'
 import TodorantWorksTextBlock from 'components/Landing/TodorantWorksTextBlock'
 
 const container = classnames(
-  padding('lg:pr-16'),
   display('flex'),
+  padding('lg:pr-16'),
   width('w-full')
 )
 
 const orangeBox = classnames(
   backgroundImage('bg-gradient-to-r'),
+  borderRadius('rounded-xl'),
+  display('flex'),
+  flexDirection('flex-col', 'lg:flex-row'),
   gradientColorStops(
     'from-orange-box-gradient-primary',
     'to-orange-box-gradient-secondary'
   ),
-  borderRadius('rounded-xl'),
-  width('w-full'),
-  display('flex'),
   justifyContent('justify-between'),
-  flexDirection('flex-col', 'lg:flex-row'),
-  padding('lg:p-8', 'pb-16', 'lg:pb-8')
+  padding('lg:p-8', 'pb-16', 'lg:pb-8'),
+  width('w-full')
 )
 
 const TopOrangeBox = () => {

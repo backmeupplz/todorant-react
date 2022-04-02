@@ -10,11 +10,11 @@ import {
 import { useLocalize } from '@borodutch-labs/localize-react'
 
 const block = classnames(
+  alignContent('content-start'),
   display('flex'),
   flexDirection('flex-row'),
-  alignContent('content-start'),
-  width('w-full'),
-  margin('mt-10', 'mb-16')
+  margin('mt-10', 'mb-16'),
+  width('w-full')
 )
 
 const PrivacyPolicy = () => {

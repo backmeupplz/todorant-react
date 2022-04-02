@@ -12,12 +12,12 @@ import {
 import { useLocalize } from '@borodutch-labs/localize-react'
 
 const block = classnames(
-  maxWidth('lg:max-w-todorant-works-text'),
   display('flex'),
   flexDirection('flex-col'),
-  justifyContent('justify-between'),
   flexWrap('flex-wrap'),
+  justifyContent('justify-between'),
   margin('mb-4', 'lg:mb-0'),
+  maxWidth('lg:max-w-todorant-works-text'),
   padding('p-4')
 )
 
