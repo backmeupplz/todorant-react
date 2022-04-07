@@ -7,6 +7,7 @@ import {
   maxWidth,
 } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
+import ComponentName from 'components/Landing/ComponentNames'
 
 const block = classnames(
   display('flex'),
@@ -26,7 +27,7 @@ const DifferenceTextBlock = () => {
           translate('homeShort.differenceText2'),
           translate('homeShort.differenceText3'),
         ]}
-        margin="mt-6"
+        name={ComponentName.difference}
       />
     </div>
   )

@@ -8,6 +8,7 @@ import {
   width,
 } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
+import ComponentName from 'components/Landing/ComponentNames'
 
 const container = classnames(
   display('flex'),
@@ -28,7 +29,7 @@ const Deal = () => {
           translate('homeShort.dealText2'),
           translate('homeShort.dealText3'),
         ]}
-        margin="mt-4"
+        name={ComponentName.deal}
       />
     </div>
   )

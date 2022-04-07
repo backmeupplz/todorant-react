@@ -16,6 +16,7 @@ import {
   textDecoration,
   whitespace,
 } from 'classnames/tailwind'
+import ComponentName from 'components/Landing/ComponentNames'
 
 type TextProps = {
   textArray: string[]
@@ -90,11 +91,20 @@ const landingBodyText = (ma?: TMargin) =>
     textColor('text-main-text'),
     whitespace('whitespace-pre-line')
   )
-
-export const LandingBodyText: FC<TextProps & { margin?: TMargin }> = ({
+function landingBodyMargin(name?: string) {
+  if (name === ComponentName.deal) {
+    return 'mt-4'
+  } else if (name === ComponentName.difference) {
+    return 'mt-6'
+  } else if (name === ComponentName.review) {
+    return 'mt-3'
+  }
+}
+export const LandingBodyText: FC<TextProps & { name?: string }> = ({
   textArray,
-  margin,
+  name,
 }) => {
+  const margin: TMargin | undefined = landingBodyMargin(name)
   return (
     <>
       {textArray.map((text) => (

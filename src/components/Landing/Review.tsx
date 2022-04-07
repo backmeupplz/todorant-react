@@ -10,6 +10,7 @@ import {
   width,
 } from 'classnames/tailwind'
 import { useLocalize } from '@borodutch-labs/localize-react'
+import ComponentName from 'components/Landing/ComponentNames'
 
 const container = classnames(
   display('flex'),
@@ -46,7 +47,10 @@ const Review: FC<{ count: number }> = ({ count }) => {
           url={`https://t.me/${review.userName}`}
           text={`@${review.userName}`}
         />
-        <LandingBodyText textArray={[review.text]} margin="mt-3" />
+        <LandingBodyText
+          textArray={[review.text]}
+          name={ComponentName.review}
+        />
       </div>
     </div>
   )
