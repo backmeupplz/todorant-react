@@ -1,4 +1,436 @@
 {
-  "title": "Frontend Template",
-  "userCount": "User count: {{count}}"
+  "encryption": {
+    "info": "Use this section with the utmost caution! Encryption will not work unless you add a password. There will be two types of tasks: encrypted and unencrypted. All new tasks will be encrypted. Old todos can be converted to be encrypted with the button below. If you lose the password there will be no way to recover tasks.",
+    "switch": "Encrypt todos",
+    "password": "Password",
+    "encryptAllButton": "Encrypt all",
+    "decryptAllButton": "Decrypt all",
+    "confirm": "Are you sure you want to encrypt the todos with this password? You will be able to decrypt todos later with the same password. If you lose the password, you will not be able to decrypt todos!",
+    "disableConfirm": "Are you sure you want to remove the key and disable the encryption? This will not decrypt the tasks that are encrypted.",
+    "errorDecrypting": "Wrong decryption password",
+    "repeatPassword": "Repeat password",
+    "title": "Encryption"
+  },
+  "search": "Search",
+  "qr": {
+    "code": "QR code",
+    "description": {
+      "app_login": "Use this QR code to login on mobile devices. This picture is a password, do not share it with anyone!",
+      "web_login": "Login in the Todorant mobile app, then go to the Settings, then tap the \"Add devices\" button under the \"Account\" section, then scan this QR code to allow login to Todorant here. Remember: this QR code is only valid for 10 minutes!"
+    }
+  },
+  "breakdown": {
+    "request": "Looks like you move this task way too much. Please break it down, you can no longer move it to another date. Believe me, it will help to complete the task!",
+    "button": "Breakdown"
+  },
+  "warning": "Warning",
+  "hashtags": { "title": "Hashtags", "name": "Hashtag name" },
+  "supportAlert": {
+    "title": "Support",
+    "text": "If you have any questions or suggestions, feel free to <a href=\"mailto:todorant@borodutch.com\">send me an email</a>, <a href=\"https://t.me/borodutch\" target=\"_blank\">contact me on Telegram</a> or <a href=\"https://t.me/todorant_feedback\" target=\"_blank\">join our Telegram community group</a>!"
+  },
+  "loginMobile": {
+    "telegram": {
+      "headline": "Please login with Telegram by entering your Telegram ID in a field below and hitting the \"Login\" button. You can get your Telegram ID by sending <code>/id</code> to the <a href=\"https://t.me/todorant_bot\" target=\"_blank\">@todorant_bot</a>. Or you can just send <code>/qr</code> to <a href=\"https://t.me/todorant_bot\" target=\"_blank\">@todorant_bot</a> and scan it in the QR login section!",
+      "id": "123456789",
+      "idHint": "Telegram ID",
+      "loginButton": "Login",
+      "noCredentialsError": "Please, provide a Telegram ID",
+      "cannotSendMessageError": "Could not send a login request to the user. Please make sure that you started @todorant_bot and that the Telegram ID is correct.",
+      "waiting": "Waiting for the response in <a href=\"https://t.me/todorant_bot\" target=\"_blank\">@todorant_bot</a>...",
+      "notAllowedError": "Login request was rejected"
+    }
+  },
+  "noReport": {
+    "title": "No data yet",
+    "text": "Go on, complete your first todo and come back!"
+  },
+  "report": {
+    "title": "Stats",
+    "tasksCompleted": "Tasks completed",
+    "frogsCompleted": "Frogs completed",
+    "share": "Share this report!",
+    "hashtag": "Hashtag",
+    "shareButton": "Share",
+    "url": "Permanent link to this report",
+    "shareMessage": "Check out my productivity report from Todorant!",
+    "call": "Want to join?",
+    "callButton": "Join Todorant",
+    "startDate": "Start date",
+    "endDate": "End date"
+  },
+  "title": "Todorant",
+  "cookie": {
+    "button": "Got it!",
+    "message": "🍪 This website uses cookies."
+  },
+  "home": {
+    "texts": {
+      "contact": [
+        "Still got questions? Contact me directly at ",
+        ". Thank you. "
+      ]
+    },
+    "signIn": "Sign in",
+    "facebook": "Login with Facebook",
+    "google": "Login with Google",
+    "privacy": "Privacy policy",
+    "feedback": {
+      "title": "What do the users say?",
+      "reviews": [
+        {
+          "name": "Sergey Romanov",
+          "username": "Gendoor",
+          "text": "Messages in the subscription part are cute :)\n\nThank you for the simple service thriving for the ideal. Turned out that it not only helps to be productive but also proactive. Little daily improvements confidently enhance life, and the free mind is constantly looking how to fill now emptied todo list so that it could feel the pleasure of completing tasks again and again — and it is a direct route towards improving everything surrounding me.\n\nAll in all, Todorant, no matter how simple at first glance, can become a faithful ally in any business. Thank you, Nikita, for unleashing the aspects of true productivity and sharing them with us in a convenient solution.\n\nThankful Todorant subscriber."
+        },
+        {
+          "name": "Dinislam Sad",
+          "username": "Azerzet",
+          "text": "The main advantages that I, and I'm sure others, liked.\n1. Simple and convenient interface.\n2. Missed tasks automatically become frogs, and an option to make a task a frog initially.\n3. /done command is a must, and thank you for it, Nikita. I used Todoist, Wunderlist, Bitrix24. All of them are overcomplicated.\n4. Telegram bot."
+        },
+        {
+          "name": "Aleksei Kaut",
+          "username": "aleksei_kaut",
+          "text": "After I created the first tasks and switched to the \"Current\" tab — I was surprised that I had only one task and that I needed to complete it before moving on. This idea with one task and concentration on it struck me, it seems obvious, but I couldn't use it before.\n\nI usually tracked tasks and ideas in Notes, which should be done soon, but I did not approach it as a system. I have been using the service for a couple of weeks, not very actively, but I think this is a very strong way to systemize the affairs and tasks.\n\nThank you for your work!"
+        },
+        {
+          "name": "Anton",
+          "username": "mas1311",
+          "text": "Tested Todorant. At first, I was skeptical (I tried a lot of planning services already), but I realized that it works effectively and is very easy to use.\n\nPlus, for reasons unknown to me, when all the tasks are completed for the day, strong satisfaction appears, which was absent in other planners (there was something like \"well, that was everything... or not?\").\n\nThank you for your work!"
+        },
+        {
+          "name": "Willsey Paslen",
+          "username": "WillseyPaslen",
+          "text": "Thanks for the great service. Enough time has passed so that I can say — it helps me. Thanks, Nikita 😁 And good luck with the app."
+        },
+        {
+          "name": "Igor Malinkin",
+          "username": "sxe4kilo",
+          "text": "I started to do at least something with Todorant, so my productivity went up from 0."
+        },
+        {
+          "name": "Vladimir Dubenko",
+          "username": "dubenko_v",
+          "text": "Your service is awesome in terms of at least three things:\n1. Convenient — it is minimalistic!\n2. It instills a habit.\n3. Strange as it may seem, it doesn't force you to think rationally.\n\nI'm irrational by nature, I can't just lead 1 project (I burn out quickly). My life is multitasking! 3 projects in parallel are easy, but 3 is not enough... 7 sounds more like it. And your service allows you to achieve this. It is the alternation of tasks that prevents the brain from burning out in one particular direction. And somehow, magically, it alternates tasks from one project to another."
+        },
+        {
+          "name": "Maksim Alekseyevich",
+          "username": "MMAradiology",
+          "text": "I can't say that using Todorant changed my life. Can I say that this is a meaningful and very useful application/website? Yes, thousand times yes.\n\nI like Todorant, it lets me free up my \"operating memory\" and allows me to think about solving problems, not about remembering them. As Nikita (the creator) correctly wrote — with constant and correct use, tasks that used to cast true biblical fear will stop appearing. And this will not happen because the complex tasks will stop coming. It will become clear to you (and to me, and everyone) that \"the road will be overpowered by those walking\", \"the way to the thousand miles begins with one step\"."
+        },
+        {
+          "name": "Kiku Reise",
+          "username": "Kiku_Reise",
+          "text": "I've arranged my work, programming and hobby tasks. Even this review was written thanks to Todorant. Just one task, no complications. That's the whole point of the app — it helped me to concentrate without constantly shuffling my todos.\n\nOf course, you can set tasks and forget about them, but for me, it's easier to go back to a minimalistic application with one task, rather than to spend half a day looking for what task to work on now out of a hundred planned in Telegram or Notion.\n\nI was especially pleased with the update with hashtags — now all stats are on the palm of my hand, I can track and share with friends how many tasks I have completed this month.\n\nThank you a lot for Todorant!"
+        }
+      ]
+    },
+    "act": "Act!",
+    "apple": "Login with Apple",
+    "crossplatform": { "title": "Truly cross-platform" },
+    "mobile": "Login with mobile app"
+  },
+  "menu": {
+    "darkMode": { "on": "Dark mode: on", "off": "Dark mode: off" },
+    "logout": "Logout"
+  },
+  "support": "Something isn't clear? Contact me at <a target=\"_blank\" href=\"mailto:n@borodutch.com\">n@borodutch.com</a>",
+  "errors": {
+    "login": {
+      "facebook": "Could not log in with Facebook",
+      "google": "Could not log in with Google",
+      "telegram": "Could not log in with Telegram",
+      "apple": "Could not log in with Apple",
+      "mobile": "Could not log in with mobile app"
+    },
+    "internal": "Internal server error",
+    "loadTodos": "Could not fetch todos",
+    "todo": {
+      "textLenght": "Todos should have text",
+      "dateOrMonth": "Todos should have either date or month set",
+      "more1500": "Todos can't have more than 1500 characters."
+    },
+    "invalidForm": "Please, fill in the required fields",
+    "report": "Could not load report",
+    "appleFirefox": "Unfortunately, there is <a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1628361\">a bug</a> with Apple sign-in on Firefox. Until it is resolved, please, use other web browsers to login with Apple — and then merge it with other social accounts on Todorant. Sorry for the inconvenience.",
+    "delegate": { "invalidToken": "Invite link is no longer valid" },
+    "epic": {
+      "numberError": "Should be a number",
+      "greaterThanZeroError": "Should be greater than 0"
+    },
+    "tag": { "whitespaces": "Tags shouldn't contain spaces" }
+  },
+  "close": "Close",
+  "notFound": "Page not found",
+  "todo": {
+    "create": {
+      "title": "Add todos",
+      "text": "Text of the todo",
+      "textHint": "You can add a link to an email or a website",
+      "placeholder": "Todo",
+      "frog": "It's a frog!",
+      "date": "Exact day",
+      "month": "Or month",
+      "tooltip": "Tasks should always be: actionable (\"Find best flights to Mexico\" vs \"Go to Mexico\"); as small and exact as possible (\"Dust the displays\" vs \"Clean the house\").",
+      "goFirst": "Add on the top"
+    },
+    "list": {
+      "completed": "Show completed",
+      "delegated": "Show the tasks that I delegated"
+    },
+    "edit": { "title": "Edit" }
+  },
+  "cancel": "Cancel",
+  "save": "Save",
+  "delete": "Delete",
+  "deleteHeadline": "Are you sure you want to delete \"{name}\"?",
+  "current": "Current",
+  "planning": "Planning",
+  "created": "Created",
+  "breakdownInfo": "Use breakdown when the current task is too broad",
+  "howto": {
+    "title": "How to use Todorant?",
+    "premise": "Below are the main principles that you should follow to productively exploit all the features provided by Todorant. It is easy as 1-2-3, just with a few more steps.",
+    "bonus": {
+      "title": "Bonus features",
+      "rules": [
+        "Use keyboard shortcuts when on desktop! You can (a)dd, (b)reakdown, switch to (c)urrent, mark as (d)one and switch to (p)lanning. To add an additional task slot while adding tasks, you can use Ctrl+Shift+A."
+      ]
+    }
+  },
+  "skipped": "Skipped",
+  "subscription": {
+    "title": "Subscription",
+    "statusText": "Subscription status: {status}",
+    "signature": "Nikita Kolmogorov, Todorant creator",
+    "daysLeft": "(days left: {daysLeft})",
+    "5dollars": "$5/month",
+    "success": "You have successfuly subscribed!",
+    "payment": {
+      "success": "✅ You are all done! Enjoy unlimited Todorant experience 💪",
+      "failure": "✋ Wait, something went wrong. Maybe you could retry? 😳",
+      "back": "Head back to productivity!"
+    },
+    "cancel": "Cancel subscription",
+    "manage": "Manage subscription",
+    "36dollars": "$36/year",
+    "150dollars": "$150 once"
+  },
+  "moveUp": "Move to today",
+  "settings": {
+    "title": "Settings",
+    "showTodayOnAddTodo": "Default to today when creating a todo",
+    "firstDayOfWeek": "First day of the week",
+    "newTodosGoFirst": "New todos are added on top of the list",
+    "preserveOrderByTime": "Preserve exact time order",
+    "general": "General",
+    "integrations": "Integrations",
+    "connected": "Connected",
+    "notConnected": "Not connected",
+    "googleCalendar": "Google Calendar",
+    "disconnectConfirm": "Are you sure you want to disconnect this service?",
+    "account": "Account",
+    "duplicateTagInBreakdown": "Copy hashtags during a breakdown",
+    "export": "Export data",
+    "hotkeys": "Hotkeys",
+    "startTimeOfDay": "Start of the day",
+    "username": "Name",
+    "telegram": "Telegram",
+    "coloredCardBackgrounds": "Color tasks with hashtag colors",
+    "newLineOnReturn": "Insert new line on enter",
+    "removeCompletedFromCalendar": "Remove completed todos from Google Calendar"
+  },
+  "allDoneTitle": "Congratulations!",
+  "allDoneText": "🥳 You did it! All the tasks for today are done, go get rest or maybe dance a little 💃",
+  "noTodosTitle": "To infinity!",
+  "noTodosText": "You don't have any todos for today. If you want to work — add a new todo for today or take the todos from future days.",
+  "addTodoTime": "Exact time",
+  "completed": "Completed",
+  "planningText": "Looks like you have some planning to do! Please, redistribute the outstanding tasks below to unlock the \"Current\" tab and to keep being productive. Cheers!",
+  "activeText": "🎉 Thank you a lot for supporting Todorant! I hope that Todorant has improved your life already and will keep making it better in the future! Your support allows me to improve Todorant daily, adding new features and simplifying the work processes!",
+  "inactiveText": "🐝 It looks like your Todorant trial has come to the end. Has Todorant improved your life by at least $5/month? I certainly hope so! I'll cut straight to the chase.\n\nTrade offer. I receive: $5 per month, $36 per year (a whopping 40% discount) or $150 one time. You receive: unlimited productivity and unlimited Todorant as a bonus.\n\nWhat do you say?",
+  "earlyAdopterText": "👏👏 — this is me applauding you; you — the crazy ones who agreed to try out the instrument of ever increasing productivity, Todorant, among the first. One can say that you are the golden thousand, feedback of whom was shaping the Todorant from the very beginning. You have all the rights to use Todorant as much as you wish — you will never experience any limits, you have earned it. However, if you noticed that Todorant has drastically improved your life — you can still buy the subscription thus saying the best kind of \"Thank you\". You will never loose the \"Early adopter 🦄\" status — but will always be able to cancel the subscription. Thank you a lot for still using Todorant — and I will keep adding new features improving the product that positively affects all of us. Good luck!",
+  "earlyAdopterTextBonus": "🤗 Holy +*%$! Looks like either Todorant or I personally helped you enough that you purchased subscription even though you could use Todorant for free forever. I am deeply touched and happy to have a cup of coffee with you or just to chat a little. Feel free to reach me on Telegram (@borodutch) or by email — just click my name below. Thank you a lot! It is hard to imagine how important your contribution is!",
+  "trialText": "💪 Welcome to Todorant! You have 30 days after the registration to figure out whether Todorant works well for you. After 30 days will pass, you will still have access to the old tasks but will not be able to add new ones. It is perfectly fine to purchase subscription before 30 days end. I believe that using Todorant will bring you new heights in the personal productivity!",
+  "rules": [
+    "As soon as you get an actionable task (receive an email, phonecall, text, or if you see anything of interest that has to be put on your todo list) — create a todo for it right away. Do not wait, you will forget about it if you do not take it down.",
+    "Todos should always be actionable and as explicit as possible. If a task takes less than 2 minutes, then do it right away and record it as completed.",
+    "You either add a specific date or select a month while creating a todo. You cannot pick current month without selecting a specific date. This is done to relax your mind. If you trust the system and put everything that needs to be done on the correct date — you will encounter it at the right time. Huge amount of willpower is wasted on being constantly stressed about \"that other thing that I need to deal with but I am not quite sure what it was\". Learn to trust and relax.",
+    "First thing you do each month is planning ahead. You take all the tasks assigned to the current month and you sort them in the correct dates. It allows you to filter out outdated tasks and keep your mind in peace with, knowing exactly what you need to do this month.",
+    "First thing you do in the morning is planning your day. Have a glance at your Planning section. Can you handle everything? Distribute tasks that cannot be dealt with today. Redistribute any tasks left undone from the previous days.",
+    "Unless it is an emergency, do not look at the planning section after you have finished planning. It will be way better psychologically if you only focus on one task, so keep your eyes on the Current section. Trust the system, it remembers everything. Do your job and relax your mind.",
+    "Current section contains only one task that you need to focus on — nothing else. You can have more than one task a day, the amount of tasks as well as progress bar is displayed for your convenience. You are not allowed to jump between tasks — you should deal with every task linearly, one by one.",
+    "Frogs are special types of tasks you generally do not want to deal with. Usually they are the tasks left behind for months and even years. Todorant ensures that you handle frogs first thing every day. In the morning your willpower reserve is large enough to handle even the most outrageous tasks. And after you finally deal with a frog — you receive just enough happiness to be smiling throughout the whole day. You feel proud of yourself when you deal with frogs.",
+    "You are allowed to skip current task — but try to do so as rarely as possible. You cannot skip a frog. If you failed to complete a task and had to redistribute it twice, it becomes a frog.",
+    "If the current task is too high level, then break it down to a list of subtasks. As soon as you break it down, the task is marked as completed.",
+    "Add as much relevant information about the todo as possible. Add links to specific emails (gmail on web allows you to do this), websites, notes (like evernote), documents (like dropbox), leave phone numbers or add any information you might need to complete the task. Todorant is not meant to be a point of reference for you — instead it should act as a catalogue of links to the reference information relevant to specific todos.",
+    "Feel free to join our multi-language group on Telegram to share experience and tricks on how to be more productive — @todorant_feedback! Your feedback about the service — suggestions, wishes and complaints — are highly welcome.",
+    "Use the edit mode (the list order icon on top) on the Planning page to change the task order. If you want to assign a task to a specific week, just assign it to Monday and reassign it during the planning phase on Monday morning.",
+    "Todorant does not have and will never have repeating tasks — the only thing they do well causing anxiety by hanging over you as unfinished tasks. If you need to complete repeating tasks — add all of them manually, your brain will thank you for conscious tasks.",
+    "Todorant does not have the concept of \"Projects\" as it has proven itself to be demotivating, some of the \"folder\" never get open. Projects \"Fitness\" and \"Self-improvement\" send their regards. Instead, use #hashtags.",
+    "Frogs will always appear on the top of the list.",
+    "Todorant does not have notifications about the upcoming tasks with the exact time set. However, feel free to use Google Calendar integration so that Google can annoy you with notifications, not Todorant."
+  ],
+  "earlyAdopter": "Early adopter 🦄",
+  "active": "Active",
+  "inactive": "Inactive",
+  "trial": "Trial",
+  "weekday1": "Monday",
+  "weekday2": "Tuesday",
+  "weekday3": "Wednesday",
+  "weekday4": "Thursday",
+  "weekday5": "Friday",
+  "weekday6": "Saturday",
+  "weekday0": "Sunday",
+  "introTitle": "Welcome!",
+  "introButton": "Intro message",
+  "introBack": "Let's go!",
+  "back": "Back",
+  "soundEffects": "Sound effects",
+  "emptyHashtags": "Hashtag list is empty for now. Create your first task with a #hashtag to add the first hashtag here!",
+  "refreshRequest": "There is a new version of Todorant available. Please refresh the page to get the new shiny stuff 🦄",
+  "refresh": "Refresh",
+  "heroProfileTitle": "Hero profile",
+  "infoHero": "This is the profile page of you — the hero! Complete tasks and earn points to achieve higher and higher ranks!\n\nYou won't know the whole list of ranks until you achieve the highest! Remember: the only way to get to the top is through the everyday sequence of small steps.",
+  "rank": "🔥 Your rank 🔥",
+  "rank-1Title": "Dark matter infinity being 😈",
+  "rank-1Description": "You have achieved the rank no human was able to achieve before! Congratulations, here is your pie: 🍰. It's not a lie this time.",
+  "rank0Title": "Subzero −273.15 °C 🥶",
+  "rank0Description": "It'd be a lot cooler if it could.",
+  "rank5Title": "V is for Vroductivive 👺",
+  "rank5Description": "Remember kids, if you drop productivity for less than 5 seconds and pick it up, you are safe!",
+  "rank13Title": "Happy Freddy 😱",
+  "rank13Description": "You know what day it is. It is the day Jason bakes a cake for you. Every day is this day now.",
+  "rank42Title": "Fisher 🐬",
+  "rank42Description": "So long! And thanks for all the fish!",
+  "rank69Title": "Nice master! 😝",
+  "rank69Description": "The nicest rank there is. Period.",
+  "rank85Title": "Mark-85 🦄",
+  "rank85Description": "One can say your productivity is made of Iron.",
+  "rank100Title": "100% force user ⚡️",
+  "rank100Description": "100 done, infinity to go! Keep going every day, it is worth it!",
+  "rank221Title": "Sherlock 😎",
+  "rank221Description": "You solved the productivity, well, good for you!",
+  "rank256Title": "Happy plumber 👾",
+  "rank256Description": "8 bits of productivity later you still think of good old games.",
+  "rank300Title": "Spartan 💪",
+  "rank300Description": "Clear your mind, simplify the routines, spend the next 100 points as a true Spartan!",
+  "rank404Title": "❓❓❓",
+  "rank404Description": "Rank not found.",
+  "rank777Title": "Lucky grandmaster! 🍀",
+  "rank777Description": "This rank only lasts 23 points. Make it count, it is your lucky day!",
+  "rank800Title": "T-800 🤖",
+  "rank800Description": "You are the terminator of dreadful frogs. Go terminate a few!",
+  "rank1337Title": "3L1T3 🧑‍💻",
+  "rank1337Description": "Productivity hacking is initiated... Hacking...",
+  "rank1338Title": "3L1T3 (Hacked) 🧑‍💻",
+  "rank1338Description": "Hacked productivity successfully!",
+  "rank2048Title": "Chess master ♔",
+  "rank2048Description": "You prefer productivity over endless pointless time-killing games, right? RIGHT?",
+  "rank9000Title": "Over 9000 power user 🏋️",
+  "rank9000Description": "You lift the tasks like they are nothing!",
+  "rank12800Title": "Doctor Manhattan ⚛",
+  "rank12800Description": "You breakdown the tasks like you split the atoms. Keep up the good work!",
+  "homeShort": {
+    "headline": "Productivity systems fail.",
+    "headline2": "Todorant works.",
+    "feature1": "Focus on one task at a time",
+    "feature2": "Always add a date or a month to a task",
+    "feature3": "Complete unpleasant tasks (frogs) first",
+    "feature4": "Keep your inbox empty",
+    "differenceTitle": "What's the difference?",
+    "differenceText1": "All other productivity apps focus on storing, organizing and automating endless lists of tasks. Todorant focuses on the only thing that matters: it makes you complete the tasks.",
+    "differenceText2": "Todorant uses a carefully crafted set of limits and praise to punish bad behaviour and support good habits. It affects the primitive part of the brain to make it crave completing todos like people crave sugar.",
+    "differenceText3": "I've read and tried 20+ productivity books and methodologies. When all of them failed one by one I combined their components and simplified the result. This is how Todorant was created.",
+    "dealTitle": "What's the deal?",
+    "dealText1": "Todorant is free for the first 30 days and then it is $5/month. It is more expensive than competitors because it works. If you don't get $5 worth of productivity in the first 30 days of the free trial, you are welcome not to continue to use Todorant.",
+    "dealText2": "No strings attached. You don't need to give us any information like a credit card at all before your trial ends. You don't even need an account if you install the mobile apps!",
+    "dealText3": "The only exception is if you signup on iOS, Apple has forced us to make you commit to a free trial before you can use the app. The way to avoid this limit is to create an account here, on the website, and then log in on the iOS app."
+  },
+  "googleCalendarDisableSuccess": "Google Calendar disabled",
+  "googleCalendarEnableSuccess": "Google Calendar enabled",
+  "spread": {
+    "hint": "Choose tasks to spread, choose dates to spread over, press a button and see how selected tasks spread evenly between the selected dates",
+    "spreading": "Spreading",
+    "chooseTasks": "Click on the tasks to spread",
+    "between": "between",
+    "chooseDates": "Click on the dates to spread over"
+  },
+  "level": "Level",
+  "points": "points",
+  "pointsTillNextLevel": "points to unlock the next level",
+  "accept": "Accept",
+  "delegate": {
+    "title": "Delegation",
+    "noDelegators": "You don't have any delegators yet. Ask for an invite link to become someone's delegate.",
+    "noDelegates": "You don't have any delegates yet. Share the invite link with the people who you want to make delegates",
+    "noDelegatedTasks": "You don't have any more newly delegated tasks.",
+    "link": "Delegate invite link",
+    "linkDescription": "People can become your delegates by following this link. Delegates will only see the tasks that you delegated to them.",
+    "resetConfirmation": "Are you sure that you want to reset the link? The current link won't work anymore!",
+    "delegators": "Delegators",
+    "delegates": "Delegates",
+    "inviteSuccess": "Success! Now this user can delegate tasks for you.",
+    "inviteConfirm": "Are you sure you want to become a delegate of this user?",
+    "deleteDelegateConfirmation": "Are you sure you want to delete this delegate? You will no longer be able to delegate tasks to this delegate.",
+    "deleteDelegatorConfirmation": "Are you sure you want to delete this delegator? This delegator will no longer be able to delegate tasks to you.",
+    "pickDelegateField": "Delegate",
+    "noDelegatorsShort": "You don't have any delegators yet",
+    "noDelegatedTasksTo": "You haven't delegated any tasks yet.",
+    "noDelegatesShort": "You don't have any delegates yet"
+  },
+  "epic": {
+    "intoEpic": "Make an Epic",
+    "epicGoal": "Epic goal",
+    "name": "Epic name",
+    "epicForeword": "Select the number of tasks that has to be completed with this hashtag. This will turn the hashtag into an epic. The epic progress will be displayed on the Current page."
+  },
+  "success": "Success!",
+  "notLogginedBody": "Please, login at ",
+  "settingsActions": { "swipeActions": "Swipe actions" },
+  "cannotLoadTitle": "Uh oh!",
+  "cannotLoadText": "Could not load your todos, maybe the Internet is down?",
+  "deleteAllHashtagsConfirm": "Are you sure you want to delete all hashtags?",
+  "deleteAll": "Delete all",
+  "apps": "Apps",
+  "next": "Next",
+  "letsGo": "Let's go!",
+  "introText0": "Hi there! It's Nikita, the creator of Todorant. I'm so glad you've downloaded Todorant because it means that you too will soon benefit from unlimited productivity.",
+  "introText1": "Most of the people who end up here are like me: tried what feels like all productivity tools but none of them were just right.",
+  "introText2": "Let me show you how Todorant became the last and the only productivity tool for me and what will happen to you in the next 3-4 weeks. Just scroll or use the buttons on the bottom!",
+  "introText3": "First thing that will happen to you after you enter all of your tasks to Todorant will be that it will seem to others like you can remember everything. You won't need to do anything extra, the system will just work.",
+  "introText4": "This is why my wife loves the fact that I use Todorant. Before, I kept forgetting things and obligations that didn't seem important to me, but were important for my wife.",
+  "introText5": "Now every time I make a commitment or a promise, I add it to Todorant and when the time comes, I'm aware of what needs to be done and can plan accordingly.",
+  "introText6": "Second thing that will happen to you will be the ease of mind. You will stop stressing out about undone tasks and tasks you think you forgot about.",
+  "introText7": "You will always know what you need to be working on at any moment and will stay in the \"Flow Zone\" longer achieving goals and completing tasks.",
+  "introText8": "Even though I support over a dozen services used by more than 20 000 000 people, I never feel stressed anymore. I always have the current task in front of me and I'm always aware that if I make progress then I'll achieve the goal eventually.",
+  "introText9": "Third thing that will happen to you will be a super-human like planning power. You will be able to accurately estimate the length and the ETA of any task.",
+  "introText10": "Every time a colleague or a friend asks me when a particular thing will be done, I always check Todorant and see when the task is scheduled to be worked on. Most of the time, I can accurately give them estimates that are quite realistic.",
+  "introText11": "I personally never have to rush anything now. I never have to have \"crunch time\" anymore! I complete tasks at a comfortable pace and people around can trust me.",
+  "introText12": "Know that you are in a good company. Thousands of users trust their productivity to Todorant daily, myself included.",
+  "introText13": "If you ever have any questions about the app — just click on the \"i\" button in the top right. If you can't find an answer there, find my personal contacts under the \"Support\" section in the settings and shoot me a message!",
+  "introText14": "There is one more thing to note though! To fully control superpower, you need to learn how to use it. Make sure to read \"How to use Todorant\" in the settings!",
+  "introText15": "Good luck with Todorant! I hope it will transform your life to the better as it did mine!",
+  "introText0web": "Hi there! It's Nikita, the creator of Todorant. I'm so glad you've decided to try Todorant because it means that you too will soon benefit from unlimited productivity.",
+  "introText2web": "Let me show you how Todorant became the last and the only productivity tool for me and what will happen to you in the next 3-4 weeks. Just use the buttons on the bottom to advance!",
+  "introText14web": "There is one more thing to note though! To fully control superpower, you need to learn how to use it. Make sure to read \"How to use Todorant\" by tapping the info button in the top right corner!",
+  "edit": "Edit",
+  "settingsObject": {
+    "showMoreByDefault": "Show more when adding todos by default"
+  },
+  "googleCalendarHint": "Only the tasks created in Todorant with an exact time will be synced to Google Calendar",
+  "googleCalendarGotIt": "Got it!",
+  "frogsAlert": {
+    "title": "Stop! It's illegal",
+    "text": "Don't break the rules. If you have any frogs today — finish them first, break them down, move them to future days or remove the frog flag from them. Please, just don't ignore the frogs!"
+  },
+  "to": "To",
+  "from": "From",
+  "unEpicInfo": "Reset epic",
+  "unEpicConfirm": "Are you sure you want to reset the epic?",
+  "breakdownMessage": {
+    "title": "Repetitive task",
+    "text": "This is a repetitive task, do you want to break down it or complete it?",
+    "complete": "Complete"
+  }
 }

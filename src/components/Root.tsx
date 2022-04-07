@@ -1,7 +1,11 @@
 import { FC } from 'react'
-import { classnames } from 'classnames/tailwind'
+import { classnames, margin, maxWidth, padding } from 'classnames/tailwind'
 
-const root = classnames('container', 'mx-auto', 'pb-10', 'max-w-4xl', 'py-4')
+const root = classnames(
+  margin('mx-auto'),
+  maxWidth('max-w-screen-lg'),
+  padding('px-4')
+)
 const Root: FC = ({ children }) => {
   return <div className={root}>{children}</div>
 }

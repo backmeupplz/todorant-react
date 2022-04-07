@@ -1,0 +1,144 @@
+{
+  "encryption": {
+    "info": "Usa questa sezione con la massima cautela! La crittografia non funzionerà se non si aggiunge una password. Esistono due tipi di attività: crittografate e non crittografate. Tutte le nuove attività saranno crittografate. I vecchi compiti possono essere convertiti per essere crittografati con il pulsante in basso. Se perdi la password non ci sarà modo di recuperare le attività.",
+    "switch": "Attività criptate",
+    "password": "Password",
+    "encryptAllButton": "Cripta tutto",
+    "decryptAllButton": "Decrepita tutto",
+    "confirm": "Sei sicuro di voler crittografare le attività con questa password? Sarai in grado di decifrare attività in seguito con la stessa password. Se perdi la password, non sarai in grado di decriptare le attività!",
+    "disableConfirm": "Sei sicuro di voler rimuovere la password e disabilitare la crittografia? Questo non decripterà le attività che sono state criptate.",
+    "errorDecrypting": "Password di decriptazione errata",
+    "repeatPassword": "Ripetere la password",
+    "title": "Crittografia"
+  },
+  "search": "Ricerca",
+  "qr": { "code": "Codice QR" },
+  "breakdown": {
+    "request": "Sembra che tu abbia spostato troppo questo compito. Si prega di scomporlo, non è più possibile spostarlo in un'altra data. Credimi, aiuterà a completare l'attività!",
+    "button": "Arresto"
+  },
+  "warning": "Avviso",
+  "hashtags": { "title": "Hashtags" },
+  "supportAlert": {
+    "title": "Supporto",
+    "text": "Se hai delle domande o dei suggerimenti, sentiti libero di <a href=\"mailto:todorant@borodutch.com\">mandarmi un'email</a>, <a href=\"https://t.me/borodutch\" target=\"_blank\">scrivermi su Telegram</a> oppure <a href=\"https://t.me/todorant_feedback\" target=\"_blank\">entrare nel gruppo Telegram della nostra community</a>!"
+  },
+  "loginMobile": {
+    "telegram": {
+      "headline": "Prego, accedi con Telegram inserendo il tuo ID Telegram e premendo il bottone \"Login\". Puoi ottenere il tuo ID Telegram inviando <code>/id</code> su <a href=\"https://t.me/todorant_bot\" target=\"_blank\">@todorant_bot</a>. Oppure puoi anche semplicemente inviare <code>/qr</code> a <a href=\"https://t.me/todorant_bot\" target=\"_blank\">@todorant_bot</a> e scansionare la foto nella sezione login con codice QR!",
+      "idHint": "ID Telegram",
+      "loginButton": "Login",
+      "noCredentialsError": "Per favore, inserisci un ID Telegram",
+      "cannotSendMessageError": "Impossibile inviare la richiesta di accesso all'utente. Assicurati di aver avviato @todorant_bot e che l'ID di Telegram sia corretto.",
+      "waiting": "In attesa della risposta su <a href=\"https://t.me/todorant_bot\" target=\"_blank\">@todorant_bot</a>...",
+      "notAllowedError": "Richiesta di login respinta"
+    }
+  },
+  "noReport": {
+    "title": "Ancora nessun dato",
+    "text": "Vai, completa la tua prima attività e torna!"
+  },
+  "report": {
+    "title": "Statistiche",
+    "tasksCompleted": "Attività completate",
+    "frogsCompleted": "Rane completate",
+    "share": "Condividi questi dati!",
+    "hashtag": "Hashtag",
+    "shareButton": "Condividi",
+    "url": "Link permanente a questi dati",
+    "shareMessage": "Guarda le statistiche della mia produttività da Todorant!",
+    "call": "Vuoi iscriverti?",
+    "callButton": "Iscriviti a Todorant",
+    "startDate": "Data d'inizio",
+    "endDate": "Data di fine"
+  },
+  "title": "Todorant",
+  "cookie": {
+    "button": "Ho capito!",
+    "message": "🍪 Questi sito utilizza cookies."
+  },
+  "home": {
+    "texts": {
+      "contact": [
+        "Hai ancora domande? Contattami direttamente a ",
+        ". Grazie. "
+      ]
+    },
+    "act": "Agire!"
+  },
+  "todo": { "create": { "placeholder": "Attività", "frog": "È una rana!" } },
+  "cancel": "Annulla",
+  "save": "Salva",
+  "delete": "Elimina",
+  "current": "Corrente",
+  "planning": "Pianificazione",
+  "skipped": "Saltato",
+  "allDoneTitle": "Congratulazioni!",
+  "allDoneText": "🥳 Ce l'hai fatta! Le attività di oggi son state completate, riposati o balla un po' 💃",
+  "noTodosTitle": "Verso l'infinito!",
+  "noTodosText": "Non hai attività per oggi. Se vuoi fare qualcosa aggiungi un'attività per oggi o fai quelle dei prossimi giorni.",
+  "addTodoTime": "Ora esatta",
+  "completed": "Completato",
+  "planningText": "Sembra che tu abbia qualche programmazione da fare! Per favore, ridistribuisci i compiti in sospeso qui sotto per sbloccare la scheda \"Corrente\" e continuare ad essere produttivo. Buona fortuna!",
+  "activeText": "🎉 Grazie mille per sostenere Todorant! Spero che Todorant abbia già migliorato la tua vita e che continuerà a migliorarla in futuro! Il tuo supporto mi permette di migliorare Todorant ogni giorno, aggiungendo nuove funzionalità e semplificando i processi di lavoro!",
+  "inactiveText": "🐝 Sembra che la tua prova di Todorant sia giunta alla fine. Todorant ha migliorato la tua vita di almeno 5 dollari al mese? Spero proprio di sì! Vado subito al sodo.\n\nOfferta commerciale. Ricevo: 5$ al mese, 36$ all'anno (un enorme sconto del 40%) o 150$ una tantum. Voi ricevete: produttività illimitata e Todorant illimitato come bonus.\n\nChe ne dite?",
+  "earlyAdopterText": "👏👏 — questo sono io che vi applaudo; voi — i pazzi che hanno accettato di provare lo strumento della produttività sempre crescente, Todorant, tra i primi. Si può dire che voi siete i pionieri, il cui feedback ha plasmato il Todorant fin dall'inizio. Avete tutti i diritti di usare il Todorant quanto volete: non avrete mai limiti, ve lo siete guadagnato. Tuttavia, se avete notato che il Todorant ha drasticamente migliorato la vostra vita — potete comunque acquistare l'abbonamento dicendo così il miglior tipo di \"Grazie\". Non perderete mai lo stato di \"Early adopter 🦄\" — ma potrete sempre annullare l'abbonamento. Vi ringrazio molto per l'utilizzo di Todorant — e continuerò ad aggiungere nuove funzionalità che migliorano il prodotto e che hanno un effetto positivo su tutti noi. Buona fortuna!",
+  "earlyAdopterTextBonus": "🤗 Accidenti! Sembra che io o Todorant vi abbiamo aiutato abbastanza da farvi acquistare l'abbonamento, anche se potreste usare Todorant gratuitamente per sempre. Sono profondamente commosso e felice di prendere una tazza di caffè con voi o di chiacchierare un po'. Sentitevi liberi di contattarmi su Telegram (@borodutch) o via e-mail — basta cliccare sul mio nome qui sotto. Grazie mille! È difficile immaginare quanto sia importante il vostro contributo!",
+  "trialText": "💪 Benvenuti in Todorant! Avete 30 giorni di tempo dopo la registrazione per capire se Todorant funziona bene per voi. Trascorsi i 30 giorni, avrete ancora accesso ai vecchi compiti, ma non potrete aggiungerne di nuovi. Va benissimo acquistare l'abbonamento prima della fine dei 30 giorni. Ritengo che l'utilizzo di Todorant vi porterà nuove vette nella produttività personale!",
+  "rules": [
+    "Non appena ricevi un compito realizzabile (ricevere un'e-mail, una telefonata, un testo o se vedi qualcosa di interessante che deve essere messo nella tua lista delle cose da fare) — crea subito una cosa da fare. Non aspettate, ve ne dimenticherete se non lo togliete.",
+    "Le attività dovrebbero essere sempre realizzabili e il più possibile esplicite. Se un'attività richiede meno di 2 minuti, allora fatela subito e registratela come completata.",
+    "È possibile aggiungere una data specifica o selezionare un mese durante la creazione di un'attività. Non è possibile scegliere il mese corrente senza selezionare una data specifica. Questo viene fatto per rilassare la mente. Se vi fidate del sistema e mettete tutto ciò che deve essere fatto nella data corretta — lo incontrerete al momento giusto. Si spreca un'enorme quantità di forza di volontà per essere costantemente stressati da \"quell'altra cosa di cui ho bisogno di occuparmi, ma non sono del tutto sicuro di cosa fosse\". Impara a fidarti e a rilassarti.",
+    "La prima cosa da fare ogni mese è pianificare in anticipo. Prendete tutti i compiti assegnati al mese in corso e ordinateli nelle date corrette. Questo vi permette di filtrare i compiti obsoleti e di mantenere la mente serena, sapendo esattamente cosa dovete fare questo mese.",
+    "La prima cosa da fare la mattina è pianificare la giornata. Guardate la sezione Pianificazione. Siete in grado di gestire tutto? Distribuite i compiti che non possono essere svolti oggi. Ridistribuite tutti i compiti lasciati in sospeso dai giorni precedenti.",
+    "A meno che non si tratti di un'emergenza, non guardate la sezione di pianificazione dopo aver finito di pianificare. Sarà molto meglio psicologicamente se vi concentrerete su un solo compito, quindi tenete d'occhio la sezione Corrente. Fidatevi del sistema, ricorda tutto. Fate il vostro lavoro e rilassate la mente.",
+    "La sezione corrente contiene un solo compito sul quale è necessario concentrarsi — nient'altro. È possibile avere più di un compito al giorno, la quantità di compiti così come la barra di avanzamento viene visualizzata per comodità. Non è consentito saltare da un compito all'altro: ogni compito deve essere affrontato in modo lineare, uno per uno.",
+    "Le rane sono tipi speciali di compiti che in genere non si vogliono affrontare. Di solito sono i compiti lasciati per mesi e persino anni. Todorant fa in modo di gestire le rane come prima cosa ogni giorno. Al mattino la vostra riserva di forza di volontà è abbastanza grande da poter gestire anche i compiti più oltraggiosi. E dopo aver finalmente a che fare con una rana — si riceve la felicità sufficiente per sorridere per tutto il giorno. Vi sentite orgogliosi di voi stessi quando avete a che fare con le rane.",
+    "È consentito saltare l'attività corrente — ma cercate di farlo il più raramente possibile. Non si può saltare una rana. Se non riuscite a completare un compito e dovete ridistribuirlo due volte, diventa una rana.",
+    "Se l'attività corrente è di livello troppo alto, allora scomporla in una lista di sottoattività. Non appena la si suddivide, l'attività viene contrassegnata come completata.",
+    "Aggiungete quante più informazioni rilevanti possibili sulle cose da fare. Aggiungete link a specifiche e-mail (gmail sul web vi permette di farlo), siti web, note (come evernote), documenti (come dropbox), lasciate numeri di telefono o aggiungete tutte le informazioni necessarie per completare l'operazione. Todorant non vuole essere un punto di riferimento per voi, ma dovrebbe agire da catalogo di link alle informazioni di riferimento relative a specifiche attività.",
+    "Sentitevi liberi di unirvi al nostro gruppo multilingue su Telegram per condividere esperienze e trucchi su come essere più produttivi — @todorant_feedback! I vostri commenti sul servizio — suggerimenti, desideri e reclami — sono benvenuti.",
+    "Utilizzare la modalità di modifica (l'icona dell'ordine di lista in alto) nella pagina di pianificazione per modificare l'ordine delle attività. Se si desidera assegnare un compito ad una settimana specifica, è sufficiente assegnarlo al lunedì e riassegnarlo durante la fase di pianificazione il lunedì mattina.",
+    "Todorant non ha e non avrà mai compiti ricorrenti — l'unica cosa che fanno bene è causare ansia che ricade su di voi come compiti incompiuti. Se avete bisogno di completare i compiti ripetuti — aggiungeteli tutti manualmente, il vostro cervello vi ringrazierà per averci pensato.",
+    "Todorant non ha il concetto di \"Progetti\" in quanto ha dimostrato di essere demotivante, alcune delle \"cartelle\" non si aprono mai. I progetti \"Fitness\" e \"Automiglioramento\" mandano i loro saluti. Usa invece gli #hashtag.",
+    "Le rane appariranno sempre in cima alla lista.",
+    "Todorant non dispone di notifiche sui prossimi compiti con l'ora esatta impostata. Tuttavia, sentitevi liberi di utilizzare l'integrazione di Google Calendar in modo che Google possa infastidirvi con le notifiche, non Todorant."
+  ],
+  "earlyAdopter": "Pioniere 🦄",
+  "active": "Attivo",
+  "inactive": "Inattivo",
+  "trial": "Prova",
+  "weekday1": "Lunedì",
+  "weekday2": "Martedì",
+  "weekday3": "Mercoledì",
+  "weekday4": "Giovedì",
+  "weekday5": "Venerdì",
+  "weekday6": "Sabato",
+  "weekday0": "Domenica",
+  "introTitle": "Benvenuto!",
+  "introButton": "Messaggio di benvenuto",
+  "introBack": "Andiamo!",
+  "back": "Indietro",
+  "soundEffects": "Effetti sonori",
+  "emptyHashtags": "L'elenco degli hashtag è vuoto per ora. Create il vostro primo compito con un #hashtag per aggiungere il primo hashtag qui!",
+  "refreshRequest": "È disponibile una nuova versione di Todorant. Si prega di aggiornare la pagina per ottenere il nuovo materiale lucido 🦄",
+  "refresh": "Aggiorna",
+  "homeShort": {
+    "headline": "I sistemi di produttività falliscono.",
+    "headline2": "Todorant funziona.",
+    "feature1": "Concentrarsi su un compito alla volta",
+    "feature2": "Aggiungere sempre una data o un mese a un'attività",
+    "feature3": "Completare prima i compiti sgradevoli",
+    "feature4": "Tieni vuota la tua casella di posta in arrivo",
+    "differenceTitle": "Qual è la differenza?",
+    "differenceText1": "Tutte le altre app per la produttività si concentrano sull'archiviazione, l'organizzazione e l'automazione di liste infinite di attività. Todorant si concentra sull'unica cosa che conta: ti fa completare i compiti.",
+    "differenceText2": "Todorant usa una serie di limiti e di elogi accuratamente studiati per punire i cattivi comportamenti e sostenere le buone abitudini. Colpisce la parte primitiva del cervello per fargli desiderare di completare i todos come le persone desiderano lo zucchero.",
+    "differenceText3": "Ho letto e provato più di 20 libri e metodologie di produttività. Quando tutti hanno fallito uno ad uno ho combinato i loro componenti e semplificato il risultato. È così che è stato creato il Todorant.",
+    "dealTitle": "Qual è il motivo?",
+    "dealText1": "Il Todorant è gratuito per i primi 30 giorni e poi è di 5 dollari al mese. È più costoso della concorrenza perché funziona. Se non ottenete 5 dollari di produttività nei primi 30 giorni della prova gratuita, siete invitati a non continuare a usare il Todorant.",
+    "dealText2": "Nessun vincolo. Non è necessario che ci fornisca alcuna informazione, come una carta di credito, prima della fine della prova. Non avete nemmeno bisogno di un account se installate le app mobili!",
+    "dealText3": "L'unica eccezione è che se ti iscrivi su iOS, Apple ci ha obbligato a farti fare una prova gratuita prima che tu possa usare l'app. Il modo per evitare questo limite è quello di creare un account qui, sul sito web, e poi accedere all'app per iOS"
+  },
+  "googleCalendarDisableSuccess": "Google Calendar disabilitato",
+  "googleCalendarEnableSuccess": "Google Calendar abilitato"
+}
