@@ -9,6 +9,8 @@ import {
   margin,
   maxWidth,
 } from 'classnames/tailwind'
+import { useSnapshot } from 'valtio'
+import AppStore from 'stores/AppStore'
 import open from 'helpers/open'
 import useDarkMode from 'hooks/useDarkMode'
 
@@ -23,6 +25,7 @@ const block = classnames(
 )
 const CrossplatformButtonsBlock = () => {
   const [isDark] = useDarkMode()
+  const { language } = useSnapshot(AppStore)
 
   const buttons = platforms.map((platform) => (
     <PlatformButton
@@ -30,7 +33,7 @@ const CrossplatformButtonsBlock = () => {
       alt={platform.alt}
       title={platform.title}
       onClick={() => {
-        open(platform.url)
+        platform.url ? open(platform.url) : open(getTranslationUrl(language))
       }}
     />
   ))
@@ -40,19 +43,21 @@ const CrossplatformButtonsBlock = () => {
 
 export default CrossplatformButtonsBlock
 
+const getTranslationUrl = (language: string) => {
+  return `https://apps.apple.com/${language}/app/todorant/id1482078243`
+}
+
 const platforms = [
   {
     path: 'webapp',
     alt: 'Web app logo',
     title: 'Web',
-    url: 'https://apps.apple.com/${appstoreLanguage}/app/todorant/id1482078243',
   },
   {
     path: 'apple-black',
     pathDark: 'apple',
     alt: 'Apple logo',
     title: 'iOS',
-    url: 'https://apps.apple.com/${appstoreLanguage}/app/todorant/id1482078243',
   },
   {
     path: 'android',
